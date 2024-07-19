@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://ja4x42o1flej"]
 
-[ext_resource type="Script" path="res://Scenes/Scripts/Timer.cs" id="1_rykxc"]
+[ext_resource type="Script" path="res://Scenes/Scripts/TypingText.cs" id="1_b230x"]
 [ext_resource type="FontFile" uid="uid://7l0t5gk5lixg" path="res://Assets/Fonts/VT323-Regular.ttf" id="2_olowl"]
 [ext_resource type="Texture2D" uid="uid://cnihms442me1s" path="res://Assets/TextureMaps/CircleGradient.png" id="3_l4mia"]
 [ext_resource type="Texture2D" uid="uid://dhay2l3xkdys" path="res://Assets/TextureMaps/CircleClickGradient.png" id="4_ppt8c"]
@@ -18,12 +18,12 @@ position = Vector2(93, 291)
 color = Color(0.0365313, 0.0981555, 0.0320369, 1)
 polygon = PackedVector2Array(-78, 93, -79, -264, 662, -263, 663, 95)
 
-[node name="Timer" type="Timer" parent="TextBackground"]
+[node name="TypingText" type="Timer" parent="TextBackground"]
 wait_time = 0.2
 autostart = true
-script = ExtResource("1_rykxc")
+script = ExtResource("1_b230x")
 
-[node name="Text" type="Label" parent="TextBackground/Timer"]
+[node name="Text" type="Label" parent="TextBackground/TypingText"]
 modulate = Color(0.231373, 0.956863, 0.0823529, 1)
 offset_left = 27.0
 offset_top = 47.0
@@ -48,7 +48,7 @@ visible_characters = 0
 visible_ratio = 0.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Start" type="TextureButton" parent="TextBackground/Timer"]
+[node name="Start" type="TextureButton" parent="TextBackground/TypingText"]
 visible = false
 modulate = Color(0, 0.678315, 0.580085, 1)
 top_level = true
@@ -63,7 +63,7 @@ texture_pressed = ExtResource("4_ppt8c")
 texture_hover = ExtResource("5_sf4ws")
 texture_click_mask = ExtResource("6_dxnih")
 
-[node name="StartChar" type="TextureRect" parent="TextBackground/Timer/Start"]
+[node name="StartChar" type="TextureRect" parent="TextBackground/TypingText/Start"]
 self_modulate = Color(5.05373e-07, 0.293859, 0.247129, 1)
 layout_mode = 1
 anchors_preset = -1
@@ -89,4 +89,4 @@ position = Vector2(-12, 8)
 color = Color(0.0365313, 0.0981555, 0.0320369, 1)
 polygon = PackedVector2Array(-65, 237, -79, -264, 725, -256, 716, 245)
 
-[connection signal="timeout" from="TextBackground/Timer" to="TextBackground/Timer" method="_on_timeout"]
+[connection signal="timeout" from="TextBackground/TypingText" to="TextBackground/TypingText" method="_on_timeout"]

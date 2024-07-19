@@ -1,7 +1,9 @@
 using Godot;
 
+namespace BrokenCircle.Scenes.Scripts;
+
 [Tool]
-public partial class glyph : Node2D
+public partial class Glyph : Node2D
 {
 	[Export] 
 	public Texture2D GlyphIcon;

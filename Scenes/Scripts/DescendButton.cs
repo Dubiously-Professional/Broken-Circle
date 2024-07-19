@@ -1,7 +1,8 @@
 using Godot;
-using System;
 
-public partial class TextNode : TextureButton
+namespace BrokenCircle.Scenes.Scripts;
+
+public partial class DescendButton : TextureButton
 {
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -12,10 +13,8 @@ public partial class TextNode : TextureButton
 	public override void _Process(double delta)
 	{
 	}
-
+	
 	private void _on_pressed()
 	{
-		TextureButton edit = GetNode<TextureButton>("Edit");
-		edit.Visible = !edit.Visible;
 	}
 }

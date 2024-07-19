@@ -1,7 +1,9 @@
-using Godot;
 using System;
+using Godot;
 
-public partial class Timer : Godot.Timer
+namespace BrokenCircle.Scenes.Scripts;
+
+public partial class TypingText : Timer
 {
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
