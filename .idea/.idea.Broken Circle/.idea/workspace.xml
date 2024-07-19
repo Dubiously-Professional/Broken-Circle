@@ -5,9 +5,81 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95be39f8-f45b-460e-865f-39e44d47200a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Broken Circle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Broken Circle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Descend.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Circle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Circle.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/CircleClickGradient.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/CircleClickGradient.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/CircleGradient.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/CircleGradient.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/CircleHoverGradient.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/CircleHoverGradient.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/CircleHoverGradient.xcf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/CircleMask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/CircleMask.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Descend.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Descend.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Edit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Edit.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Hover.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Hover_filled.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/Circle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/Circle.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/Empty.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/Empty.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/Flow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/Flow.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/Not.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/Not.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/Object.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/Object.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/Self.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/Self.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/before.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/change.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/change.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/cut.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/cut.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/gas.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/glass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/group.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/group.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/math.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/metal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/more.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/move.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/move.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/need.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/need.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/on.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/other.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/possess.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/possess.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/same.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/see.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/see.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/sun.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/sun.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/time.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/time.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/trade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/trade.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/wait.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/wait.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/write.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Ideograms/write.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/VT323-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/VT323-Regular.ttf.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/text_node.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextNode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextNode2.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextNode3.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextNode3d1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextNode4.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Timer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/intro_screen.tscn" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/main.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/text_scene.tscn" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +167,7 @@
       <workItem from="1721350468305" duration="4268000" />
       <workItem from="1721367771204" duration="45000" />
       <workItem from="1721367860669" duration="3273000" />
-      <workItem from="1721376052022" duration="12298000" />
+      <workItem from="1721376052022" duration="12611000" />
     </task>
     <servers />
   </component>
