@@ -1,0 +1,295 @@
+[gd_scene load_steps=9 format=3 uid="uid://77ngbpkgrbkb"]
+
+[ext_resource type="Texture2D" uid="uid://cnihms442me1s" path="res://Assets/TextureMaps/CircleGradient.png" id="1_l05wn"]
+[ext_resource type="Texture2D" uid="uid://dhay2l3xkdys" path="res://Assets/TextureMaps/CircleClickGradient.png" id="2_uyxub"]
+[ext_resource type="Texture2D" uid="uid://b10w56ymj0y3f" path="res://Assets/TextureMaps/CircleHoverGradient.png" id="3_v4ocp"]
+[ext_resource type="BitMap" uid="uid://cauic0hcd7663" path="res://Assets/TextureMaps/CircleMask.png" id="4_dfvc2"]
+[ext_resource type="Texture2D" uid="uid://cwmfhq38om1rt" path="res://Assets/Sprites/Edit.png" id="5_nkc4e"]
+[ext_resource type="Texture2D" uid="uid://dbqve3xk7d51h" path="res://Assets/Sprites/Descend.png" id="6_yji6r"]
+[ext_resource type="Texture2D" uid="uid://bjvg4mex7t376" path="res://Assets/Sprites/Ideograms/Flow.png" id="7_b1mdp"]
+[ext_resource type="FontFile" uid="uid://dwcymbx5ivat2" path="res://Assets/Fonts/doves.ttf" id="8_q7fk3"]
+
+[node name="Glyph000" type="Node2D"]
+texture_filter = 1
+position = Vector2(44, 39)
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 64.0
+offset_bottom = 88.0
+
+[node name="Control" type="Control" parent="Control2"]
+modulate = Color(0, 0.678315, 0.580085, 1)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -32.0
+offset_right = 32.0
+offset_bottom = 64.0
+grow_horizontal = 2
+
+[node name="Control" type="Control" parent="Control2/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -24.0
+offset_right = 24.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureButton" type="TextureButton" parent="Control2/Control/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -23.0
+offset_right = 23.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_normal = ExtResource("1_l05wn")
+texture_pressed = ExtResource("2_uyxub")
+texture_hover = ExtResource("3_v4ocp")
+texture_click_mask = ExtResource("4_dfvc2")
+stretch_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="Control2/Control/Control/TextureButton"]
+self_modulate = Color(5.05373e-07, 0.293859, 0.247129, 1)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -23.0
+offset_right = 23.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch_mode = 3
+
+[node name="Control3" type="Control" parent="Control2/Control"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -24.0
+offset_right = 24.0
+grow_vertical = 0
+
+[node name="TextureButton" type="TextureButton" parent="Control2/Control/Control3"]
+self_modulate = Color(0.909804, 0.396078, 0.584314, 1)
+clip_contents = true
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 24.0
+grow_vertical = 2
+texture_normal = ExtResource("1_l05wn")
+texture_pressed = ExtResource("2_uyxub")
+texture_hover = ExtResource("3_v4ocp")
+texture_click_mask = ExtResource("4_dfvc2")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="Control2/Control/Control3/TextureButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_nkc4e")
+expand_mode = 1
+
+[node name="Control4" type="Control" parent="Control2/Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -24.0
+offset_top = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="TextureButton" type="TextureButton" parent="Control2/Control/Control4"]
+self_modulate = Color(0.909804, 0.396078, 0.584314, 1)
+clip_contents = true
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -12.0
+offset_bottom = 12.0
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = ExtResource("1_l05wn")
+texture_pressed = ExtResource("2_uyxub")
+texture_hover = ExtResource("3_v4ocp")
+texture_click_mask = ExtResource("4_dfvc2")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="Control2/Control/Control4/TextureButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_yji6r")
+expand_mode = 1
+
+[node name="Control5" type="Control" parent="Control2/Control"]
+layout_mode = 1
+anchors_preset = 0
+offset_right = 24.0
+offset_bottom = 24.0
+
+[node name="TextureButton" type="TextureButton" parent="Control2/Control/Control5"]
+self_modulate = Color(0.909804, 0.396078, 0.584314, 1)
+clip_contents = true
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 24.0
+grow_vertical = 2
+texture_normal = ExtResource("1_l05wn")
+texture_pressed = ExtResource("2_uyxub")
+texture_hover = ExtResource("3_v4ocp")
+texture_click_mask = ExtResource("4_dfvc2")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="Control2/Control/Control5/TextureButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_b1mdp")
+expand_mode = 1
+
+[node name="Control6" type="Control" parent="Control2/Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -24.0
+offset_bottom = 24.0
+grow_horizontal = 0
+
+[node name="TextureButton" type="TextureButton" parent="Control2/Control/Control6"]
+self_modulate = Color(0.909804, 0.396078, 0.584314, 1)
+clip_contents = true
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -12.0
+offset_bottom = 12.0
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = ExtResource("1_l05wn")
+texture_pressed = ExtResource("2_uyxub")
+texture_hover = ExtResource("3_v4ocp")
+texture_click_mask = ExtResource("4_dfvc2")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="Control2/Control/Control6/TextureButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_yji6r")
+expand_mode = 1
+flip_v = true
+
+[node name="Control2" type="Control" parent="Control2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -33.0
+offset_top = -28.0
+offset_right = 33.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control2/Control2"]
+self_modulate = Color(0.501469, 1, 0.892343, 1)
+texture_filter = 1
+clip_contents = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -25.0
+offset_right = 32.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(5.05373e-07, 0.293859, 0.247129, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/normal_font = ExtResource("8_q7fk3")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[center]????[/center]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+language = "en_US"
