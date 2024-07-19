@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://cw6ruhcx6hrq3" path="res://Sprites/Circle.png" id="1_8ikjq"]
 [ext_resource type="BitMap" uid="uid://cauic0hcd7663" path="res://Sprites/CircleMask.png" id="2_650nt"]
 [ext_resource type="Texture2D" uid="uid://6e4imjlxqfdy" path="res://Sprites/Ideograms/change.png" id="4_5xrkw"]
-[ext_resource type="Texture2D" uid="uid://cg4h5gr5w2sg7" path="res://Sprites/Hover.png" id="5_hdm3u"]
 
 [sub_resource type="CSharpScript" id="CSharpScript_6v6vn"]
 script/source = "using Godot;
@@ -25,6 +24,9 @@ public partial class TextNode : Control
 	}
 }
 "
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1sdo0"]
+load_path = "res://.godot/imported/Hover.png-fb05dea43d8c7beb8e25ae753f8a2a5c.ctex"
 
 [node name="TextNode" type="Control"]
 layout_mode = 3
@@ -68,4 +70,4 @@ offset_left = -0.199999
 offset_top = 0.199979
 offset_right = 47.8
 offset_bottom = 48.2
-texture = ExtResource("5_hdm3u")
+texture = SubResource("CompressedTexture2D_1sdo0")
