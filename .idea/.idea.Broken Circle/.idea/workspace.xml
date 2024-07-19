@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="95be39f8-f45b-460e-865f-39e44d47200a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Broken Circle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Broken Circle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Broken Circle.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Broken Circle.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sprites/Hover.png" beforeDir="false" afterPath="$PROJECT_DIR$/Sprites/Hover.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sprites/Hover_filled.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/text_scene.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/text_scene.tscn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,20 +31,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Executable.Editor.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Executable.Editor.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Executable.Editor">
     <configuration name="Player GDScript" type="GDSCRIPT_DEBUG_RUN_CONFIGURATION" factoryName="GdScriptRunFactory" show_console_on_std_err="false" show_console_on_std_out="false" port="6006">
       <option name="address" value="127.0.0.1" />
@@ -62,7 +59,7 @@
     <configuration name="Editor" type="RunExe" factoryName=".NET Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../Godot_v4.2.2-stable_mono_win64/Godot_v4.2.2-stable_mono_win64.exe" />
       <option name="PROGRAM_PARAMETERS" value="--path &quot;./&quot; --editor" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Godot_v4.2.2-stable_mono_win64" />
+      <option name="WORKING_DIRECTORY" value="C:\Projects\Broken-Circle" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
@@ -73,9 +70,9 @@
       </method>
     </configuration>
     <configuration name="Player" type="RunExe" factoryName=".NET Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../code/godot/bin/godot.macos.editor.dev.arm64.mono" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../Godot_v4.2.2-stable_mono_win64/Godot_v4.2.2-stable_mono_win64.exe" />
       <option name="PROGRAM_PARAMETERS" value="--path &quot;./&quot;" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="C:\Projects\Broken-Circle" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
@@ -97,6 +94,7 @@
       <workItem from="1721350468305" duration="4268000" />
       <workItem from="1721367771204" duration="45000" />
       <workItem from="1721367860669" duration="3273000" />
+      <workItem from="1721376052022" duration="3938000" />
     </task>
     <servers />
   </component>
