@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class TextNode2 : TextureButton
+public partial class TextNode3d1 : TextureButton
 {
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
@@ -15,7 +15,9 @@ public partial class TextNode2 : TextureButton
 
     private void _on_pressed()
     {
+        TextureButton ascend = GetNode<TextureButton>("Ascend");
         TextureButton edit = GetNode<TextureButton>("Edit");
+        ascend.Visible = !ascend.Visible;
         edit.Visible = !edit.Visible;
     }
 }
