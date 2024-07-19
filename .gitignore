@@ -17,3 +17,6 @@ Desktop.ini.meta
 ehthumbs.db
 ehthumbs.db.meta
 Local/*
+
+# Rider config files
+.idea/**
