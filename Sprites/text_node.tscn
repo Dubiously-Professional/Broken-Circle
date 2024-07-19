@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=3 uid="uid://2b1nb4dejm3k"]
+
+[ext_resource type="Texture2D" uid="uid://cw6ruhcx6hrq3" path="res://Sprites/Circle.png" id="1_8ikjq"]
+[ext_resource type="BitMap" uid="uid://cauic0hcd7663" path="res://Sprites/CircleMask.png" id="2_650nt"]
+[ext_resource type="Texture2D" uid="uid://6e4imjlxqfdy" path="res://Sprites/Ideograms/change.png" id="4_5xrkw"]
+[ext_resource type="Texture2D" uid="uid://cg4h5gr5w2sg7" path="res://Sprites/Hover.png" id="5_hdm3u"]
+
+[sub_resource type="CSharpScript" id="CSharpScript_6v6vn"]
+script/source = "using Godot;
+using System;
+using System.Collections.Generic;
+
+public partial class TextNode : Control
+{
+	[ExportCategory(\"Main Category\")] [Export]
+	private Vector2 scale = new Vector2(1, 1);
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
+	{
+	}
+
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
+	{
+	}
+}
+"
+
+[node name="TextNode" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextNodeButton" type="TextureButton" parent="."]
+self_modulate = Color(1, 0.101961, 1, 1)
+top_level = true
+texture_filter = 1
+use_parent_material = true
+layout_mode = 0
+offset_left = 292.0
+offset_top = -802.0
+offset_right = 340.0
+offset_bottom = -754.0
+scale = Vector2(5, 5)
+texture_normal = ExtResource("1_8ikjq")
+texture_click_mask = ExtResource("2_650nt")
+stretch_mode = 5
+script = SubResource("CSharpScript_6v6vn")
+Scale = null
+
+[node name="TextChar" type="TextureRect" parent="TextNodeButton"]
+modulate = Color(0.196078, 0.0980392, 1, 1)
+texture_filter = 3
+layout_mode = 0
+offset_left = 4.4
+offset_top = 3.8
+offset_right = 44.4
+offset_bottom = 43.8
+texture = ExtResource("4_5xrkw")
+
+[node name="TextBorder" type="TextureRect" parent="TextNodeButton"]
+self_modulate = Color(0.168627, 0.211765, 1, 1)
+layout_mode = 0
+offset_left = -0.199999
+offset_top = 0.199979
+offset_right = 47.8
+offset_bottom = 48.2
+texture = ExtResource("5_hdm3u")
