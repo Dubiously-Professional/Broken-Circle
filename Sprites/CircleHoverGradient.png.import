@@ -2,26 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dw2jf4qqmbdu4"
-path="res://.godot/imported/possess.png-7d3bc9b41bcd7e0b88ce56d05b20db99.ctex"
+uid="uid://b10w56ymj0y3f"
+path="res://.godot/imported/CircleHoverGradient.png-089600d5c3dc1035eb215ff9f028b740.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Ideograms/possess.png"
-dest_files=["res://.godot/imported/possess.png-7d3bc9b41bcd7e0b88ce56d05b20db99.ctex"]
+source_file="res://Sprites/CircleHoverGradient.png"
+dest_files=["res://.godot/imported/CircleHoverGradient.png-089600d5c3dc1035eb215ff9f028b740.ctex"]
 
 [params]
 
-compress/mode=1
+compress/mode=0
 compress/high_quality=false
-compress/lossy_quality=0.2
+compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

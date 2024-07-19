@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://dao3qaangxd3h"]
+[gd_scene load_steps=19 format=3 uid="uid://dao3qaangxd3h"]
 
 [ext_resource type="Texture2D" uid="uid://cw6ruhcx6hrq3" path="res://Sprites/Circle.png" id="1_10ryq"]
-[ext_resource type="Texture2D" uid="uid://d4ncw5q8df8q5" path="res://Sprites/CircleHover.png" id="2_uollk"]
+[ext_resource type="Texture2D" uid="uid://dhay2l3xkdys" path="res://Sprites/CircleClickGradient.png" id="2_gtv3g"]
 [ext_resource type="BitMap" uid="uid://cauic0hcd7663" path="res://Sprites/CircleMask.png" id="3_gjp1j"]
+[ext_resource type="Texture2D" uid="uid://b10w56ymj0y3f" path="res://Sprites/CircleHoverGradient.png" id="3_ki2cb"]
 [ext_resource type="Texture2D" uid="uid://dw2jf4qqmbdu4" path="res://Sprites/Ideograms/possess.png" id="4_ds6ld"]
-[ext_resource type="Texture2D" uid="uid://cg4h5gr5w2sg7" path="res://Sprites/Hover.png" id="5_qg60t"]
+[ext_resource type="Texture2D" uid="uid://cnihms442me1s" path="res://Sprites/CircleGradient.png" id="5_mktot"]
 [ext_resource type="Script" path="res://TextNode.cs" id="6_7bmy0"]
 [ext_resource type="Texture2D" uid="uid://bgjvufx1wpgua" path="res://Sprites/Ideograms/group.png" id="6_c6aqm"]
 [ext_resource type="Texture2D" uid="uid://d2ljcqmh48811" path="res://Sprites/Ideograms/Self.png" id="7_j4wuy"]
@@ -12,10 +13,15 @@
 [ext_resource type="Texture2D" uid="uid://dbqve3xk7d51h" path="res://Sprites/Descend.png" id="8_x88uo"]
 [ext_resource type="Texture2D" uid="uid://cwmfhq38om1rt" path="res://Sprites/Edit.png" id="9_t2e1q"]
 [ext_resource type="Script" path="res://TextNode3.cs" id="11_esy6q"]
-[ext_resource type="Script" path="res://Descend.cs" id="13_xb2iw"]
 [ext_resource type="Script" path="res://TextNode3d1.cs" id="14_qocsr"]
 [ext_resource type="Script" path="res://TextNode4.cs" id="15_83g8f"]
 [ext_resource type="Texture2D" uid="uid://b5glc7mxm5gg" path="res://Sprites/Ideograms/Not.png" id="16_xl7f1"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1qu58"]
+load_path = "res://.godot/imported/CircleHover.png-a64e335858deff86a8e0339362711f04.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1sdo0"]
+load_path = "res://.godot/imported/Hover.png-fb05dea43d8c7beb8e25ae753f8a2a5c.ctex"
 
 [node name="TextScene" type="Node2D"]
 position = Vector2(0, 1)
@@ -42,24 +48,24 @@ offset_right = 589.0
 offset_bottom = 390.0
 
 [node name="TextNode" type="TextureButton" parent="Depth0"]
-self_modulate = Color(0.0901961, 0.596078, 1, 1)
+modulate = Color(0, 0.678315, 0.580085, 1)
 top_level = true
 texture_filter = 1
-use_parent_material = true
 layout_mode = 0
 offset_left = 336.0
 offset_top = 80.0
 offset_right = 384.0
 offset_bottom = 128.0
 scale = Vector2(2, 2)
-texture_normal = ExtResource("1_10ryq")
-texture_hover = ExtResource("2_uollk")
+texture_normal = ExtResource("5_mktot")
+texture_pressed = ExtResource("2_gtv3g")
+texture_hover = ExtResource("3_ki2cb")
 texture_click_mask = ExtResource("3_gjp1j")
-stretch_mode = 5
+stretch_mode = 3
 script = ExtResource("6_7bmy0")
 
 [node name="TextChar" type="TextureRect" parent="Depth0/TextNode"]
-modulate = Color(0.196078, 0.0980392, 1, 1)
+self_modulate = Color(5.05373e-07, 0.293859, 0.247129, 1)
 texture_filter = 3
 layout_mode = 0
 offset_left = 4.4
@@ -67,41 +73,36 @@ offset_top = 3.8
 offset_right = 44.4
 offset_bottom = 43.8
 texture = ExtResource("4_ds6ld")
-expand_mode = 3
+expand_mode = 2
 stretch_mode = 3
-
-[node name="TextBorder" type="TextureRect" parent="Depth0/TextNode"]
-self_modulate = Color(0.168627, 0.211765, 1, 1)
-layout_mode = 0
-offset_left = -0.199999
-offset_top = 0.199979
-offset_right = 47.8
-offset_bottom = 48.2
-texture = ExtResource("5_qg60t")
 
 [node name="Edit" type="TextureButton" parent="Depth0/TextNode"]
 visible = false
-self_modulate = Color(1, 0.701961, 0, 1)
+self_modulate = Color(0.909804, 0.396078, 0.584314, 1)
 layout_mode = 0
 offset_left = -14.5
 offset_top = -11.0
 offset_right = 25.5
 offset_bottom = 29.0
 scale = Vector2(0.7, 0.7)
-texture_normal = ExtResource("9_t2e1q")
+texture_normal = ExtResource("5_mktot")
+texture_hover = ExtResource("3_ki2cb")
 texture_click_mask = ExtResource("3_gjp1j")
 stretch_mode = 5
 
-[node name="SubMenuBG" type="TextureRect" parent="Depth0/TextNode/Edit"]
-self_modulate = Color(0, 0, 0, 1)
-show_behind_parent = true
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("2_uollk")
+[node name="SubMenuChar" type="TextureRect" parent="Depth0/TextNode/Edit"]
+modulate = Color(0.156863, 0.929412, 0.929412, 1)
+layout_mode = 0
+offset_left = 2.14286
+offset_top = 2.85714
+offset_right = 42.1429
+offset_bottom = 42.8571
+texture = ExtResource("9_t2e1q")
 expand_mode = 3
+stretch_mode = 3
 
 [node name="TextNode2" type="TextureButton" parent="Depth0"]
-self_modulate = Color(0.0901961, 0.596078, 1, 1)
+modulate = Color(0, 0.678315, 0.580085, 1)
 top_level = true
 texture_filter = 1
 use_parent_material = true
@@ -111,14 +112,15 @@ offset_top = 271.0
 offset_right = 257.0
 offset_bottom = 319.0
 scale = Vector2(2, 2)
-texture_normal = ExtResource("1_10ryq")
-texture_hover = ExtResource("2_uollk")
+texture_normal = ExtResource("5_mktot")
+texture_pressed = ExtResource("2_gtv3g")
+texture_hover = ExtResource("3_ki2cb")
 texture_click_mask = ExtResource("3_gjp1j")
 stretch_mode = 5
 script = ExtResource("8_lkw7p")
 
 [node name="TextChar" type="TextureRect" parent="Depth0/TextNode2"]
-modulate = Color(0.196078, 0.0980392, 1, 1)
+self_modulate = Color(5.05373e-07, 0.293859, 0.247129, 1)
 texture_filter = 3
 layout_mode = 0
 offset_left = 4.4
@@ -129,38 +131,33 @@ texture = ExtResource("6_c6aqm")
 expand_mode = 3
 stretch_mode = 3
 
-[node name="TextBorder" type="TextureRect" parent="Depth0/TextNode2"]
-self_modulate = Color(0.168627, 0.211765, 1, 1)
-layout_mode = 0
-offset_left = -0.199999
-offset_top = 0.199979
-offset_right = 47.8
-offset_bottom = 48.2
-texture = ExtResource("5_qg60t")
-
 [node name="Edit" type="TextureButton" parent="Depth0/TextNode2"]
 visible = false
-self_modulate = Color(1, 0.701961, 0, 1)
+self_modulate = Color(0.909804, 0.396078, 0.584314, 1)
 layout_mode = 0
 offset_left = -14.5
 offset_top = 32.5
 offset_right = 25.5
 offset_bottom = 72.5
 scale = Vector2(0.7, 0.7)
-texture_normal = ExtResource("9_t2e1q")
+texture_normal = ExtResource("5_mktot")
+texture_pressed = ExtResource("2_gtv3g")
+texture_hover = ExtResource("3_ki2cb")
 texture_click_mask = ExtResource("3_gjp1j")
 stretch_mode = 5
 
-[node name="SubMenuBG" type="TextureRect" parent="Depth0/TextNode2/Edit"]
-self_modulate = Color(0, 0, 0, 1)
-show_behind_parent = true
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("2_uollk")
+[node name="SubMenuChar" type="TextureRect" parent="Depth0/TextNode2/Edit"]
+modulate = Color(0.156863, 0.929412, 0.929412, 1)
+offset_left = 2.14286
+offset_top = 2.85714
+offset_right = 42.1429
+offset_bottom = 42.8571
+texture = ExtResource("9_t2e1q")
 expand_mode = 3
+stretch_mode = 3
 
 [node name="TextNode3" type="TextureButton" parent="Depth0"]
-self_modulate = Color(0.0901961, 0.596078, 1, 1)
+modulate = Color(0, 0.678315, 0.580085, 1)
 top_level = true
 texture_filter = 1
 use_parent_material = true
@@ -170,14 +167,15 @@ offset_top = 271.0
 offset_right = 511.0
 offset_bottom = 319.0
 scale = Vector2(2, 2)
-texture_normal = ExtResource("1_10ryq")
-texture_hover = ExtResource("2_uollk")
+texture_normal = ExtResource("5_mktot")
+texture_pressed = ExtResource("2_gtv3g")
+texture_hover = ExtResource("3_ki2cb")
 texture_click_mask = ExtResource("3_gjp1j")
 stretch_mode = 5
 script = ExtResource("11_esy6q")
 
 [node name="TextChar" type="TextureRect" parent="Depth0/TextNode3"]
-modulate = Color(0.196078, 0.0980392, 1, 1)
+modulate = Color(5.05373e-07, 0.293859, 0.247129, 1)
 texture_filter = 3
 layout_mode = 0
 offset_left = 4.4
@@ -188,88 +186,86 @@ texture = ExtResource("7_j4wuy")
 expand_mode = 3
 stretch_mode = 3
 
-[node name="TextBorder" type="TextureRect" parent="Depth0/TextNode3"]
-self_modulate = Color(0.168627, 0.211765, 1, 1)
-layout_mode = 0
-offset_left = -0.199999
-offset_top = 0.199979
-offset_right = 47.8
-offset_bottom = 48.2
-texture = ExtResource("5_qg60t")
-
 [node name="Descend" type="TextureButton" parent="Depth0/TextNode3"]
 visible = false
-self_modulate = Color(1, 0.701961, 0, 1)
-offset_left = 33.5
-offset_top = 33.0
-offset_right = 73.5
-offset_bottom = 73.0
+self_modulate = Color(0.909804, 0.396078, 0.584314, 1)
+offset_left = 30.0
+offset_top = 28.5
+offset_right = 76.0
+offset_bottom = 74.5
 scale = Vector2(0.7, 0.7)
-texture_normal = ExtResource("8_x88uo")
+texture_normal = ExtResource("5_mktot")
+texture_hover = ExtResource("3_ki2cb")
 texture_click_mask = ExtResource("3_gjp1j")
 stretch_mode = 5
-script = ExtResource("13_xb2iw")
 
-[node name="SubMenuBG" type="TextureRect" parent="Depth0/TextNode3/Descend"]
-self_modulate = Color(0, 0, 0, 1)
-show_behind_parent = true
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("2_uollk")
+[node name="SubMenuChar" type="TextureRect" parent="Depth0/TextNode3/Descend"]
+modulate = Color(0.156863, 0.929412, 0.929412, 1)
+layout_mode = 0
+offset_left = 2.85714
+offset_top = 4.28571
+offset_right = 42.8571
+offset_bottom = 44.2857
+texture = ExtResource("8_x88uo")
 expand_mode = 3
+stretch_mode = 3
 
 [node name="Edit" type="TextureButton" parent="Depth0/TextNode3"]
 visible = false
-self_modulate = Color(1, 0.701961, 0, 1)
-offset_left = -14.5
-offset_top = 32.5
-offset_right = 25.5
-offset_bottom = 72.5
+self_modulate = Color(0.909804, 0.396078, 0.584314, 1)
+offset_left = -17.5
+offset_top = 29.0
+offset_right = 28.5
+offset_bottom = 75.0
 scale = Vector2(0.7, 0.7)
-texture_normal = ExtResource("9_t2e1q")
+texture_normal = ExtResource("5_mktot")
+texture_hover = ExtResource("3_ki2cb")
 texture_click_mask = ExtResource("3_gjp1j")
 stretch_mode = 5
 
-[node name="SubMenuBG" type="TextureRect" parent="Depth0/TextNode3/Edit"]
-self_modulate = Color(0, 0, 0, 1)
-show_behind_parent = true
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("2_uollk")
+[node name="SubMenuChar" type="TextureRect" parent="Depth0/TextNode3/Edit"]
+modulate = Color(0.156863, 0.929412, 0.929412, 1)
+layout_mode = 0
+offset_left = 2.14286
+offset_top = 2.85714
+offset_right = 42.1429
+offset_bottom = 42.8571
+texture = ExtResource("9_t2e1q")
 expand_mode = 3
+stretch_mode = 3
 
 [node name="Arrow1" type="Line2D" parent="Depth0"]
-self_modulate = Color(0.0901961, 0.101961, 1, 1)
 visibility_layer = 7
 texture_filter = 3
 position = Vector2(122, 167)
 scale = Vector2(2, 2)
 points = PackedVector2Array(-9.5, 25, 29, -31.5)
 width = 1.0
+default_color = Color(5.05373e-07, 0.293859, 0.247129, 1)
 sharp_limit = 6.0
 round_precision = 1
 
 [node name="Arrow1Head" type="Line2D" parent="Depth0/Arrow1"]
 position = Vector2(0, 0.5)
-points = PackedVector2Array(22, -28, 29, -31.5, 29, -29.003, 29, -24)
+points = PackedVector2Array(22, -28, 30, -33, 29, -29.003, 29, -24)
 width = 1.0
-default_color = Color(0.0901961, 0.101961, 1, 1)
+default_color = Color(5.05373e-07, 0.293859, 0.247129, 1)
 
 [node name="Arrow2" type="Line2D" parent="Depth0"]
-self_modulate = Color(0.0901961, 0.101961, 1, 1)
 texture_filter = 3
 position = Vector2(122, 167)
 scale = Vector2(2, 2)
 points = PackedVector2Array(92, 23.5, 54, -33.5)
 width = 1.0
+default_color = Color(5.05373e-07, 0.293859, 0.247129, 1)
 sharp_limit = 6.0
 round_precision = 1
 
 [node name="Arrow2Head" type="Line2D" parent="Depth0/Arrow2"]
-position = Vector2(0, 0.5)
-points = PackedVector2Array(92, 15.5, 92, 23.5, 84.5, 21.5)
+position = Vector2(-1.5, -1)
+points = PackedVector2Array(92, 15.5, 94, 24.5, 84.5, 21.5)
 width = 1.0
-default_color = Color(0.0901961, 0.101961, 1, 1)
+default_color = Color(5.05373e-07, 0.293859, 0.247129, 1)
 
 [node name="Depth1" type="Control" parent="."]
 visible = false
@@ -288,13 +284,14 @@ self_modulate = Color(0.0901961, 0.596078, 1, 1)
 top_level = true
 texture_filter = 1
 use_parent_material = true
+layout_mode = 0
 offset_left = 463.0
 offset_top = 271.0
 offset_right = 511.0
 offset_bottom = 319.0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("1_10ryq")
-texture_hover = ExtResource("2_uollk")
+texture_hover = SubResource("CompressedTexture2D_1qu58")
 texture_click_mask = ExtResource("3_gjp1j")
 stretch_mode = 5
 script = ExtResource("14_qocsr")
@@ -318,11 +315,12 @@ offset_left = -0.199999
 offset_top = 0.199979
 offset_right = 47.8
 offset_bottom = 48.2
-texture = ExtResource("5_qg60t")
+texture = SubResource("CompressedTexture2D_1sdo0")
 
 [node name="Edit" type="TextureButton" parent="Depth1/Cluster1/TextNode3d1"]
 visible = false
 self_modulate = Color(1, 0.701961, 0, 1)
+layout_mode = 0
 offset_left = -14.5
 offset_top = 32.5
 offset_right = 25.5
@@ -335,14 +333,16 @@ stretch_mode = 5
 [node name="SubMenuBG" type="TextureRect" parent="Depth1/Cluster1/TextNode3d1/Edit"]
 self_modulate = Color(0, 0, 0, 1)
 show_behind_parent = true
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("2_uollk")
+texture = SubResource("CompressedTexture2D_1qu58")
 expand_mode = 3
 
 [node name="Ascend" type="TextureButton" parent="Depth1/Cluster1/TextNode3d1"]
 visible = false
 self_modulate = Color(1, 0.701961, 0, 1)
+layout_mode = 0
 offset_left = 61.5
 offset_top = 61.0
 offset_right = 101.5
@@ -359,7 +359,7 @@ show_behind_parent = true
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("2_uollk")
+texture = SubResource("CompressedTexture2D_1qu58")
 expand_mode = 3
 
 [node name="TextNode4" type="TextureButton" parent="Depth1/Cluster1"]
@@ -368,13 +368,14 @@ self_modulate = Color(0.106915, 0.252895, 0.214032, 1)
 top_level = true
 texture_filter = 1
 use_parent_material = true
+layout_mode = 0
 offset_left = 535.0
 offset_top = 48.0
 offset_right = 583.0
 offset_bottom = 96.0
 scale = Vector2(4, 4)
 texture_normal = ExtResource("1_10ryq")
-texture_hover = ExtResource("2_uollk")
+texture_hover = SubResource("CompressedTexture2D_1qu58")
 texture_click_mask = ExtResource("3_gjp1j")
 stretch_mode = 5
 script = ExtResource("15_83g8f")
@@ -398,7 +399,7 @@ offset_left = -0.199999
 offset_top = 0.199979
 offset_right = 47.8
 offset_bottom = 48.2
-texture = ExtResource("5_qg60t")
+texture = SubResource("CompressedTexture2D_1sdo0")
 
 [node name="Edit" type="TextureButton" parent="Depth1/Cluster1/TextNode4"]
 visible = false
@@ -416,9 +417,10 @@ stretch_mode = 5
 [node name="SubMenuBG" type="TextureRect" parent="Depth1/Cluster1/TextNode4/Edit"]
 self_modulate = Color(0, 0, 0, 1)
 show_behind_parent = true
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("2_uollk")
+texture = SubResource("CompressedTexture2D_1qu58")
 expand_mode = 3
 
 [node name="Arrow1" type="Line2D" parent="Depth1/Cluster1"]
@@ -441,8 +443,6 @@ default_color = Color(0.0901961, 0.101961, 1, 1)
 
 [connection signal="pressed" from="Depth0/TextNode" to="Depth0/TextNode" method="_on_pressed"]
 [connection signal="pressed" from="Depth0/TextNode2" to="Depth0/TextNode2" method="_on_pressed"]
-[connection signal="pressed" from="Depth0/TextNode3" to="Depth0/TextNode" method="_on_text_node_3_pressed"]
 [connection signal="pressed" from="Depth0/TextNode3" to="Depth0/TextNode3" method="_on_pressed"]
-[connection signal="pressed" from="Depth0/TextNode3/Descend" to="Depth0/TextNode" method="_on_descend_pressed"]
 [connection signal="pressed" from="Depth1/Cluster1/TextNode3d1" to="Depth1/Cluster1/TextNode3d1" method="_on_pressed"]
 [connection signal="pressed" from="Depth1/Cluster1/TextNode4" to="Depth0/TextNode" method="_on_text_node_4_pressed"]

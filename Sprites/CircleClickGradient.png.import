@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cg4h5gr5w2sg7"
-path="res://.godot/imported/Hover.png-fb05dea43d8c7beb8e25ae753f8a2a5c.ctex"
+uid="uid://dhay2l3xkdys"
+path="res://.godot/imported/CircleClickGradient.png-732166c19f83e018ad6e1fb639fd3a7b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Hover.png"
-dest_files=["res://.godot/imported/Hover.png-fb05dea43d8c7beb8e25ae753f8a2a5c.ctex"]
+source_file="res://Sprites/CircleClickGradient.png"
+dest_files=["res://.godot/imported/CircleClickGradient.png-732166c19f83e018ad6e1fb639fd3a7b.ctex"]
 
 [params]
 
