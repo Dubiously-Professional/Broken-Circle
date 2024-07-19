@@ -31,7 +31,8 @@ offset_right = 737.0
 offset_bottom = 88.0
 theme_override_fonts/font = ExtResource("2_olowl")
 theme_override_font_sizes/font_size = 18
-text = "Obviously, there isn't oxygen and it's unclear if there are materials on board that could cause you harm...
+text = "                  
+Obviously, there isn't oxygen and it's unclear if there are materials on board that could cause you harm...
 
                      
 I know. I know.
@@ -87,9 +88,5 @@ visibility_layer = 4
 position = Vector2(-12, 8)
 color = Color(0.0365313, 0.0981555, 0.0320369, 1)
 polygon = PackedVector2Array(-65, 237, -79, -264, 725, -256, 716, 245)
-
-[node name="Timer2" type="Timer" parent="."]
-wait_time = 250.0
-autostart = true
 
 [connection signal="timeout" from="TextBackground/Timer" to="TextBackground/Timer" method="_on_timeout"]

@@ -1,17 +1,19 @@
-[gd_scene load_steps=9 format=3 uid="uid://77ngbpkgrbkb"]
+[gd_scene load_steps=10 format=3 uid="uid://77ngbpkgrbkb"]
 
-[ext_resource type="Texture2D" uid="uid://cnihms442me1s" path="res://Assets/TextureMaps/CircleGradient.png" id="1_l05wn"]
-[ext_resource type="Texture2D" uid="uid://dhay2l3xkdys" path="res://Assets/TextureMaps/CircleClickGradient.png" id="2_uyxub"]
-[ext_resource type="Texture2D" uid="uid://b10w56ymj0y3f" path="res://Assets/TextureMaps/CircleHoverGradient.png" id="3_v4ocp"]
-[ext_resource type="BitMap" uid="uid://cauic0hcd7663" path="res://Assets/TextureMaps/CircleMask.png" id="4_dfvc2"]
-[ext_resource type="Texture2D" uid="uid://cwmfhq38om1rt" path="res://Assets/Sprites/Edit.png" id="5_nkc4e"]
-[ext_resource type="Texture2D" uid="uid://dbqve3xk7d51h" path="res://Assets/Sprites/Descend.png" id="6_yji6r"]
-[ext_resource type="Texture2D" uid="uid://bjvg4mex7t376" path="res://Assets/Sprites/Ideograms/Flow.png" id="7_b1mdp"]
-[ext_resource type="FontFile" uid="uid://dwcymbx5ivat2" path="res://Assets/Fonts/doves.ttf" id="8_q7fk3"]
+[ext_resource type="Texture2D" uid="uid://cnihms442me1s" path="res://Assets/TextureMaps/CircleGradient.png" id="1_cegpk"]
+[ext_resource type="Script" path="res://Scenes/Scripts/glyph.cs" id="1_wix65"]
+[ext_resource type="Texture2D" uid="uid://dhay2l3xkdys" path="res://Assets/TextureMaps/CircleClickGradient.png" id="2_2whlt"]
+[ext_resource type="Texture2D" uid="uid://b10w56ymj0y3f" path="res://Assets/TextureMaps/CircleHoverGradient.png" id="3_tjf3u"]
+[ext_resource type="BitMap" uid="uid://cauic0hcd7663" path="res://Assets/TextureMaps/CircleMask.png" id="4_c7rnf"]
+[ext_resource type="Texture2D" uid="uid://cwmfhq38om1rt" path="res://Assets/Sprites/Edit.png" id="5_ni0l8"]
+[ext_resource type="Texture2D" uid="uid://dbqve3xk7d51h" path="res://Assets/Sprites/Descend.png" id="6_1dxet"]
+[ext_resource type="Texture2D" uid="uid://bjvg4mex7t376" path="res://Assets/Sprites/Ideograms/Flow.png" id="7_6vp6g"]
+[ext_resource type="FontFile" uid="uid://dwcymbx5ivat2" path="res://Assets/Fonts/doves.ttf" id="8_vjwti"]
 
-[node name="Glyph000" type="Node2D"]
+[node name="Glyph" type="Node2D"]
 texture_filter = 1
 position = Vector2(44, 39)
+script = ExtResource("1_wix65")
 
 [node name="Control2" type="Control" parent="."]
 layout_mode = 3
@@ -59,10 +61,10 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
-texture_normal = ExtResource("1_l05wn")
-texture_pressed = ExtResource("2_uyxub")
-texture_hover = ExtResource("3_v4ocp")
-texture_click_mask = ExtResource("4_dfvc2")
+texture_normal = ExtResource("1_cegpk")
+texture_pressed = ExtResource("2_2whlt")
+texture_hover = ExtResource("3_tjf3u")
+texture_click_mask = ExtResource("4_c7rnf")
 stretch_mode = 3
 
 [node name="TextureRect" type="TextureRect" parent="Control2/Control/Control/TextureButton"]
@@ -99,10 +101,10 @@ anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 24.0
 grow_vertical = 2
-texture_normal = ExtResource("1_l05wn")
-texture_pressed = ExtResource("2_uyxub")
-texture_hover = ExtResource("3_v4ocp")
-texture_click_mask = ExtResource("4_dfvc2")
+texture_normal = ExtResource("1_cegpk")
+texture_pressed = ExtResource("2_2whlt")
+texture_hover = ExtResource("3_tjf3u")
+texture_click_mask = ExtResource("4_c7rnf")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -119,7 +121,7 @@ offset_right = 10.0
 offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("5_nkc4e")
+texture = ExtResource("5_ni0l8")
 expand_mode = 1
 
 [node name="Control4" type="Control" parent="Control2/Control"]
@@ -148,10 +150,10 @@ offset_top = -12.0
 offset_bottom = 12.0
 grow_horizontal = 0
 grow_vertical = 2
-texture_normal = ExtResource("1_l05wn")
-texture_pressed = ExtResource("2_uyxub")
-texture_hover = ExtResource("3_v4ocp")
-texture_click_mask = ExtResource("4_dfvc2")
+texture_normal = ExtResource("1_cegpk")
+texture_pressed = ExtResource("2_2whlt")
+texture_hover = ExtResource("3_tjf3u")
+texture_click_mask = ExtResource("4_c7rnf")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -168,7 +170,7 @@ offset_right = 10.0
 offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("6_yji6r")
+texture = ExtResource("6_1dxet")
 expand_mode = 1
 
 [node name="Control5" type="Control" parent="Control2/Control"]
@@ -185,10 +187,10 @@ anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 24.0
 grow_vertical = 2
-texture_normal = ExtResource("1_l05wn")
-texture_pressed = ExtResource("2_uyxub")
-texture_hover = ExtResource("3_v4ocp")
-texture_click_mask = ExtResource("4_dfvc2")
+texture_normal = ExtResource("1_cegpk")
+texture_pressed = ExtResource("2_2whlt")
+texture_hover = ExtResource("3_tjf3u")
+texture_click_mask = ExtResource("4_c7rnf")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -205,7 +207,7 @@ offset_right = 10.0
 offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("7_b1mdp")
+texture = ExtResource("7_6vp6g")
 expand_mode = 1
 
 [node name="Control6" type="Control" parent="Control2/Control"]
@@ -231,10 +233,10 @@ offset_top = -12.0
 offset_bottom = 12.0
 grow_horizontal = 0
 grow_vertical = 2
-texture_normal = ExtResource("1_l05wn")
-texture_pressed = ExtResource("2_uyxub")
-texture_hover = ExtResource("3_v4ocp")
-texture_click_mask = ExtResource("4_dfvc2")
+texture_normal = ExtResource("1_cegpk")
+texture_pressed = ExtResource("2_2whlt")
+texture_hover = ExtResource("3_tjf3u")
+texture_click_mask = ExtResource("4_c7rnf")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -251,7 +253,7 @@ offset_right = 10.0
 offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("6_yji6r")
+texture = ExtResource("6_1dxet")
 expand_mode = 1
 flip_v = true
 
@@ -285,7 +287,7 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_outline_color = Color(5.05373e-07, 0.293859, 0.247129, 1)
 theme_override_constants/outline_size = 5
-theme_override_fonts/normal_font = ExtResource("8_q7fk3")
+theme_override_fonts/normal_font = ExtResource("8_vjwti")
 theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 text = "[center]????[/center]"
