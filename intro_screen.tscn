@@ -1,14 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://dwo7phkmrxijy"]
+[gd_scene load_steps=8 format=3 uid="uid://ja4x42o1flej"]
 
-[ext_resource type="Script" path="res://Timer.cs" id="1_qnah6"]
-[ext_resource type="FontFile" uid="uid://7l0t5gk5lixg" path="res://Sprites/VT323-Regular.ttf" id="2_dcq5d"]
-[ext_resource type="Texture2D" uid="uid://cnihms442me1s" path="res://Sprites/CircleGradient.png" id="3_6tw42"]
-[ext_resource type="Texture2D" uid="uid://dhay2l3xkdys" path="res://Sprites/CircleClickGradient.png" id="4_txwp5"]
-[ext_resource type="Texture2D" uid="uid://b10w56ymj0y3f" path="res://Sprites/CircleHoverGradient.png" id="5_f6y81"]
-[ext_resource type="BitMap" uid="uid://cauic0hcd7663" path="res://Sprites/CircleMask.png" id="6_lm1e4"]
-[ext_resource type="Texture2D" uid="uid://bjvg4mex7t376" path="res://Sprites/Ideograms/Flow.png" id="7_vuobg"]
+[ext_resource type="Script" path="res://Timer.cs" id="1_rykxc"]
+[ext_resource type="FontFile" uid="uid://7l0t5gk5lixg" path="res://Sprites/VT323-Regular.ttf" id="2_olowl"]
+[ext_resource type="Texture2D" uid="uid://cnihms442me1s" path="res://Sprites/CircleGradient.png" id="3_l4mia"]
+[ext_resource type="Texture2D" uid="uid://dhay2l3xkdys" path="res://Sprites/CircleClickGradient.png" id="4_ppt8c"]
+[ext_resource type="Texture2D" uid="uid://b10w56ymj0y3f" path="res://Sprites/CircleHoverGradient.png" id="5_sf4ws"]
+[ext_resource type="BitMap" uid="uid://cauic0hcd7663" path="res://Sprites/CircleMask.png" id="6_dxnih"]
+[ext_resource type="Texture2D" uid="uid://bjvg4mex7t376" path="res://Sprites/Ideograms/Flow.png" id="7_haebv"]
 
-[node name="Main" type="Node2D"]
+[node name="IntroScreen" type="Node2D"]
 
 [node name="TextBackground" type="Polygon2D" parent="."]
 self_modulate = Color(0, 0, 0, 0.490196)
@@ -21,7 +21,7 @@ polygon = PackedVector2Array(-78, 93, -79, -264, 662, -263, 663, 95)
 [node name="Timer" type="Timer" parent="TextBackground"]
 wait_time = 0.2
 autostart = true
-script = ExtResource("1_qnah6")
+script = ExtResource("1_rykxc")
 
 [node name="Text" type="Label" parent="TextBackground/Timer"]
 modulate = Color(0.231373, 0.956863, 0.0823529, 1)
@@ -29,7 +29,7 @@ offset_left = 27.0
 offset_top = 47.0
 offset_right = 737.0
 offset_bottom = 88.0
-theme_override_fonts/font = ExtResource("2_dcq5d")
+theme_override_fonts/font = ExtResource("2_olowl")
 theme_override_font_sizes/font_size = 18
 text = "Obviously, there isn't oxygen and it's unclear if there are materials on board that could cause you harm...
 
@@ -45,6 +45,7 @@ I love you. I trust you. I miss you.
 autowrap_mode = 3
 visible_characters = 0
 visible_ratio = 0.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Start" type="TextureButton" parent="TextBackground/Timer"]
 visible = false
@@ -56,10 +57,10 @@ offset_top = 288.0
 offset_right = 605.0
 offset_bottom = 334.0
 scale = Vector2(3, 3)
-texture_normal = ExtResource("3_6tw42")
-texture_pressed = ExtResource("4_txwp5")
-texture_hover = ExtResource("5_f6y81")
-texture_click_mask = ExtResource("6_lm1e4")
+texture_normal = ExtResource("3_l4mia")
+texture_pressed = ExtResource("4_ppt8c")
+texture_hover = ExtResource("5_sf4ws")
+texture_click_mask = ExtResource("6_dxnih")
 
 [node name="StartChar" type="TextureRect" parent="TextBackground/Timer/Start"]
 self_modulate = Color(5.05373e-07, 0.293859, 0.247129, 1)
@@ -71,7 +72,7 @@ offset_left = 2.66667
 offset_top = 3.0
 offset_right = 35.1227
 offset_bottom = 34.582
-texture = ExtResource("7_vuobg")
+texture = ExtResource("7_haebv")
 stretch_mode = 3
 
 [node name="Background" type="Polygon2D" parent="."]
