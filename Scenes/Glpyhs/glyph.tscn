@@ -20,6 +20,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 64.0
 offset_bottom = 88.0
+metadata/_edit_use_anchors_ = true
 
 [node name="ButtonCanvas" type="Control" parent="ControlCanvas"]
 modulate = Color(0, 0.678315, 0.580085, 1)
@@ -31,6 +32,7 @@ offset_left = -32.0
 offset_right = 32.0
 offset_bottom = 64.0
 grow_horizontal = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="GlyphButtonCanvas" type="Control" parent="ControlCanvas/ButtonCanvas"]
 layout_mode = 1
@@ -45,6 +47,7 @@ offset_right = 24.0
 offset_bottom = 24.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="GlyphButton" type="TextureButton" parent="ControlCanvas/ButtonCanvas/GlyphButtonCanvas"]
 layout_mode = 1
@@ -66,6 +69,7 @@ texture_pressed = ExtResource("2_2whlt")
 texture_hover = ExtResource("3_tjf3u")
 texture_click_mask = ExtResource("4_c7rnf")
 stretch_mode = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="GlyphTexture" type="TextureRect" parent="ControlCanvas/ButtonCanvas/GlyphButtonCanvas/GlyphButton"]
 self_modulate = Color(5.05373e-07, 0.293859, 0.247129, 1)
@@ -83,6 +87,7 @@ offset_bottom = 23.0
 grow_horizontal = 2
 grow_vertical = 2
 stretch_mode = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="SubMenuCanvas" type="Control" parent="ControlCanvas/ButtonCanvas"]
 layout_mode = 1
@@ -97,6 +102,7 @@ offset_right = 32.0
 offset_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="TranslateButtonCanvas" type="Control" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas"]
 layout_mode = 1
