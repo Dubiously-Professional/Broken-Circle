@@ -11,6 +11,7 @@ public partial class Glyph : Node2D {
 	private string _labelText = "????";
 	private int _scaleNode = 1;
 	private bool _subMenuVisible;
+	private bool _actionButton;
 
 	[Export]
 	public int ScaleNode {
@@ -90,6 +91,16 @@ public partial class Glyph : Node2D {
 			}
 		}
 	}
+	[Export]
+	public bool ActionButton
+	{
+		get => _actionButton;
+		set
+		{
+			_actionButton = value;
+			_subMenuVisible = false;
+		}
+	}
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready() {
@@ -108,6 +119,13 @@ public partial class Glyph : Node2D {
 	public override void _Process(double delta) { }
 
 	private void OnGlyphButtonPressed() {
-		SubMenuVisible = !SubMenuVisible;
+		if (ActionButton)
+		{
+			// proceed to next scene
+		}
+		else
+		{
+			SubMenuVisible = !SubMenuVisible;
+		}
 	}
 }
