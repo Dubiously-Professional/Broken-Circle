@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bo7ekc5uusta5"
-path="res://.godot/imported/place.png-b4932315a44c1c8c895b4e48ebf44aca.ctex"
+uid="uid://b7hfykuopuv6s"
+path="res://.godot/imported/Object0101.png-67c11d479867f243f4ffe3e06dfbd208.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Ideograms/place.png"
-dest_files=["res://.godot/imported/place.png-b4932315a44c1c8c895b4e48ebf44aca.ctex"]
+source_file="res://Assets/Sprites/Ideograms/Object0101.png"
+dest_files=["res://.godot/imported/Object0101.png-67c11d479867f243f4ffe3e06dfbd208.ctex"]
 
 [params]
 
