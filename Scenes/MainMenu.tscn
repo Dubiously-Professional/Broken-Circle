@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://c2q3c4cgtjtp6"]
 
 [ext_resource type="PackedScene" uid="uid://drydumtl0cjh0" path="res://Scenes/background.tscn" id="1_to5eq"]
-[ext_resource type="PackedScene" uid="uid://b3c0mrc7q5y48" path="res://Scenes/Glyphs/Glyph001.tscn" id="2_2fdto"]
-[ext_resource type="PackedScene" uid="uid://70kh50s1fnc8" path="res://Scenes/Glyphs/Glyph003.tscn" id="3_hbfl6"]
-[ext_resource type="PackedScene" uid="uid://bxhlq5863m238" path="res://Scenes/Glyphs/Glyph010.tscn" id="4_pfp57"]
+[ext_resource type="PackedScene" uid="uid://b3c0mrc7q5y48" path="res://Scenes/Glyphs/Glyph0001-self.tscn" id="2_2fdto"]
+[ext_resource type="PackedScene" uid="uid://70kh50s1fnc8" path="res://Scenes/Glyphs/Glyph0003-affirm.tscn" id="3_hbfl6"]
+[ext_resource type="PackedScene" uid="uid://bxhlq5863m238" path="res://Scenes/Glyphs/Glyph0010-safe.tscn" id="4_pfp57"]
 
 [node name="AuthScreen" type="Node2D"]
 

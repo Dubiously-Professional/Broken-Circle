@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do305agfevba"
-path="res://.godot/imported/electricity.png-58c6a8aad4c963e7469e70432a28dd68.ctex"
+uid="uid://b1rugk4sbjv5y"
+path="res://.godot/imported/10011.png-8f181391de2b50702af14e3784957d35.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Ideograms/electricity.png"
-dest_files=["res://.godot/imported/electricity.png-58c6a8aad4c963e7469e70432a28dd68.ctex"]
+source_file="res://Assets/Sprites/Ideograms/10011.png"
+dest_files=["res://.godot/imported/10011.png-8f181391de2b50702af14e3784957d35.ctex"]
 
 [params]
 
