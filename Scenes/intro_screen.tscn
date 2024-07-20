@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ja4x42o1flej"]
+[gd_scene load_steps=5 format=3 uid="uid://ja4x42o1flej"]
 
 [ext_resource type="Script" path="res://Scenes/Scripts/TypingText.cs" id="1_3mav0"]
 [ext_resource type="FontFile" uid="uid://7l0t5gk5lixg" path="res://Assets/Fonts/VT323-Regular.ttf" id="2_olowl"]
 [ext_resource type="PackedScene" uid="uid://b8vgceqe576yt" path="res://Scenes/Glyphs/Glyph000.tscn" id="8_537ge"]
+[ext_resource type="AudioStream" uid="uid://df4kftdmudmp6" path="res://Assets/Sounds/33552__jobro__osd-text-10.wav" id="8_u1ww5"]
 
 [node name="IntroScreen" type="Node2D"]
 
@@ -47,5 +48,9 @@ metadata/_edit_use_anchors_ = true
 [node name="Glyph000" parent="TextBackground/TypingText" instance=ExtResource("8_537ge")]
 visible = false
 position = Vector2(576, 237)
+
+[node name="TextSound" type="AudioStreamPlayer2D" parent="TextBackground/TypingText"]
+position = Vector2(393, 214)
+stream = ExtResource("8_u1ww5")
 
 [connection signal="timeout" from="TextBackground/TypingText" to="TextBackground/TypingText" method="_on_timeout"]

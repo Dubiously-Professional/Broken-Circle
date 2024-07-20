@@ -19,6 +19,7 @@ public partial class TypingText : Timer
 	{
 		Label text = GetNode<Label>("Text");
 		int increase = Convert.ToInt16(GD.Randi() % 6);
+		
 		text.VisibleCharacters += increase;
 
 		if (text.VisibleRatio >= 1)
@@ -27,5 +28,15 @@ public partial class TypingText : Timer
 			start.Visible = true;
 			Stop();
 		}
+		
+		PlayTextSound(0.1f * increase / 6.0f);
+
+	}
+
+	private async void PlayTextSound(float duration) {
+		AudioStreamPlayer2D player = GetNode<AudioStreamPlayer2D>("TextSound");
+		player.Play(0.0f);
+		await ToSignal(GetTree().CreateTimer(duration), SceneTreeTimer.SignalName.Timeout);
+		player.Stop();
 	}
 }
