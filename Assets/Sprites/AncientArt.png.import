@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5bgiy3aitfrk"
-path="res://.godot/imported/metal.png-edd6cbeaac4b7045db90ea8f8848705c.ctex"
+uid="uid://ch40jmu7num6y"
+path="res://.godot/imported/AncientArt.png-37c8e90e29816f1c7934bf3b8b7058f5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Ideograms/metal.png"
-dest_files=["res://.godot/imported/metal.png-edd6cbeaac4b7045db90ea8f8848705c.ctex"]
+source_file="res://Assets/Sprites/AncientArt.png"
+dest_files=["res://.godot/imported/AncientArt.png-37c8e90e29816f1c7934bf3b8b7058f5.ctex"]
 
 [params]
 

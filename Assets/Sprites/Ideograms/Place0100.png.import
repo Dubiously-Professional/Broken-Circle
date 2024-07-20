@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jvx35tt2tn81"
-path="res://.godot/imported/cut.png-9c295ffc860e30edfbb27797d7c95bf0.ctex"
+uid="uid://bo7ekc5uusta5"
+path="res://.godot/imported/Place0100.png-a3f3aebf70f96649f7fe1e9aff311902.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Ideograms/cut.png"
-dest_files=["res://.godot/imported/cut.png-9c295ffc860e30edfbb27797d7c95bf0.ctex"]
+source_file="res://Assets/Sprites/Ideograms/Place0100.png"
+dest_files=["res://.godot/imported/Place0100.png-a3f3aebf70f96649f7fe1e9aff311902.ctex"]
 
 [params]
 

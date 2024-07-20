@@ -1,9 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://d4i00tyjex828"]
+[gd_scene load_steps=7 format=3 uid="uid://d4i00tyjex828"]
 
-[ext_resource type="PackedScene" uid="uid://drydumtl0cjh0" path="res://Scenes/background.tscn" id="1_gydx3"]
+[ext_resource type="PackedScene" uid="uid://bxhlq5863m238" path="res://Scenes/Glyphs/Glyph0010Safe.tscn" id="1_dnsrl"]
+[ext_resource type="PackedScene" uid="uid://b6gik6fh0n58f" path="res://Scenes/Glyphs/Glyph0032Not.tscn" id="2_61f38"]
+[ext_resource type="PackedScene" uid="uid://b3c0mrc7q5y48" path="res://Scenes/Glyphs/Glyph0001Self.tscn" id="2_w1awq"]
+[ext_resource type="PackedScene" uid="uid://c8ljayq1n8k0t" path="res://Scenes/Glyphs/Glyph0033Origin.tscn" id="5_7mflj"]
+[ext_resource type="PackedScene" uid="uid://c4vhrpteonpj0" path="res://Scenes/Glyphs/Glyph0021Move.tscn" id="6_67con"]
+[ext_resource type="PackedScene" uid="uid://cf0u0v3xyfdnf" path="res://Scenes/Glyphs/Glyph0100Place.tscn" id="6_obvph"]
 
-[node name="MainMenu" type="Node2D"]
+[node name="Status" type="Node2D"]
 
-[node name="Background" parent="." instance=ExtResource("1_gydx3")]
+[node name="Glyph0010Safe" parent="." instance=ExtResource("1_dnsrl")]
 
-[node name="CanvasGroup" type="CanvasGroup" parent="."]
+[node name="Glyph0032Not" parent="." instance=ExtResource("2_61f38")]
+
+[node name="Glyph0032Not2" parent="." instance=ExtResource("2_61f38")]
+
+[node name="Glyph0021Move" parent="." instance=ExtResource("6_67con")]
+
+[node name="Glyph0001Self" parent="." instance=ExtResource("2_w1awq")]
+
+[node name="Glyph0033Origin" parent="." instance=ExtResource("5_7mflj")]
+position = Vector2(80, 71)
+
+[node name="Glyph0100Place" parent="." instance=ExtResource("6_obvph")]
+position = Vector2(80, 71)
