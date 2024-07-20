@@ -98,7 +98,6 @@ stream = ExtResource("10_e314c")
 
 [node name="SubMenuCanvas" type="Control" parent="ControlCanvas/ButtonCanvas"]
 visible = false
-modulate = Color(1, 0, 0.996078, 1)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -115,6 +114,7 @@ mouse_filter = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="TranslateButtonCanvas" type="Control" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas"]
+modulate = Color(1, 0, 0.996078, 1)
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -156,6 +156,7 @@ expand_mode = 1
 
 [node name="DescendButtonCanvas" type="Control" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas"]
 visible = false
+modulate = Color(1, 0, 0.996078, 1)
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -206,6 +207,7 @@ expand_mode = 1
 
 [node name="FlowButtonCanvas" type="Control" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas"]
 visible = false
+modulate = Color(0, 0.464581, 0.395127, 1)
 layout_mode = 1
 anchors_preset = 0
 offset_right = 24.0
@@ -226,7 +228,7 @@ ignore_texture_size = true
 stretch_mode = 5
 
 [node name="FlowTexture" type="TextureRect" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas/FlowButtonCanvas/FlowButton"]
-self_modulate = Color(0.345098, 0, 0.34902, 1)
+self_modulate = Color(5.05373e-07, 0.293859, 0.247129, 1)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -244,6 +246,7 @@ expand_mode = 1
 
 [node name="AscendButtonCanvas" type="Control" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas"]
 visible = false
+modulate = Color(1, 0, 0.996078, 1)
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
