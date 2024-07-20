@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://775b44u126jx"
-path="res://.godot/imported/Know012.png-4911ee1bae5ae1369f1d634ebd0c7249.ctex"
+uid="uid://dpbc43n5ewywy"
+path="res://.godot/imported/Force0020.png-6de8657d27b32762dc5875c46735dcd1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Ideograms/Know012.png"
-dest_files=["res://.godot/imported/Know012.png-4911ee1bae5ae1369f1d634ebd0c7249.ctex"]
+source_file="res://Assets/Sprites/Ideograms/Force0020.png"
+dest_files=["res://.godot/imported/Force0020.png-6de8657d27b32762dc5875c46735dcd1.ctex"]
 
 [params]
 
