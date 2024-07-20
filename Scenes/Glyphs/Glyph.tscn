@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://77ngbpkgrbkb"]
+[gd_scene load_steps=10 format=3 uid="uid://77ngbpkgrbkb"]
 
 [ext_resource type="Texture2D" uid="uid://cnihms442me1s" path="res://Assets/TextureMaps/CircleGradient.png" id="1_cegpk"]
 [ext_resource type="Script" path="res://Scenes/Scripts/Glyph.cs" id="1_wix65"]
@@ -9,9 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://dbqve3xk7d51h" path="res://Assets/Sprites/Descend.png" id="6_1dxet"]
 [ext_resource type="Texture2D" uid="uid://bjvg4mex7t376" path="res://Assets/Sprites/Ideograms/Flow000.png" id="7_6vp6g"]
 [ext_resource type="FontFile" uid="uid://dwcymbx5ivat2" path="res://Assets/Fonts/doves.ttf" id="8_vjwti"]
-[ext_resource type="AudioStream" uid="uid://cnca65qg283g5" path="res://Assets/Sounds/615533__crash_358__sci-fi-ui-button-sound-010.wav" id="10_e314c"]
-[ext_resource type="AudioStream" uid="uid://c5xkxikwf6j8t" path="res://Assets/Sounds/615538__crash_358__sci-fi-ui-button-sound-015.wav" id="10_eu1jt"]
-[ext_resource type="AudioStream" uid="uid://c12w8dsacjk33" path="res://Assets/Sounds/338229__fachii__button-hover.wav" id="11_rhtry"]
 
 [node name="Glyph" type="Node2D"]
 texture_filter = 1
@@ -26,7 +23,6 @@ offset_bottom = 88.0
 metadata/_edit_use_anchors_ = true
 
 [node name="ButtonCanvas" type="Control" parent="ControlCanvas"]
-modulate = Color(0, 0.678315, 0.580085, 1)
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -38,6 +34,7 @@ grow_horizontal = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="GlyphButtonCanvas" type="Control" parent="ControlCanvas/ButtonCanvas"]
+modulate = Color(0.501469, 1, 0.892343, 1)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -92,12 +89,9 @@ grow_vertical = 2
 stretch_mode = 3
 metadata/_edit_use_anchors_ = true
 
-[node name="GlyphButtonClick" type="AudioStreamPlayer2D" parent="ControlCanvas/ButtonCanvas/GlyphButtonCanvas"]
-position = Vector2(25, 26)
-stream = ExtResource("10_e314c")
-
 [node name="SubMenuCanvas" type="Control" parent="ControlCanvas/ButtonCanvas"]
 visible = false
+modulate = Color(1, 0, 0.996078, 1)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -123,7 +117,6 @@ offset_right = 24.0
 grow_vertical = 0
 
 [node name="TranslateButton" type="TextureButton" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas/TranslateButtonCanvas"]
-self_modulate = Color(0.909804, 0.396078, 0.584314, 1)
 clip_contents = true
 layout_mode = 1
 anchors_preset = 9
@@ -138,6 +131,7 @@ ignore_texture_size = true
 stretch_mode = 5
 
 [node name="TranslateTexture" type="TextureRect" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas/TranslateButtonCanvas/TranslateButton"]
+self_modulate = Color(0.345098, 0, 0.34902, 1)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -167,7 +161,6 @@ grow_horizontal = 0
 grow_vertical = 0
 
 [node name="DescendButton" type="TextureButton" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas/DescendButtonCanvas"]
-self_modulate = Color(0.909804, 0.396078, 0.584314, 1)
 clip_contents = true
 layout_mode = 1
 anchors_preset = 6
@@ -188,6 +181,7 @@ ignore_texture_size = true
 stretch_mode = 5
 
 [node name="DescendTexture" type="TextureRect" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas/DescendButtonCanvas/DescendButton"]
+self_modulate = Color(0.345098, 0, 0.34902, 1)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -211,7 +205,6 @@ offset_right = 24.0
 offset_bottom = 24.0
 
 [node name="FlowButton" type="TextureButton" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas/FlowButtonCanvas"]
-self_modulate = Color(0.909804, 0.396078, 0.584314, 1)
 clip_contents = true
 layout_mode = 1
 anchors_preset = 9
@@ -226,6 +219,7 @@ ignore_texture_size = true
 stretch_mode = 5
 
 [node name="FlowTexture" type="TextureRect" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas/FlowButtonCanvas/FlowButton"]
+self_modulate = Color(0.345098, 0, 0.34902, 1)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -252,7 +246,6 @@ offset_bottom = 24.0
 grow_horizontal = 0
 
 [node name="AscendButton" type="TextureButton" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas/AscendButtonCanvas"]
-self_modulate = Color(0.909804, 0.396078, 0.584314, 1)
 clip_contents = true
 layout_mode = 1
 anchors_preset = 6
@@ -273,6 +266,7 @@ ignore_texture_size = true
 stretch_mode = 5
 
 [node name="AscendTexture" type="TextureRect" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas/AscendButtonCanvas/AscendButton"]
+self_modulate = Color(0.345098, 0, 0.34902, 1)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -288,15 +282,6 @@ grow_vertical = 2
 texture = ExtResource("6_1dxet")
 expand_mode = 1
 flip_v = true
-
-[node name="SubMenuButtonClick" type="AudioStreamPlayer2D" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas"]
-position = Vector2(32, 32)
-stream = ExtResource("10_eu1jt")
-
-[node name="HoverSound" type="AudioStreamPlayer2D" parent="ControlCanvas/ButtonCanvas"]
-position = Vector2(32, 31)
-stream = ExtResource("11_rhtry")
-volume_db = 11.954
 
 [node name="TranslationLabelCanvas" type="Control" parent="ControlCanvas"]
 layout_mode = 1
@@ -337,19 +322,12 @@ scroll_active = false
 autowrap_mode = 0
 language = "en_US"
 
-[connection signal="mouse_entered" from="ControlCanvas/ButtonCanvas/GlyphButtonCanvas/GlyphButton" to="ControlCanvas/ButtonCanvas/HoverSound" method="play"]
-[connection signal="mouse_exited" from="ControlCanvas/ButtonCanvas/GlyphButtonCanvas/GlyphButton" to="ControlCanvas/ButtonCanvas/HoverSound" method="play"]
+[node name="Window" type="Window" parent="ControlCanvas"]
+transparent_bg = true
+snap_2d_transforms_to_pixel = true
+snap_2d_vertices_to_pixel = true
+initial_position = 2
+size = Vector2i(480, 300)
+visible = false
+
 [connection signal="pressed" from="ControlCanvas/ButtonCanvas/GlyphButtonCanvas/GlyphButton" to="." method="OnGlyphButtonPressed"]
-[connection signal="pressed" from="ControlCanvas/ButtonCanvas/GlyphButtonCanvas/GlyphButton" to="ControlCanvas/ButtonCanvas/GlyphButtonCanvas/GlyphButtonClick" method="play" binds= [0.0]]
-[connection signal="mouse_entered" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/TranslateButtonCanvas/TranslateButton" to="ControlCanvas/ButtonCanvas/HoverSound" method="play"]
-[connection signal="mouse_exited" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/TranslateButtonCanvas/TranslateButton" to="ControlCanvas/ButtonCanvas/HoverSound" method="play"]
-[connection signal="pressed" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/TranslateButtonCanvas/TranslateButton" to="ControlCanvas/ButtonCanvas/SubMenuCanvas/SubMenuButtonClick" method="play"]
-[connection signal="mouse_entered" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/DescendButtonCanvas/DescendButton" to="ControlCanvas/ButtonCanvas/HoverSound" method="play"]
-[connection signal="mouse_exited" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/DescendButtonCanvas/DescendButton" to="ControlCanvas/ButtonCanvas/HoverSound" method="play"]
-[connection signal="pressed" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/DescendButtonCanvas/DescendButton" to="ControlCanvas/ButtonCanvas/SubMenuCanvas/SubMenuButtonClick" method="play"]
-[connection signal="mouse_entered" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/FlowButtonCanvas/FlowButton" to="ControlCanvas/ButtonCanvas/HoverSound" method="play"]
-[connection signal="mouse_exited" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/FlowButtonCanvas/FlowButton" to="ControlCanvas/ButtonCanvas/HoverSound" method="play"]
-[connection signal="pressed" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/FlowButtonCanvas/FlowButton" to="ControlCanvas/ButtonCanvas/SubMenuCanvas/SubMenuButtonClick" method="play"]
-[connection signal="mouse_entered" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/AscendButtonCanvas/AscendButton" to="ControlCanvas/ButtonCanvas/HoverSound" method="play"]
-[connection signal="mouse_exited" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/AscendButtonCanvas/AscendButton" to="ControlCanvas/ButtonCanvas/HoverSound" method="play"]
-[connection signal="pressed" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/AscendButtonCanvas/AscendButton" to="ControlCanvas/ButtonCanvas/SubMenuCanvas/SubMenuButtonClick" method="play"]
