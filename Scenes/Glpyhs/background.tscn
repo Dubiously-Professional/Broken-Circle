@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://drydumtl0cjh0"]
+
+[node name="Background" type="Node2D"]
+
+[node name="Background" type="Polygon2D" parent="."]
+visibility_layer = 16
+position = Vector2(62, 245)
+color = Color(0.133196, 0.133196, 0.133196, 0.588235)
+polygon = PackedVector2Array(-65, 237, -58, -218, 711, -248, 715, 200)
+
+[node name="BackgroundDepth" type="Polygon2D" parent="Background"]
+show_behind_parent = true
+visibility_layer = 4
+position = Vector2(-12, 8)
+color = Color(0.0365313, 0.0981555, 0.0320369, 1)
+polygon = PackedVector2Array(-65, 237, -79, -264, 725, -256, 716, 245)
