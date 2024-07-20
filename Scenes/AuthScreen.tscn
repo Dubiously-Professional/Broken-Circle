@@ -7,54 +7,69 @@
 
 [node name="AuthScreen" type="Node2D"]
 
-[node name="Background" parent="." instance=ExtResource("1_3be5q")]
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+top_level = true
 
-[node name="Glyph001" parent="." instance=ExtResource("1_0at2a")]
-position = Vector2(271, 184)
+[node name="CanvasGroup" type="CanvasGroup" parent="CanvasGroup"]
+self_modulate = Color(1, 1, 1, 0)
+show_behind_parent = true
 
-[node name="Glyph003" parent="." instance=ExtResource("2_31456")]
-position = Vector2(316, 120)
-
-[node name="Glyph010" parent="." instance=ExtResource("3_dwfq7")]
-position = Vector2(361, 184)
-
-[node name="Line2D" type="Line2D" parent="."]
+[node name="Line2D" type="Line2D" parent="CanvasGroup/CanvasGroup"]
+visibility_layer = 2
 points = PackedVector2Array(360, 236, 378, 208)
 width = 1.0
 default_color = Color(0.909804, 0.396078, 0.584314, 1)
 
-[node name="Line2D" type="Line2D" parent="Line2D"]
+[node name="Line2D" type="Line2D" parent="CanvasGroup/CanvasGroup/Line2D"]
+visibility_layer = 2
 position = Vector2(0, -48)
 rotation = -0.00453992
 points = PackedVector2Array(369.807, 263.682, 373.825, 259.7, 376.834, 257.713, 376.816, 261.713, 376.798, 265.713)
 width = 1.0
 default_color = Color(0.909804, 0.396078, 0.584314, 1)
 
-[node name="Line2D2" type="Line2D" parent="."]
+[node name="Line2D2" type="Line2D" parent="CanvasGroup/CanvasGroup"]
+visibility_layer = 2
 points = PackedVector2Array(426, 235, 406, 208)
 width = 1.0
 default_color = Color(0.909804, 0.396078, 0.584314, 1)
 
-[node name="Line2D" type="Line2D" parent="Line2D2"]
+[node name="Line2D" type="Line2D" parent="CanvasGroup/CanvasGroup/Line2D2"]
+visibility_layer = 2
 position = Vector2(52, -29)
 points = PackedVector2Array(368, 260, 370, 262, 374, 264, 374, 261, 372, 255)
 width = 1.0
 default_color = Color(0.909804, 0.396078, 0.584314, 1)
 
-[node name="Line2D3" type="Line2D" parent="."]
+[node name="Line2D3" type="Line2D" parent="CanvasGroup/CanvasGroup"]
+visibility_layer = 2
 texture_filter = 1
 position = Vector2(0, -3)
 points = PackedVector2Array(414, 258, 410, 258, 370, 258)
 width = 1.0
 default_color = Color(0.909804, 0.396078, 0.584314, 1)
 
-[node name="Line2D" type="Line2D" parent="Line2D3"]
+[node name="Line2D" type="Line2D" parent="CanvasGroup/CanvasGroup/Line2D3"]
+visibility_layer = 2
 points = PackedVector2Array(374, 255, 372, 256, 370, 258, 374, 261, 375, 261)
 width = 1.0
 default_color = Color(0.909804, 0.396078, 0.584314, 1)
 
-[node name="Line2D2" type="Line2D" parent="Line2D3"]
+[node name="Line2D2" type="Line2D" parent="CanvasGroup/CanvasGroup/Line2D3"]
+visibility_layer = 2
 position = Vector2(-1, 0)
 points = PackedVector2Array(410, 255, 412, 255, 415, 258, 414, 259, 409, 261)
 width = 1.0
 default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[node name="Glyph001" parent="CanvasGroup" instance=ExtResource("1_0at2a")]
+position = Vector2(271, 184)
+
+[node name="Glyph003" parent="CanvasGroup" instance=ExtResource("2_31456")]
+position = Vector2(316, 120)
+
+[node name="Glyph010" parent="CanvasGroup" instance=ExtResource("3_dwfq7")]
+position = Vector2(361, 184)
+
+[node name="Background" parent="." instance=ExtResource("1_3be5q")]
+show_behind_parent = true
