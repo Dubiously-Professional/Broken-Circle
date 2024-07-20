@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8vgceqe576yt"]
+
+[ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="1_a8oc3"]
+[ext_resource type="Texture2D" uid="uid://d2ljcqmh48811" path="res://Assets/Sprites/Ideograms/Self001.png" id="2_4yy23"]
+
+[node name="Glyph000" type="Node2D"]
+
+[node name="Glyph" parent="." instance=ExtResource("1_a8oc3")]
+ScaleNode = 2
+GlyphIcon = ExtResource("2_4yy23")

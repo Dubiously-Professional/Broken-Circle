@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc4u3hxr682iw"
-path="res://.godot/imported/affirm.png-fd824bb483e99879b896e7d83843766e.ctex"
+uid="uid://bol3gawloxiic"
+path="res://.godot/imported/Contain002.png-fa3fa2dc0c168a039790432d4ca3ad5b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Ideograms/affirm.png"
-dest_files=["res://.godot/imported/affirm.png-fd824bb483e99879b896e7d83843766e.ctex"]
+source_file="res://Assets/Sprites/Ideograms/Contain002.png"
+dest_files=["res://.godot/imported/Contain002.png-fa3fa2dc0c168a039790432d4ca3ad5b.ctex"]
 
 [params]
 

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://70kh50s1fnc8"]
+
+[ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="1_3lvf2"]
+[ext_resource type="Texture2D" uid="uid://bc4u3hxr682iw" path="res://Assets/Sprites/Ideograms/Affirm003.png" id="2_bhowf"]
+
+[node name="Glyph003" type="Node2D"]
+
+[node name="Glyph" parent="." instance=ExtResource("1_3lvf2")]
+GlyphIcon = ExtResource("2_bhowf")
+FlowVisible = true

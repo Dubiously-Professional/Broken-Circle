@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2ljcqmh48811"
-path="res://.godot/imported/Self.png-561b29b6f90ab9c823c687ca2daa8a5a.ctex"
+path="res://.godot/imported/Self001.png-e1157c3323d197cad5b98458f797bc05.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Ideograms/Self.png"
-dest_files=["res://.godot/imported/Self.png-561b29b6f90ab9c823c687ca2daa8a5a.ctex"]
+source_file="res://Assets/Sprites/Ideograms/Self001.png"
+dest_files=["res://.godot/imported/Self001.png-e1157c3323d197cad5b98458f797bc05.ctex"]
 
 [params]
 

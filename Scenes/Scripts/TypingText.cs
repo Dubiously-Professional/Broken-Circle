@@ -1,4 +1,4 @@
-using System;
+	using System;
 using Godot;
 
 namespace BrokenCircle.Scenes.Scripts;
@@ -23,7 +23,7 @@ public partial class TypingText : Timer
 
 		if (text.VisibleRatio >= 1)
 		{
-			TextureButton start = GetNode<TextureButton>("Start");
+			Node2D start = GetNode<Node2D>("Glyph000");
 			start.Visible = true;
 			Stop();
 		}

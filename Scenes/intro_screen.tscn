@@ -1,12 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://ja4x42o1flej"]
+[gd_scene load_steps=4 format=3 uid="uid://ja4x42o1flej"]
 
 [ext_resource type="Script" path="res://Scenes/Scripts/TypingText.cs" id="1_3mav0"]
 [ext_resource type="FontFile" uid="uid://7l0t5gk5lixg" path="res://Assets/Fonts/VT323-Regular.ttf" id="2_olowl"]
-[ext_resource type="Texture2D" uid="uid://cnihms442me1s" path="res://Assets/TextureMaps/CircleGradient.png" id="3_l4mia"]
-[ext_resource type="Texture2D" uid="uid://dhay2l3xkdys" path="res://Assets/TextureMaps/CircleClickGradient.png" id="4_ppt8c"]
-[ext_resource type="Texture2D" uid="uid://b10w56ymj0y3f" path="res://Assets/TextureMaps/CircleHoverGradient.png" id="5_sf4ws"]
-[ext_resource type="BitMap" uid="uid://cauic0hcd7663" path="res://Assets/TextureMaps/CircleMask.png" id="6_dxnih"]
-[ext_resource type="Texture2D" uid="uid://bjvg4mex7t376" path="res://Assets/Sprites/Ideograms/Flow.png" id="7_haebv"]
+[ext_resource type="PackedScene" uid="uid://b8vgceqe576yt" path="res://Scenes/Glyphs/Glyph000.tscn" id="8_537ge"]
 
 [node name="IntroScreen" type="Node2D"]
 
@@ -48,32 +44,8 @@ visible_characters = 0
 visible_ratio = 0.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Start" type="TextureButton" parent="TextBackground/TypingText"]
+[node name="Glyph000" parent="TextBackground/TypingText" instance=ExtResource("8_537ge")]
 visible = false
-modulate = Color(0, 0.678315, 0.580085, 1)
-top_level = true
-texture_filter = 1
-offset_left = 559.0
-offset_top = 288.0
-offset_right = 605.0
-offset_bottom = 334.0
-scale = Vector2(3, 3)
-texture_normal = ExtResource("3_l4mia")
-texture_pressed = ExtResource("4_ppt8c")
-texture_hover = ExtResource("5_sf4ws")
-texture_click_mask = ExtResource("6_dxnih")
-
-[node name="StartChar" type="TextureRect" parent="TextBackground/TypingText/Start"]
-self_modulate = Color(5.05373e-07, 0.293859, 0.247129, 1)
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.164
-anchor_bottom = 0.183
-offset_left = 2.66667
-offset_top = 3.0
-offset_right = 35.1227
-offset_bottom = 34.582
-texture = ExtResource("7_haebv")
-stretch_mode = 3
+position = Vector2(576, 237)
 
 [connection signal="timeout" from="TextBackground/TypingText" to="TextBackground/TypingText" method="_on_timeout"]
