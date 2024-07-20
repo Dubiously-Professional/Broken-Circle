@@ -89,6 +89,7 @@ offset_right = 23.0
 offset_bottom = 23.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("8_p0tqf")
 stretch_mode = 3
 metadata/_edit_use_anchors_ = true
 

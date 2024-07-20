@@ -24,6 +24,7 @@ public partial class Glyph : Node2D {
     private bool _descendVisible;
     private bool _flowVisible;
     private Texture2D _glyphIcon;
+    private Glyphs.GlyphType _glyphType;
     private string _labelText = "????";
     private int _scaleNode = 1;
     private bool _subMenuVisible;
@@ -39,8 +40,7 @@ public partial class Glyph : Node2D {
         }
     }
 
-    [Export]
-    public Texture2D GlyphIcon {
+    private Texture2D GlyphIcon {
         get => _glyphIcon;
         set {
             _glyphIcon = value;
@@ -95,8 +95,7 @@ public partial class Glyph : Node2D {
         }
     }
 
-    [Export]
-    public string LabelText {
+    private string LabelText {
         get => _labelText;
         set {
             _labelText = value;
@@ -116,8 +115,22 @@ public partial class Glyph : Node2D {
         }
     }
 
+    [Export]
+    public Glyphs.GlyphType GlyphType {
+        get => _glyphType;
+        set {
+            _glyphType = value;
+            if (IsNodeReady()) {
+                GlyphIcon = Glyphs.Instance.GetGlyphIcon(value);
+                LabelText = Glyphs.Instance.GetGlyphTranslation(value);
+            }
+        }
+    }
+
     // Called when the node enters the scene tree for the first time.
     public override void _Ready() {
+        GlyphIcon = Glyphs.Instance.GetGlyphIcon(_glyphType);
+        LabelText = Glyphs.Instance.GetGlyphTranslation(_glyphType);
         GetNode<Control>("ControlCanvas/ButtonCanvas/SubMenuCanvas").Visible = _subMenuVisible;
         GetNode<Control>("ControlCanvas/ButtonCanvas/SubMenuCanvas/FlowButtonCanvas").Visible = _flowVisible;
         GetNode<Control>("ControlCanvas/ButtonCanvas/SubMenuCanvas/AscendButtonCanvas").Visible = _ascendVisible;
@@ -127,6 +140,7 @@ public partial class Glyph : Node2D {
         GetNode<Control>("ControlCanvas").Scale = new Vector2(_scaleNode, _scaleNode);
         GetNode<TextureRect>("ControlCanvas/ButtonCanvas/GlyphButtonCanvas/GlyphButton/GlyphTexture").Texture =
             _glyphIcon;
+        Glyphs.Instance.GlyphTranslationChanged += OnTranslationChanged;
     }
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -154,5 +168,11 @@ public partial class Glyph : Node2D {
 
     private void OnAscendPressed() {
         EmitSignal(SignalName.AscendPressed);
+    }
+
+    private void OnTranslationChanged(Glyphs.GlyphType glyphType, string translation) {
+        if (glyphType == GlyphType) {
+            LabelText = translation;
+        }
     }
 }
