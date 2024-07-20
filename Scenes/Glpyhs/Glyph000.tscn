@@ -6,6 +6,7 @@
 [node name="Glyph000" type="Node2D"]
 
 [node name="Glyph" parent="." instance=ExtResource("1_a8oc3")]
+position = Vector2(-207, 148)
 GlyphIcon = ExtResource("2_u1b4v")
 ScaleNode = 0
 SubMenuVisible = true
