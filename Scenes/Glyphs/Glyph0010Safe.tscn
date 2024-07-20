@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="1_5dhf3"]
 [ext_resource type="Texture2D" uid="uid://c4wflk17p24gi" path="res://Assets/Sprites/Ideograms/Safe0010.png" id="2_06jan"]
 
-[node name="Glyph010" type="Node2D"]
+[node name="Glyph0010Safe" type="Node2D"]
 
 [node name="Glyph" parent="." instance=ExtResource("1_5dhf3")]
 GlyphIcon = ExtResource("2_06jan")
