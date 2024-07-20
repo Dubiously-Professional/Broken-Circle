@@ -3,38 +3,94 @@ using Godot;
 namespace BrokenCircle.Scenes.Scripts;
 
 [Tool]
-public partial class Glyph : Node2D
-{
-    [Export] 
-    public Texture2D GlyphIcon;
+public partial class Glyph : Node2D {
+    private bool _ascendVisible;
+    private bool _descendVisible;
+    private bool _flowVisible;
+    private Texture2D _glyphIcon;
+    private string _labelText = "????";
+    private bool _subMenuVisible;
+
     [Export] public int ScaleNode = 1;
-    [Export] public bool SubMenuVisible = false;
-    [Export] public bool FlowVisible = false;
-    [Export] public bool AscendVisible = false;
-    [Export] public bool DescendVisible = false;
+
     [Export]
-    public string LabelText { get; set; }
-	
+    public Texture2D GlyphIcon {
+        get => _glyphIcon;
+        set {
+            _glyphIcon = value;
+            if (IsNodeReady()) {
+                GetNode<TextureRect>("ControlCanvas/ButtonCanvas/GlyphButtonCanvas/GlyphButton/GlyphTexture").Texture =
+                    value;
+            }
+        }
+    }
+
+    [Export]
+    public bool SubMenuVisible {
+        get => _subMenuVisible;
+        set {
+            _subMenuVisible = value;
+            if (IsNodeReady()) {
+                GetNode<Control>("ControlCanvas/ButtonCanvas/SubMenuCanvas").Visible = value;
+            }
+        }
+    }
+
+    [Export]
+    public bool FlowVisible {
+        get => _flowVisible;
+        set {
+            _flowVisible = value;
+            if (IsNodeReady()) {
+                GetNode<Control>("ControlCanvas/ButtonCanvas/SubMenuCanvas/FlowButtonCanvas").Visible = value;
+            }
+        }
+    }
+
+    [Export]
+    public bool AscendVisible {
+        get => _ascendVisible;
+        set {
+            _ascendVisible = value;
+            if (IsNodeReady()) {
+                GetNode<Control>("ControlCanvas/ButtonCanvas/SubMenuCanvas/AscendButtonCanvas").Visible = value;
+            }
+        }
+    }
+
+    [Export]
+    public bool DescendVisible {
+        get => _descendVisible;
+        set {
+            _descendVisible = value;
+            if (IsNodeReady()) {
+                GetNode<Control>("ControlCanvas/ButtonCanvas/SubMenuCanvas/DescendButtonCanvas").Visible = value;
+            }
+        }
+    }
+
+    [Export]
+    public string LabelText {
+        get => _labelText;
+        set {
+            _labelText = value;
+            if (IsNodeReady()) {
+                GetNode<RichTextLabel>("ControlCanvas/TranslationLabelCanvas/TranslationLabel").Text =
+                    $"[center]{value}[/center]";
+            }
+        }
+    }
+
     // Called when the node enters the scene tree for the first time.
-    public override void _Ready()
-    {
-        TextureRect glyphRect =
-            GetNode<TextureRect>("ControlCanvas/ButtonCanvas/GlyphButtonCanvas/GlyphButton/GlyphTexture");
-        glyphRect.Texture = GlyphIcon;
+    public override void _Ready() {
+        GetNode<Control>("ControlCanvas/ButtonCanvas/SubMenuCanvas").Visible = _subMenuVisible;
+        GetNode<Control>("ControlCanvas/ButtonCanvas/SubMenuCanvas/FlowButtonCanvas").Visible = _flowVisible;
+        GetNode<Control>("ControlCanvas/ButtonCanvas/SubMenuCanvas/AscendButtonCanvas").Visible = _ascendVisible;
+        GetNode<Control>("ControlCanvas/ButtonCanvas/SubMenuCanvas/DescendButtonCanvas").Visible = _descendVisible;
+        GetNode<RichTextLabel>("ControlCanvas/TranslationLabelCanvas/TranslationLabel").Text =
+            $"[center]{_labelText}[/center]";
     }
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.
-    public override void _Process(double delta)
-    {
-		
-        Control subMenu = GetNode<Control>("ControlCanvas/ButtonCanvas/SubMenuCanvas");
-        subMenu.Visible = SubMenuVisible;
-        Control flowButtonCanvas = GetNode<Control>("ControlCanvas/ButtonCanvas/SubMenuCanvas/FlowButtonCanvas");
-        flowButtonCanvas.Visible = FlowVisible;
-        Control ascendButtonCanvas = GetNode<Control>("ControlCanvas/ButtonCanvas/SubMenuCanvas/AscendButtonCanvas");
-        ascendButtonCanvas.Visible = AscendVisible;
-        Control descendButtonCanvas = GetNode<Control>("ControlCanvas/ButtonCanvas/SubMenuCanvas/DescendButtonCanvas");
-        descendButtonCanvas.Visible = DescendVisible;
-		
-    }
+    public override void _Process(double delta) { }
 }
