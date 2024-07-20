@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://c0app14j8ys6p"]
+[gd_scene load_steps=5 format=3 uid="uid://c4ir5ir3q5v1x"]
 
 [ext_resource type="PackedScene" uid="uid://b3c0mrc7q5y48" path="res://Scenes/Glyphs/Glyph001.tscn" id="1_0at2a"]
 [ext_resource type="PackedScene" uid="uid://drydumtl0cjh0" path="res://Scenes/Background.tscn" id="1_3be5q"]
