@@ -23,11 +23,13 @@ public partial class TypingText : Timer {
         if (text.VisibleRatio >= 1) {
             Node2D start = GetNode<Node2D>("Glyph000");
             start.Visible = true;
+            AudioStreamPlayer2D player = GetNode<AudioStreamPlayer2D>("ButtonAppearSound");
+            player.Play();
             Stop();
+        } else {
+            string nextChars = text.Text.Substring(startingVisibleCharacters, increase);
+            PlayTextSound(0.1f * nextChars.Count(c => !char.IsWhiteSpace(c)) / 6.0f);
         }
-
-        string nextChars = text.Text.Substring(startingVisibleCharacters, increase);
-        PlayTextSound(0.1f * nextChars.Count(c => !char.IsWhiteSpace(c)) / 6.0f);
     }
 
     private async void PlayTextSound(float duration) {

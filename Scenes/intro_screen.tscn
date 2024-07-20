@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ja4x42o1flej"]
+[gd_scene load_steps=6 format=3 uid="uid://ja4x42o1flej"]
 
 [ext_resource type="Script" path="res://Scenes/Scripts/TypingText.cs" id="1_3mav0"]
 [ext_resource type="FontFile" uid="uid://7l0t5gk5lixg" path="res://Assets/Fonts/VT323-Regular.ttf" id="2_olowl"]
+[ext_resource type="AudioStream" uid="uid://5j7w8hyi7k2s" path="res://Assets/Sounds/615525__crash_358__sci-fi-ui-button-sound-004.wav" id="5_tn0jp"]
 [ext_resource type="PackedScene" uid="uid://b8vgceqe576yt" path="res://Scenes/Glyphs/Glyph000.tscn" id="8_537ge"]
 [ext_resource type="AudioStream" uid="uid://df4kftdmudmp6" path="res://Assets/Sounds/33552__jobro__osd-text-10.wav" id="8_u1ww5"]
 
@@ -52,5 +53,9 @@ position = Vector2(576, 237)
 [node name="TextSound" type="AudioStreamPlayer2D" parent="TextBackground/TypingText"]
 position = Vector2(393, 214)
 stream = ExtResource("8_u1ww5")
+
+[node name="ButtonAppearSound" type="AudioStreamPlayer2D" parent="TextBackground/TypingText"]
+position = Vector2(686, 333)
+stream = ExtResource("5_tn0jp")
 
 [connection signal="timeout" from="TextBackground/TypingText" to="TextBackground/TypingText" method="_on_timeout"]

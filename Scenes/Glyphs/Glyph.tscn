@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://77ngbpkgrbkb"]
+[gd_scene load_steps=12 format=3 uid="uid://77ngbpkgrbkb"]
 
 [ext_resource type="Texture2D" uid="uid://cnihms442me1s" path="res://Assets/TextureMaps/CircleGradient.png" id="1_cegpk"]
 [ext_resource type="Script" path="res://Scenes/Scripts/Glyph.cs" id="1_wix65"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://dbqve3xk7d51h" path="res://Assets/Sprites/Descend.png" id="6_1dxet"]
 [ext_resource type="Texture2D" uid="uid://bjvg4mex7t376" path="res://Assets/Sprites/Ideograms/Flow000.png" id="7_6vp6g"]
 [ext_resource type="FontFile" uid="uid://dwcymbx5ivat2" path="res://Assets/Fonts/doves.ttf" id="8_vjwti"]
+[ext_resource type="AudioStream" uid="uid://cnca65qg283g5" path="res://Assets/Sounds/615533__crash_358__sci-fi-ui-button-sound-010.wav" id="10_e314c"]
+[ext_resource type="AudioStream" uid="uid://c5xkxikwf6j8t" path="res://Assets/Sounds/615538__crash_358__sci-fi-ui-button-sound-015.wav" id="10_eu1jt"]
 
 [node name="Glyph" type="Node2D"]
 texture_filter = 1
@@ -89,6 +91,10 @@ grow_vertical = 2
 stretch_mode = 3
 metadata/_edit_use_anchors_ = true
 
+[node name="GlyphButtonClick" type="AudioStreamPlayer2D" parent="ControlCanvas/ButtonCanvas/GlyphButtonCanvas"]
+position = Vector2(25, 26)
+stream = ExtResource("10_e314c")
+
 [node name="SubMenuCanvas" type="Control" parent="ControlCanvas/ButtonCanvas"]
 visible = false
 layout_mode = 1
@@ -103,6 +109,7 @@ offset_right = 32.0
 offset_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="TranslateButtonCanvas" type="Control" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas"]
@@ -281,6 +288,9 @@ texture = ExtResource("6_1dxet")
 expand_mode = 1
 flip_v = true
 
+[node name="SubMenuButtonClick" type="AudioStreamPlayer2D" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas"]
+stream = ExtResource("10_eu1jt")
+
 [node name="TranslationLabelCanvas" type="Control" parent="ControlCanvas"]
 layout_mode = 1
 anchors_preset = 7
@@ -319,3 +329,10 @@ fit_content = true
 scroll_active = false
 autowrap_mode = 0
 language = "en_US"
+
+[connection signal="pressed" from="ControlCanvas/ButtonCanvas/GlyphButtonCanvas/GlyphButton" to="." method="OnGlyphButtonPressed"]
+[connection signal="pressed" from="ControlCanvas/ButtonCanvas/GlyphButtonCanvas/GlyphButton" to="ControlCanvas/ButtonCanvas/GlyphButtonCanvas/GlyphButtonClick" method="play" binds= [0.0]]
+[connection signal="pressed" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/TranslateButtonCanvas/TranslateButton" to="ControlCanvas/ButtonCanvas/SubMenuCanvas/SubMenuButtonClick" method="play"]
+[connection signal="pressed" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/DescendButtonCanvas/DescendButton" to="ControlCanvas/ButtonCanvas/SubMenuCanvas/SubMenuButtonClick" method="play"]
+[connection signal="pressed" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/FlowButtonCanvas/FlowButton" to="ControlCanvas/ButtonCanvas/SubMenuCanvas/SubMenuButtonClick" method="play"]
+[connection signal="pressed" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/AscendButtonCanvas/AscendButton" to="ControlCanvas/ButtonCanvas/SubMenuCanvas/SubMenuButtonClick" method="play"]
