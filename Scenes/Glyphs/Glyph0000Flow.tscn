@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://df5sv32a2r1fy"]
+[gd_scene load_steps=3 format=3 uid="uid://cy2as104gsba0"]
 
 [ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="1_k0ggh"]
 [ext_resource type="Texture2D" uid="uid://bjvg4mex7t376" path="res://Assets/Sprites/Ideograms/Flow0000.png" id="2_5km5j"]
 
-[node name="Glyph001" type="Node2D"]
+[node name="Glyph0000Flow" type="Node2D"]
 
 [node name="Glyph" parent="." instance=ExtResource("1_k0ggh")]
 GlyphIcon = ExtResource("2_5km5j")

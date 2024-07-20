@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://c4ir5ir3q5v1x"]
 
-[ext_resource type="PackedScene" uid="uid://b3c0mrc7q5y48" path="res://Scenes/Glyphs/Glyph0001-self.tscn" id="1_0at2a"]
-[ext_resource type="PackedScene" uid="uid://drydumtl0cjh0" path="res://Scenes/background.tscn" id="1_3be5q"]
-[ext_resource type="PackedScene" uid="uid://70kh50s1fnc8" path="res://Scenes/Glyphs/Glyph0003-affirm.tscn" id="2_31456"]
-[ext_resource type="PackedScene" uid="uid://bxhlq5863m238" path="res://Scenes/Glyphs/Glyph0010-safe.tscn" id="3_dwfq7"]
+[ext_resource type="PackedScene" uid="uid://drydumtl0cjh0" path="res://Scenes/Background.tscn" id="1_3be5q"]
+[ext_resource type="PackedScene" uid="uid://b3c0mrc7q5y48" path="res://Scenes/Glyphs/Glyph0001Self.tscn" id="2_n36xg"]
+[ext_resource type="PackedScene" uid="uid://70kh50s1fnc8" path="res://Scenes/Glyphs/Glyph0003Affirm.tscn" id="3_4rkgu"]
+[ext_resource type="PackedScene" uid="uid://bxhlq5863m238" path="res://Scenes/Glyphs/Glyph0010Safe.tscn" id="4_lunlp"]
 
 [node name="AuthScreen2" type="Node2D"]
 
@@ -62,13 +62,13 @@ points = PackedVector2Array(410, 255, 412, 255, 415, 258, 414, 259, 409, 261)
 width = 1.0
 default_color = Color(0.909804, 0.396078, 0.584314, 1)
 
-[node name="Glyph001" parent="CanvasGroup" instance=ExtResource("1_0at2a")]
+[node name="Glyph0001Self" parent="CanvasGroup" instance=ExtResource("2_n36xg")]
 position = Vector2(271, 184)
 
-[node name="Glyph003" parent="CanvasGroup" instance=ExtResource("2_31456")]
-position = Vector2(316, 120)
+[node name="Glyph0003Affirm" parent="CanvasGroup" instance=ExtResource("3_4rkgu")]
+position = Vector2(316, 119)
 
-[node name="Glyph010" parent="CanvasGroup" instance=ExtResource("3_dwfq7")]
+[node name="Glyph0010Safe" parent="CanvasGroup" instance=ExtResource("4_lunlp")]
 position = Vector2(361, 184)
 
 [node name="Background" parent="." instance=ExtResource("1_3be5q")]
