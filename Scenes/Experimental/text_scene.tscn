@@ -15,7 +15,7 @@
 [ext_resource type="Script" path="res://Scenes/Experimental/TextNode3.cs" id="11_esy6q"]
 [ext_resource type="Script" path="res://Scenes/Experimental/TextNode3d1.cs" id="14_qocsr"]
 [ext_resource type="Script" path="res://Scenes/Experimental/TextNode4.cs" id="15_83g8f"]
-[ext_resource type="Texture2D" uid="uid://b5glc7mxm5gg" path="res://Assets/Sprites/Ideograms/Not.png" id="16_xl7f1"]
+[ext_resource type="Texture2D" uid="uid://b5glc7mxm5gg" path="res://Assets/Sprites/Ideograms/Not0032.png" id="16_xl7f1"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1qu58"]
 
