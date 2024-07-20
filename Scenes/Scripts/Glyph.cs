@@ -9,8 +9,8 @@ public partial class Glyph : Node2D {
     private bool _flowVisible;
     private Texture2D _glyphIcon;
     private string _labelText = "????";
-    private bool _subMenuVisible;
     private int _scaleNode = 1;
+    private bool _subMenuVisible;
 
     [Export]
     public int ScaleNode {
@@ -100,6 +100,8 @@ public partial class Glyph : Node2D {
         GetNode<RichTextLabel>("ControlCanvas/TranslationLabelCanvas/TranslationLabel").Text =
             $"[center]{_labelText}[/center]";
         GetNode<Control>("ControlCanvas").Scale = new Vector2(_scaleNode, _scaleNode);
+        GetNode<TextureRect>("ControlCanvas/ButtonCanvas/GlyphButtonCanvas/GlyphButton/GlyphTexture").Texture =
+            _glyphIcon;
     }
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.
