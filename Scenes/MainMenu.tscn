@@ -1,60 +1,45 @@
-[gd_scene load_steps=5 format=3 uid="uid://c2q3c4cgtjtp6"]
+[gd_scene load_steps=11 format=3 uid="uid://c2q3c4cgtjtp6"]
 
 [ext_resource type="PackedScene" uid="uid://drydumtl0cjh0" path="res://Scenes/background.tscn" id="1_to5eq"]
 [ext_resource type="PackedScene" uid="uid://b3c0mrc7q5y48" path="res://Scenes/Glyphs/Glyph0001-self.tscn" id="2_2fdto"]
-[ext_resource type="PackedScene" uid="uid://70kh50s1fnc8" path="res://Scenes/Glyphs/Glyph0003-affirm.tscn" id="3_hbfl6"]
-[ext_resource type="PackedScene" uid="uid://bxhlq5863m238" path="res://Scenes/Glyphs/Glyph0010-safe.tscn" id="4_pfp57"]
+[ext_resource type="PackedScene" uid="uid://pqqow124tdpe" path="res://Scenes/Glyphs/Glyph0012-know.tscn" id="3_qxgku"]
+[ext_resource type="PackedScene" uid="uid://c6yn88sx62ns3" path="res://Scenes/Glyphs/Glyph0013-electricity.tscn" id="4_wptrw"]
+[ext_resource type="PackedScene" uid="uid://pewj1rjs08mr" path="res://Scenes/Glyphs/Glyph0020-force.tscn" id="5_pk2by"]
+[ext_resource type="PackedScene" uid="uid://c4vhrpteonpj0" path="res://Scenes/Glyphs/Glyph0021-move.tscn" id="6_y46ad"]
+[ext_resource type="PackedScene" uid="uid://c4mn35xpc1b1s" path="res://Scenes/Glyphs/Glyph0022-gas.tscn" id="7_ptwp2"]
+[ext_resource type="PackedScene" uid="uid://xrgyqvxemc81" path="res://Scenes/Glyphs/Glyph0023-emotion.tscn" id="8_6vuwn"]
+[ext_resource type="PackedScene" uid="uid://br546t4cnr28m" path="res://Scenes/Glyphs/Glyph0030-light.tscn" id="9_yydja"]
+[ext_resource type="PackedScene" uid="uid://dmu8nib4dy73s" path="res://Scenes/Glyphs/Glyph0031-math.tscn" id="10_7mg04"]
 
-[node name="AuthScreen" type="Node2D"]
+[node name="MainMenu" type="Node2D"]
 
 [node name="Background" parent="." instance=ExtResource("1_to5eq")]
 
-[node name="Glyph001" parent="." instance=ExtResource("2_2fdto")]
-position = Vector2(271, 184)
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
 
-[node name="Glyph003" parent="." instance=ExtResource("3_hbfl6")]
-position = Vector2(316, 120)
+[node name="Glyph001_Self" parent="." instance=ExtResource("2_2fdto")]
+position = Vector2(326, 0)
 
-[node name="Glyph010" parent="." instance=ExtResource("4_pfp57")]
-position = Vector2(361, 184)
+[node name="Glyph011_Know" parent="." instance=ExtResource("3_qxgku")]
+position = Vector2(156, 155)
 
-[node name="Line2D" type="Line2D" parent="."]
-points = PackedVector2Array(360, 236, 378, 208)
-width = 1.0
-default_color = Color(0.909804, 0.396078, 0.584314, 1)
+[node name="Glyph012_Electricity" parent="." instance=ExtResource("4_wptrw")]
+position = Vector2(430, 60)
 
-[node name="Line2D" type="Line2D" parent="Line2D"]
-position = Vector2(0, -48)
-rotation = -0.00453992
-points = PackedVector2Array(369.807, 263.682, 373.825, 259.7, 376.834, 257.713, 376.816, 261.713, 376.798, 265.713)
-width = 1.0
-default_color = Color(0.909804, 0.396078, 0.584314, 1)
+[node name="Glyph013_Force" parent="." instance=ExtResource("5_pk2by")]
+position = Vector2(432, 259)
 
-[node name="Line2D2" type="Line2D" parent="."]
-points = PackedVector2Array(426, 235, 406, 208)
-width = 1.0
-default_color = Color(0.909804, 0.396078, 0.584314, 1)
+[node name="Glyph021_Move" parent="." instance=ExtResource("6_y46ad")]
+position = Vector2(492, 149)
 
-[node name="Line2D" type="Line2D" parent="Line2D2"]
-position = Vector2(52, -29)
-points = PackedVector2Array(368, 260, 370, 262, 374, 264, 374, 261, 372, 255)
-width = 1.0
-default_color = Color(0.909804, 0.396078, 0.584314, 1)
+[node name="Glyph022_Gas" parent="." instance=ExtResource("7_ptwp2")]
+position = Vector2(218, 58)
 
-[node name="Line2D3" type="Line2D" parent="."]
-texture_filter = 1
-position = Vector2(0, -3)
-points = PackedVector2Array(414, 258, 410, 258, 370, 258)
-width = 1.0
-default_color = Color(0.909804, 0.396078, 0.584314, 1)
+[node name="Glyph023_Emotion" parent="." instance=ExtResource("8_6vuwn")]
+position = Vector2(322, 149)
 
-[node name="Line2D" type="Line2D" parent="Line2D3"]
-points = PackedVector2Array(374, 255, 372, 256, 370, 258, 374, 261, 375, 261)
-width = 1.0
-default_color = Color(0.909804, 0.396078, 0.584314, 1)
+[node name="Glyph030_Light" parent="." instance=ExtResource("9_yydja")]
+position = Vector2(219, 262)
 
-[node name="Line2D2" type="Line2D" parent="Line2D3"]
-position = Vector2(-1, 0)
-points = PackedVector2Array(410, 255, 412, 255, 415, 258, 414, 259, 409, 261)
-width = 1.0
-default_color = Color(0.909804, 0.396078, 0.584314, 1)
+[node name="Glyph031_Math" parent="." instance=ExtResource("10_7mg04")]
+position = Vector2(325, 320)
