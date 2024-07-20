@@ -7,6 +7,9 @@
     <list default="true" id="95be39f8-f45b-460e-865f-39e44d47200a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Broken Circle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Broken Circle/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Broken Circle.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Broken Circle.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/Glpyhs/Glyph000.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Glpyhs/Glyph000.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/Scripts/Glyph.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Scripts/Glyph.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/intro_screen.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/intro_screen.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/main.tscn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +98,7 @@
       <workItem from="1721350468305" duration="4268000" />
       <workItem from="1721367771204" duration="45000" />
       <workItem from="1721367860669" duration="3273000" />
-      <workItem from="1721376052022" duration="22914000" />
+      <workItem from="1721376052022" duration="24337000" />
     </task>
     <servers />
   </component>

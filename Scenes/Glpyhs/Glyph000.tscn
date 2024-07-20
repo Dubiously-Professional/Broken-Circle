@@ -1,14 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b8vgceqe576yt"]
+[gd_scene load_steps=2 format=3 uid="uid://b8vgceqe576yt"]
 
-[ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glpyhs/glyph.tscn" id="1_a8oc3"]
-[ext_resource type="Texture2D" uid="uid://bc4u3hxr682iw" path="res://Assets/Sprites/Ideograms/affirm.png" id="2_u1b4v"]
+[ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glpyhs/Glyph.tscn" id="1_a8oc3"]
 
 [node name="Glyph000" type="Node2D"]
 
 [node name="Glyph" parent="." instance=ExtResource("1_a8oc3")]
-position = Vector2(-207, 148)
-GlyphIcon = ExtResource("2_u1b4v")
-ScaleNode = 0
-SubMenuVisible = true
-AscendVisible = true
-DescendVisible = true

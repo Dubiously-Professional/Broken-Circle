@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://77ngbpkgrbkb"]
 
 [ext_resource type="Texture2D" uid="uid://cnihms442me1s" path="res://Assets/TextureMaps/CircleGradient.png" id="1_cegpk"]
-[ext_resource type="Script" path="res://Scenes/Scripts/glyph.cs" id="1_wix65"]
+[ext_resource type="Script" path="res://Scenes/Scripts/Glyph.cs" id="1_wix65"]
 [ext_resource type="Texture2D" uid="uid://dhay2l3xkdys" path="res://Assets/TextureMaps/CircleClickGradient.png" id="2_2whlt"]
 [ext_resource type="Texture2D" uid="uid://b10w56ymj0y3f" path="res://Assets/TextureMaps/CircleHoverGradient.png" id="3_tjf3u"]
 [ext_resource type="BitMap" uid="uid://cauic0hcd7663" path="res://Assets/TextureMaps/CircleMask.png" id="4_c7rnf"]

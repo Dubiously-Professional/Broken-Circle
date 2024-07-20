@@ -5,6 +5,7 @@
 
 [node name="Main" type="Node2D"]
 
-[node name="Background" parent="." instance=ExtResource("1_hbtoa")]
-
 [node name="IntroScreen" parent="." instance=ExtResource("1_thb0u")]
+top_level = true
+
+[node name="Background" parent="." instance=ExtResource("1_hbtoa")]
