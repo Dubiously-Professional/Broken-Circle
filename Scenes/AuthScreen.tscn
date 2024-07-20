@@ -1,6 +1,5 @@
-[gd_scene load_steps=5 format=3 uid="uid://c4ir5ir3q5v1x"]
+[gd_scene load_steps=4 format=3 uid="uid://c4ir5ir3q5v1x"]
 
-[ext_resource type="PackedScene" uid="uid://drydumtl0cjh0" path="res://Scenes/Background.tscn" id="1_3be5q"]
 [ext_resource type="PackedScene" uid="uid://b3c0mrc7q5y48" path="res://Scenes/Glyphs/Glyph0001Self.tscn" id="2_n36xg"]
 [ext_resource type="PackedScene" uid="uid://70kh50s1fnc8" path="res://Scenes/Glyphs/Glyph0003Affirm.tscn" id="3_4rkgu"]
 [ext_resource type="PackedScene" uid="uid://bxhlq5863m238" path="res://Scenes/Glyphs/Glyph0010Safe.tscn" id="4_lunlp"]
@@ -70,6 +69,3 @@ position = Vector2(316, 119)
 
 [node name="Glyph0010Safe" parent="CanvasGroup" instance=ExtResource("4_lunlp")]
 position = Vector2(361, 184)
-
-[node name="Background" parent="." instance=ExtResource("1_3be5q")]
-show_behind_parent = true
