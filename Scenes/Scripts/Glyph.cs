@@ -112,7 +112,7 @@ public partial class Glyph : Node2D {
         get => _actionButton;
         set {
             _actionButton = value;
-            _subMenuVisible = false;
+            SubMenuVisible = false;
         }
     }
 
