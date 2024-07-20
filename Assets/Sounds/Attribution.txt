@@ -2,3 +2,4 @@ OSD text 10.wav by jobro -- https://freesound.org/s/33552/ -- License: Attributi
 Sci Fi UI Button Sound 004.wav by crash_358 -- https://freesound.org/s/615525/ -- License: Creative Commons 0
 Sci Fi UI Button Sound 015.wav by crash_358 -- https://freesound.org/s/615538/ -- License: Creative Commons 0
 Sci Fi UI Button Sound 010.wav by crash_358 -- https://freesound.org/s/615533/ -- License: Creative Commons 0
+Button hover.wav by Fachii -- https://freesound.org/s/338229/ -- License: Creative Commons 0
