@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://c2q3c4cgtjtp6"]
 
-[ext_resource type="PackedScene" uid="uid://drydumtl0cjh0" path="res://Scenes/background.tscn" id="1_to5eq"]
+[ext_resource type="PackedScene" uid="uid://drydumtl0cjh0" path="res://Scenes/Background.tscn" id="1_to5eq"]
 [ext_resource type="PackedScene" uid="uid://b3c0mrc7q5y48" path="res://Scenes/Glyphs/Glyph0001Self.tscn" id="2_2fdto"]
 [ext_resource type="PackedScene" uid="uid://pqqow124tdpe" path="res://Scenes/Glyphs/Glyph0012Know.tscn" id="3_qxgku"]
 [ext_resource type="PackedScene" uid="uid://csio7h3tjgoej" path="res://Scenes/Glyphs/Glyph0013Electricity.tscn" id="4_wptrw"]
@@ -17,29 +17,29 @@
 
 [node name="CanvasGroup" type="CanvasGroup" parent="."]
 
-[node name="Glyph001_Self" parent="." instance=ExtResource("2_2fdto")]
+[node name="Glyph0001Self" parent="." instance=ExtResource("2_2fdto")]
 position = Vector2(326, 0)
 
-[node name="Glyph011_Know" parent="." instance=ExtResource("3_qxgku")]
+[node name="Glyph0011Know" parent="." instance=ExtResource("3_qxgku")]
 position = Vector2(156, 155)
 
-[node name="Glyph012_Electricity" parent="." instance=ExtResource("4_wptrw")]
+[node name="Glyph0012Electricity" parent="." instance=ExtResource("4_wptrw")]
 position = Vector2(430, 60)
 
-[node name="Glyph013_Force" parent="." instance=ExtResource("5_pk2by")]
+[node name="Glyph0013Force" parent="." instance=ExtResource("5_pk2by")]
 position = Vector2(432, 259)
 
-[node name="Glyph021_Move" parent="." instance=ExtResource("6_y46ad")]
+[node name="Glyph0021Move" parent="." instance=ExtResource("6_y46ad")]
 position = Vector2(492, 149)
 
-[node name="Glyph022_Gas" parent="." instance=ExtResource("7_ptwp2")]
+[node name="Glyph0022Gas" parent="." instance=ExtResource("7_ptwp2")]
 position = Vector2(218, 58)
 
-[node name="Glyph023_Emotion" parent="." instance=ExtResource("8_6vuwn")]
+[node name="Glyph0023Emotion" parent="." instance=ExtResource("8_6vuwn")]
 position = Vector2(322, 149)
 
-[node name="Glyph030_Light" parent="." instance=ExtResource("9_yydja")]
+[node name="Glyph0030Light" parent="." instance=ExtResource("9_yydja")]
 position = Vector2(219, 262)
 
-[node name="Glyph031_Math" parent="." instance=ExtResource("10_7mg04")]
+[node name="Glyph0031Math" parent="." instance=ExtResource("10_7mg04")]
 position = Vector2(325, 320)
