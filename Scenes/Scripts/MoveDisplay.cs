@@ -16,7 +16,6 @@ public partial class MoveDisplay : Node2D
     
     public void AscendMove()
     {
-        MainScreen.Instance.ScreenContents =
-            ResourceLoader.Load<PackedScene>("res://Scenes/MainMenu.tscn").Instantiate();
+        MainScreen.Instance.ScreenContents = "res://Scenes/MainMenu.tscn";
     }
 }
