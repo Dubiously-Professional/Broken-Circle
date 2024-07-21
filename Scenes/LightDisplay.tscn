@@ -16,7 +16,8 @@ offset_bottom = 63.0
 AscendVisible = true
 GlyphType = 12
 
-[node name="Glyph0030Light2" parent="." instance=ExtResource("2_oyjl1")]
+[node name="Glyph0030Light2" parent="." instance=ExtResource("1_ormm5")]
+visible = false
 anchors_preset = -1
 anchor_top = 0.0
 offset_left = 135.0
@@ -25,7 +26,8 @@ offset_right = 135.0
 offset_bottom = 174.0
 GlyphType = 12
 
-[node name="Glyph0030Light3" parent="." instance=ExtResource("2_oyjl1")]
+[node name="Glyph0030Light3" parent="." instance=ExtResource("1_ormm5")]
+visible = false
 anchors_preset = -1
 anchor_top = 0.0
 offset_left = 143.0
@@ -34,7 +36,8 @@ offset_right = 143.0
 offset_bottom = 278.0
 GlyphType = 12
 
-[node name="Glyph0030Light4" parent="." instance=ExtResource("2_oyjl1")]
+[node name="Glyph0030Light4" parent="." instance=ExtResource("1_ormm5")]
+visible = false
 anchors_preset = -1
 anchor_top = 0.0
 offset_left = 175.0
@@ -43,7 +46,8 @@ offset_right = 175.0
 offset_bottom = 375.0
 GlyphType = 12
 
-[node name="Glyph0030Light5" parent="." instance=ExtResource("2_oyjl1")]
+[node name="Glyph0030Light5" parent="." instance=ExtResource("1_ormm5")]
+visible = false
 anchors_preset = -1
 anchor_top = 0.0
 offset_left = 263.0
@@ -52,7 +56,8 @@ offset_right = 263.0
 offset_bottom = 403.0
 GlyphType = 12
 
-[node name="Glyph0030Light6" parent="." instance=ExtResource("2_oyjl1")]
+[node name="Glyph0030Light6" parent="." instance=ExtResource("1_ormm5")]
+visible = false
 anchors_preset = -1
 anchor_top = 0.0
 offset_left = 264.0
@@ -61,7 +66,8 @@ offset_right = 264.0
 offset_bottom = 267.0
 GlyphType = 12
 
-[node name="Glyph0030Light7" parent="." instance=ExtResource("2_oyjl1")]
+[node name="Glyph0030Light7" parent="." instance=ExtResource("1_ormm5")]
+visible = false
 anchors_preset = -1
 anchor_top = 0.0
 offset_left = 240.0
@@ -70,7 +76,8 @@ offset_right = 240.0
 offset_bottom = 126.0
 GlyphType = 12
 
-[node name="Glyph0030Light8" parent="." instance=ExtResource("2_oyjl1")]
+[node name="Glyph0030Light8" parent="." instance=ExtResource("1_ormm5")]
+visible = false
 anchors_preset = -1
 anchor_top = 0.0
 offset_left = 381.0
@@ -79,7 +86,8 @@ offset_right = 381.0
 offset_bottom = 130.0
 GlyphType = 12
 
-[node name="Glyph0030Light9" parent="." instance=ExtResource("2_oyjl1")]
+[node name="Glyph0030Light9" parent="." instance=ExtResource("1_ormm5")]
+visible = false
 anchors_preset = -1
 anchor_top = 0.0
 offset_left = 405.0
@@ -88,7 +96,8 @@ offset_right = 405.0
 offset_bottom = 260.0
 GlyphType = 12
 
-[node name="Glyph0030Light10" parent="." instance=ExtResource("2_oyjl1")]
+[node name="Glyph0030Light10" parent="." instance=ExtResource("1_ormm5")]
+visible = false
 anchors_preset = -1
 anchor_top = 0.0
 offset_left = 403.0
@@ -97,7 +106,8 @@ offset_right = 403.0
 offset_bottom = 393.0
 GlyphType = 12
 
-[node name="Glyph0030Light11" parent="." instance=ExtResource("2_oyjl1")]
+[node name="Glyph0030Light11" parent="." instance=ExtResource("1_ormm5")]
+visible = false
 anchors_preset = -1
 anchor_top = 0.0
 offset_left = 546.0
@@ -106,16 +116,16 @@ offset_right = 546.0
 offset_bottom = 399.0
 GlyphType = 12
 
-[node name="Glyph0030Light12" parent="." instance=ExtResource("2_oyjl1")]
-anchors_preset = -1
+
+[node name="Glyph0030Light12" parent="." instance=ExtResource("1_ormm5")]
 anchor_top = 0.0
 offset_left = 547.0
-offset_top = 261.0
 offset_right = 547.0
 offset_bottom = 261.0
 GlyphType = 12
 
-[node name="Glyph0030Light13" parent="." instance=ExtResource("2_oyjl1")]
+[node name="Glyph0030Light13" parent="." instance=ExtResource("1_ormm5")]
+visible = false
 anchors_preset = -1
 anchor_top = 0.0
 offset_left = 539.0
@@ -124,7 +134,8 @@ offset_right = 539.0
 offset_bottom = 121.0
 GlyphType = 12
 
-[node name="Glyph0030Light14" parent="." instance=ExtResource("2_oyjl1")]
+[node name="Glyph0030Light14" parent="." instance=ExtResource("1_ormm5")]
+visible = false
 anchors_preset = -1
 anchor_top = 0.0
 offset_left = 645.0
@@ -133,7 +144,8 @@ offset_right = 645.0
 offset_bottom = 150.0
 GlyphType = 12
 
-[node name="Glyph0030Light15" parent="." instance=ExtResource("2_oyjl1")]
+[node name="Glyph0030Light15" parent="." instance=ExtResource("1_ormm5")]
+visible = false
 anchors_preset = -1
 anchor_top = 0.0
 offset_left = 645.0
@@ -142,7 +154,8 @@ offset_right = 645.0
 offset_bottom = 257.0
 GlyphType = 12
 
-[node name="Glyph0030Light16" parent="." instance=ExtResource("2_oyjl1")]
+[node name="Glyph0030Light16" parent="." instance=ExtResource("1_ormm5")]
+visible = false
 anchors_preset = -1
 anchor_top = 0.0
 offset_left = 652.0
@@ -150,5 +163,19 @@ offset_top = 371.0
 offset_right = 652.0
 offset_bottom = 371.0
 GlyphType = 12
+
+[node name="Glyph0131Wire" parent="." instance=ExtResource("1_ormm5")]
+offset_left = 380.0
+offset_top = 235.0
+offset_right = 380.0
+offset_bottom = 235.0
+GlyphType = 29
+
+[node name="Glyph0110Cut" parent="." instance=ExtResource("1_ormm5")]
+offset_left = 378.0
+offset_top = 332.0
+offset_right = 378.0
+offset_bottom = 332.0
+GlyphType = 20
 
 [connection signal="AscendPressed" from="Glyph0030Light" to="." method="AscendLights"]

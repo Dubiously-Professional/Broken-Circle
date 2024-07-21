@@ -13,9 +13,9 @@ public partial class LightsDisplay : Node2D
 	public override void _Process(double delta)
 	{
 	}
-    
-    public void AscendLights()
-    {
-        MainScreen.Instance.ScreenContents = "res://Scenes/MainMenu.tscn";
-    }
+	
+	public void AscendLights()
+	{
+		MainScreen.Instance.ScreenContents = "res://Scenes/MainMenu.tscn";
+	}
 }
