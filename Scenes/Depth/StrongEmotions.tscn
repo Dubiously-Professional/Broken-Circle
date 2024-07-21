@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnvrdjtplfyqy"]
+
+[ext_resource type="Script" path="res://Scenes/Scripts/StrongEmotions.cs" id="1_8ddqb"]
+[ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="1_d1qhm"]
+
+[node name="StrongEmotions" type="Node2D"]
+script = ExtResource("1_8ddqb")
+
+[node name="Glyph0113Strong" parent="." instance=ExtResource("1_d1qhm")]
+offset_left = 339.0
+offset_top = 139.0
+offset_right = 339.0
+offset_bottom = 139.0
+GlyphType = 23
+
+[node name="Glyph0023Emotion" parent="." instance=ExtResource("1_d1qhm")]
+offset_left = 488.0
+offset_top = 141.0
+offset_right = 488.0
+offset_bottom = 141.0
+GlyphType = 11
+
+[node name="Glyph0001Self" parent="." instance=ExtResource("1_d1qhm")]
+offset_left = 412.0
+offset_top = 246.0
+offset_right = 412.0
+offset_bottom = 246.0
+GlyphType = 1
+
+[connection signal="AscendPressed" from="Glyph0023Emotion" to="." method="_on_glyph_0023_emotion_ascend_pressed"]

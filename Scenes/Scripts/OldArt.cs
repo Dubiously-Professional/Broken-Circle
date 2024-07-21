@@ -2,7 +2,7 @@ using Godot;
 using System;
 using BrokenCircle.Scenes.Scripts;
 
-public partial class FlowMenu : PopupMenu
+public partial class OldArt : Node2D
 {
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -14,16 +14,14 @@ public partial class FlowMenu : PopupMenu
 	{
 	}
 
-	private void _on_id_pressed(int id)
+	private void _on_glyph_0202_art_ascend_pressed()
 	{
-		if (id == 0)
-		{
-			LoadMainMenu();
-		}
+		LoadEmotionDisplay();
 	}
-	
-	private void LoadMainMenu() {
+
+	private void LoadEmotionDisplay() 
+	{
 		MainScreen.Instance.ScreenContents =
-			ResourceLoader.Load<PackedScene>("res://Scenes/MainMenu.tscn").Instantiate();
+			ResourceLoader.Load<PackedScene>("res://Scenes/EmotionDisplay.tscn").Instantiate();
 	}
 }

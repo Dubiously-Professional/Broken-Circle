@@ -4,23 +4,100 @@
 
 [node name="Ship" type="Node2D"]
 
-[node name="Glyph0001Self" parent="." instance=ExtResource("1_qwuld")]
-offset_left = 299.0
-offset_top = 148.0
-offset_right = 299.0
-offset_bottom = 148.0
-GlyphType = 1
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = 54.0
+offset_top = 76.0
+offset_right = 658.0
+offset_bottom = 427.0
 
-[node name="Glyph0033Origin" parent="." instance=ExtResource("1_qwuld")]
-offset_left = 380.0
-offset_top = 214.0
-offset_right = 380.0
-offset_bottom = 214.0
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+
+[node name="Glyph0033Origin" parent="HBoxContainer/VBoxContainer" instance=ExtResource("1_qwuld")]
+layout_mode = 2
 GlyphType = 15
 
-[node name="Glyph0100Place" parent="." instance=ExtResource("1_qwuld")]
-offset_left = 214.0
-offset_top = 174.0
-offset_right = 214.0
-offset_bottom = 174.0
+[node name="Line2D3" type="Line2D" parent="HBoxContainer/VBoxContainer/Glyph0033Origin"]
+position = Vector2(-33, -123.828)
+scale = Vector2(1.04762, 1.55788)
+points = PackedVector2Array(177.545, 166.5, 177.545, 192.405, 177.545, 219.078)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[node name="Line2D" type="Line2D" parent="HBoxContainer/VBoxContainer/Glyph0033Origin/Line2D3"]
+visibility_layer = 2
+position = Vector2(-880.09, -482.946)
+scale = Vector2(2.84334, 2.65549)
+points = PackedVector2Array(368, 260, 371.8, 263.9, 375.4, 259.867)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[node name="Glyph0001Self" parent="HBoxContainer/VBoxContainer" instance=ExtResource("1_qwuld")]
+layout_mode = 2
+GlyphType = 1
+
+[node name="Line2D3" type="Line2D" parent="HBoxContainer/VBoxContainer/Glyph0001Self"]
+position = Vector2(-67.5715, -493.736)
+scale = Vector2(1.09751, 2.42698)
+points = PackedVector2Array(221.931, 232.279, 453.365, 232.279)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[node name="Line2D" type="Line2D" parent="HBoxContainer/VBoxContainer/Glyph0001Self/Line2D3"]
+visibility_layer = 2
+position = Vector2(-880.09, -482.946)
+scale = Vector2(2.84334, 2.65549)
+points = PackedVector2Array(392.066, 270.89, 387.579, 269.183, 391.425, 267.631)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(300, 170)
+layout_mode = 2
+
+[node name="Glyph0100Object" parent="HBoxContainer/VBoxContainer2/HBoxContainer" instance=ExtResource("1_qwuld")]
+layout_mode = 2
+GlyphType = 17
+
+[node name="Line2D4" type="Line2D" parent="HBoxContainer/VBoxContainer2/HBoxContainer/Glyph0100Object"]
+position = Vector2(-220, -123.828)
+scale = Vector2(1.04762, 1.55788)
+points = PackedVector2Array(287.318, 166.141, 335.045, 225.196)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[node name="Line2D" type="Line2D" parent="HBoxContainer/VBoxContainer2/HBoxContainer/Glyph0100Object/Line2D4"]
+visibility_layer = 2
+position = Vector2(-726.408, -477.684)
+scale = Vector2(2.84334, 2.65549)
+points = PackedVector2Array(367.269, 262.997, 372.976, 264.206, 374.654, 260.097)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[node name="Glyph0100Place" parent="HBoxContainer/VBoxContainer2/HBoxContainer" instance=ExtResource("1_qwuld")]
+layout_mode = 2
 GlyphType = 16
+
+[node name="Line2D4" type="Line2D" parent="HBoxContainer/VBoxContainer2/HBoxContainer/Glyph0100Place"]
+position = Vector2(-602.476, -316.736)
+scale = Vector2(1.09751, 2.42698)
+points = PackedVector2Array(615.464, 182.835, 571.728, 221.978)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[node name="Line2D" type="Line2D" parent="HBoxContainer/VBoxContainer2/HBoxContainer/Glyph0100Place/Line2D4"]
+visibility_layer = 2
+position = Vector2(-726.408, -477.684)
+scale = Vector2(2.84334, 2.65549)
+points = PackedVector2Array(454.63, 261.46, 455.591, 263.788, 461.359, 263.322)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[node name="Glyph0102Metal" parent="HBoxContainer/VBoxContainer2" instance=ExtResource("1_qwuld")]
+layout_mode = 2
+GlyphType = 18
