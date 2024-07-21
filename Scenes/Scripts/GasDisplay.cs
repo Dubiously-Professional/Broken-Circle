@@ -2,7 +2,7 @@ using Godot;
 using System;
 using BrokenCircle.Scenes.Scripts;
 
-public partial class EmotionDisplay : Node2D
+public partial class GasDisplay : Node2D
 {
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -14,23 +14,9 @@ public partial class EmotionDisplay : Node2D
 	{
 	}
     
-	private void LoadOldArt() 
-	{
-		MainScreen.Instance.ScreenContents =
-			ResourceLoader.Load<PackedScene>("res://Scenes/Depth/OldArt.tscn").Instantiate();
-	}
-	
-	private void LoadStrongEmotions() 
-	{
-		MainScreen.Instance.ScreenContents =
-			ResourceLoader.Load<PackedScene>("res://Scenes/Depth/StrongEmotions.tscn").Instantiate();
-	}
-
-    public void AscendEmotion()
+    public void AscendGas()
     {
         MainScreen.Instance.ScreenContents =
             ResourceLoader.Load<PackedScene>("res://Scenes/MainMenu.tscn").Instantiate();
     }
-
 }
-

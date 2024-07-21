@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://bs4tjxkvat4sc"]
 
-[ext_resource type="Script" path="res://Scenes/Scripts/MainMenu.cs" id="1_o10ru"]
+[ext_resource type="Script" path="res://Scenes/Scripts/GasDisplay.cs" id="1_symwx"]
 [ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="2_5k0dh"]
 
 [node name="GasDisplay" type="Node2D"]
-script = ExtResource("1_o10ru")
+script = ExtResource("1_symwx")
 
 [node name="Glyph0011One" parent="." instance=ExtResource("2_5k0dh")]
 offset_left = 216.0
@@ -175,8 +175,11 @@ offset_bottom = 49.0
 GlyphType = 28
 
 [node name="Glyph0022Gas2" parent="." instance=ExtResource("2_5k0dh")]
-offset_left = 733.0
-offset_top = 41.0
-offset_right = 733.0
-offset_bottom = 41.0
+offset_left = 691.0
+offset_top = 67.0
+offset_right = 691.0
+offset_bottom = 67.0
+AscendVisible = true
 GlyphType = 10
+
+[connection signal="AscendPressed" from="Glyph0022Gas2" to="." method="AscendGas"]

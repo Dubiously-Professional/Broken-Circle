@@ -4,16 +4,11 @@ using BrokenCircle.Scenes.Scripts;
 
 public partial class MainMenu : Node2D
 {
-	public bool messageSeen = false;
+
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		if (!messageSeen)
-		{
-			Control message = GetNode<Control>("res://Scenes/MainMenuMessage.tscn");
-			AddChild(message);
-			message.Visible = true;
-		}
+
 
 	}
 
@@ -30,7 +25,8 @@ public partial class MainMenu : Node2D
 	{
 	}
 
-	private void DescendElectricity() {
+	private void DescendElectricity()
+	{
 		MainScreen.Instance.ScreenContents =
 			ResourceLoader.Load<PackedScene>("res://Scenes/ElectricityDisplay.tscn").Instantiate();
 	}
@@ -46,7 +42,7 @@ public partial class MainMenu : Node2D
 		MainScreen.Instance.ScreenContents =
 			ResourceLoader.Load<PackedScene>("res://Scenes/SelfDisplay.tscn").Instantiate();
 	}
-	
+
 	private void DescendKnow()
 	{
 		MainScreen.Instance.ScreenContents =
@@ -58,7 +54,7 @@ public partial class MainMenu : Node2D
 		MainScreen.Instance.ScreenContents =
 			ResourceLoader.Load<PackedScene>("res://Scenes/ForceDisplay.tscn").Instantiate();
 	}
-	
+
 	private void DescendMove()
 	{
 		MainScreen.Instance.ScreenContents =
@@ -76,7 +72,7 @@ public partial class MainMenu : Node2D
 		MainScreen.Instance.ScreenContents =
 			ResourceLoader.Load<PackedScene>("res://Scenes/LightDisplay.tscn").Instantiate();
 	}
-	
+
 	private void DescendMath()
 	{
 		MainScreen.Instance.ScreenContents =
