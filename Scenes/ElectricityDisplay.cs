@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using BrokenCircle.Scenes.Scripts;
 
 public partial class ElectricityDisplay : Node2D
 {
@@ -12,4 +13,10 @@ public partial class ElectricityDisplay : Node2D
 	public override void _Process(double delta)
 	{
 	}
+
+    public void AscendElectric()
+    {
+        MainScreen.Instance.ScreenContents =
+            ResourceLoader.Load<PackedScene>("res://Scenes/MainMenu.tscn").Instantiate();
+    }
 }

@@ -4,18 +4,22 @@ using BrokenCircle.Scenes.Scripts;
 
 public partial class MainMenu : Node2D
 {
+    public bool messageSeen = false;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		// Set initial Glyph states
-		// @TODO: make this a full method of its own
-		
+        if (!messageSeen)
+        {
+            Control message = GetNode<Control>("res://Scenes/MainMenuMessage.tscn");
+            AddChild(message);
+            message.Visible = true;
+        }
 
 	}
 
 	private void ShowCloseButton()
 	{
-		CanvasItem start = GetNode<CanvasItem>("TypingText/MessageAlert/CloseButton");
+		CanvasItem start = GetNode<CanvasItem>("CanvasGroup/MessageAlert/CloseButton");
 		start.Visible = true;
 		AudioStreamPlayer2D player = MainScreen.Instance.GetNode<AudioStreamPlayer2D>("Sounds/ButtonAppear");
 		player.Play();
@@ -77,6 +81,13 @@ public partial class MainMenu : Node2D
     {
         MainScreen.Instance.ScreenContents =
             ResourceLoader.Load<PackedScene>("res://Scenes/MathDisplay.tscn").Instantiate();
+    }
+
+    private void CloseMessage()
+    {
+        Control message = GetNode<Control>("CanvasGroup/MessageAlert");
+        message.Visible = false;
+        RemoveChild(message);
     }
 
 }
