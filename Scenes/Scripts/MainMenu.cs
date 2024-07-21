@@ -44,7 +44,7 @@ public partial class MainMenu : Node2D {
 	}
 
 	private void DescendLight() {
-		MainScreen.Instance.ScreenContents = "res://Scenes/LightsDisplay.tscn";
+		MainScreen.Instance.ScreenContents = "res://Scenes/LightDisplay.tscn";
 	}
 
 	private void DescendMath() {
