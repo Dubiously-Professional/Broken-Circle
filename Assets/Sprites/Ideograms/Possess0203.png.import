@@ -2,26 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drruplrgp5fyh"
-path="res://.godot/imported/learn.png-5b5f9392502f13f7b1b00bf7e00799e5.ctex"
+uid="uid://dw2jf4qqmbdu4"
+path="res://.godot/imported/Possess0203.png-c8faef660ede491f2e4385a37c745748.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Ideograms/learn.png"
-dest_files=["res://.godot/imported/learn.png-5b5f9392502f13f7b1b00bf7e00799e5.ctex"]
+source_file="res://Assets/Sprites/Ideograms/Possess0203.png"
+dest_files=["res://.godot/imported/Possess0203.png-c8faef660ede491f2e4385a37c745748.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
-compress/lossy_quality=0.7
+compress/lossy_quality=0.2
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

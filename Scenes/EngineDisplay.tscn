@@ -1,0 +1,98 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqnm4uo40p7kx"]
+
+[ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="1_xmmw7"]
+
+[node name="Engine" type="Node2D"]
+
+[node name="Glyph0020Force" parent="." instance=ExtResource("1_xmmw7")]
+anchors_preset = -1
+anchor_top = 0.0
+offset_left = 727.0
+offset_top = 43.0
+offset_right = 727.0
+offset_bottom = 43.0
+GlyphType = 8
+metadata/_edit_use_anchors_ = true
+
+[node name="Glyph0020Force2" parent="." instance=ExtResource("1_xmmw7")]
+anchors_preset = -1
+anchor_top = 0.0
+offset_left = 196.0
+offset_top = 327.0
+offset_right = 196.0
+offset_bottom = 327.0
+GlyphType = 8
+metadata/_edit_use_anchors_ = true
+
+[node name="Glyph0013Electricity" parent="." instance=ExtResource("1_xmmw7")]
+anchors_preset = -1
+anchor_top = 0.0
+offset_left = 200.0
+offset_top = 200.0
+offset_right = 200.0
+offset_bottom = 200.0
+GlyphType = 7
+metadata/_edit_use_anchors_ = true
+
+[node name="Glyph0000Flow" parent="." instance=ExtResource("1_xmmw7")]
+anchors_preset = -1
+anchor_top = 0.0
+offset_left = 262.0
+offset_top = 200.0
+offset_right = 262.0
+offset_bottom = 200.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Glyph0103On" parent="." instance=ExtResource("1_xmmw7")]
+offset_left = 328.0
+offset_top = 200.0
+offset_right = 328.0
+offset_bottom = 200.0
+GlyphType = 19
+
+[node name="Glyph0103On2" parent="." instance=ExtResource("1_xmmw7")]
+offset_left = 267.0
+offset_top = 324.0
+offset_right = 267.0
+offset_bottom = 324.0
+GlyphType = 19
+
+[node name="Glyph0101Object" parent="." instance=ExtResource("1_xmmw7")]
+anchors_preset = -1
+anchor_top = 0.0
+offset_left = 36.0
+offset_top = 47.0
+offset_right = 36.0
+offset_bottom = 47.0
+GlyphType = 17
+metadata/_edit_use_anchors_ = true
+
+[node name="Glyph0002Contain" parent="." instance=ExtResource("1_xmmw7")]
+anchors_preset = -1
+anchor_top = 0.0
+offset_left = 106.0
+offset_top = 48.0
+offset_right = 106.0
+offset_bottom = 48.0
+GlyphType = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Glyph0020Force3" parent="." instance=ExtResource("1_xmmw7")]
+anchors_preset = -1
+anchor_top = 0.0
+offset_left = 170.0
+offset_top = 47.0
+offset_right = 170.0
+offset_bottom = 47.0
+GlyphType = 8
+metadata/_edit_use_anchors_ = true
+
+[node name="Glyph0200Touch" parent="." instance=ExtResource("1_xmmw7")]
+anchors_preset = -1
+anchor_top = 0.0
+offset_left = 238.0
+offset_top = 49.0
+offset_right = 238.0
+offset_bottom = 49.0
+GlyphType = 32
+metadata/_edit_use_anchors_ = true

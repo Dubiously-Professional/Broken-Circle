@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://rcvfp8i684rh"]
+
+[ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="1_qgxgi"]
+
+[node name="KnowDisplay" type="Node2D"]
+
+[node name="Glyph0011Know" parent="." instance=ExtResource("1_qgxgi")]
+offset_left = 729.0
+offset_top = 43.0
+offset_right = 729.0
+offset_bottom = 43.0
+GlyphType = 6
