@@ -1,8 +1,5 @@
-using System;
-using System.Linq;
 using Godot;
-
-namespace BrokenCircle.Scenes.Scripts;
+using System;
 
 public partial class CloseButton : TextureButton
 {
@@ -15,7 +12,9 @@ public partial class CloseButton : TextureButton
 	public override void _Process(double delta)
 	{
 	}
-    
-    
-    
+
+    public void _Show()
+    {
+        Show();
+    }
 }
