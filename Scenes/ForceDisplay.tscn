@@ -66,40 +66,40 @@ GlyphType = 28
 [node name="Glyph0101Object" parent="." instance=ExtResource("1_xmmw7")]
 anchors_preset = -1
 anchor_top = 0.0
-offset_left = 36.0
-offset_top = 47.0
-offset_right = 36.0
-offset_bottom = 47.0
+offset_left = 59.0
+offset_top = 97.0
+offset_right = 59.0
+offset_bottom = 97.0
 GlyphType = 17
 metadata/_edit_use_anchors_ = true
 
 [node name="Glyph0002Contain" parent="." instance=ExtResource("1_xmmw7")]
 anchors_preset = -1
 anchor_top = 0.0
-offset_left = 106.0
-offset_top = 48.0
-offset_right = 106.0
-offset_bottom = 48.0
+offset_left = 130.0
+offset_top = 95.0
+offset_right = 130.0
+offset_bottom = 95.0
 GlyphType = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Glyph0020Force3" parent="." instance=ExtResource("1_xmmw7")]
 anchors_preset = -1
 anchor_top = 0.0
-offset_left = 170.0
-offset_top = 47.0
-offset_right = 170.0
-offset_bottom = 47.0
+offset_left = 196.0
+offset_top = 93.0
+offset_right = 196.0
+offset_bottom = 93.0
 GlyphType = 8
 metadata/_edit_use_anchors_ = true
 
 [node name="Glyph0200Touch" parent="." instance=ExtResource("1_xmmw7")]
 anchors_preset = -1
 anchor_top = 0.0
-offset_left = 238.0
-offset_top = 49.0
-offset_right = 238.0
-offset_bottom = 49.0
+offset_left = 254.0
+offset_top = 95.0
+offset_right = 254.0
+offset_bottom = 95.0
 GlyphType = 32
 metadata/_edit_use_anchors_ = true
 
@@ -108,15 +108,8 @@ visible = false
 self_modulate = Color(0, 0, 0, 1)
 clip_contents = true
 custom_minimum_size = Vector2(768, 480)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -56.0
-offset_top = -40.0
-offset_right = 712.0
-offset_bottom = 440.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 768.0
+offset_bottom = 480.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxEmpty_l58nb")
@@ -125,11 +118,9 @@ metadata/_edit_use_anchors_ = true
 [node name="CanvasLayer" type="ColorRect" parent="FlowMenuDisplay"]
 self_modulate = Color(0, 0, 0, 1)
 custom_minimum_size = Vector2(768, 480)
-layout_mode = 1
-offset_left = 56.0
-offset_top = 40.0
-offset_right = 824.0
-offset_bottom = 520.0
+layout_mode = 0
+offset_right = 768.0
+offset_bottom = 480.0
 color = Color(0, 0, 0, 1)
 
 [node name="FlowDisplayBG" type="ColorRect" parent="FlowMenuDisplay"]
