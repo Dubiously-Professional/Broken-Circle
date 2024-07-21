@@ -13,3 +13,5 @@ offset_right = 684.0
 offset_bottom = 87.0
 AscendVisible = true
 GlyphType = 6
+
+[connection signal="AscendPressed" from="Glyph0011Know" to="." method="AscendKnow"]

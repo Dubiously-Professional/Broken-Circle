@@ -11,8 +11,7 @@ offset_left = 689.0
 offset_top = 83.0
 offset_right = 689.0
 offset_bottom = 83.0
-AscendVisible = true
-GlyphType = 7
+script = ExtResource("1_3kwtb")
 
 [node name="Glyph0030Light" parent="." instance=ExtResource("2_gtdj1")]
 offset_left = 135.0
@@ -69,5 +68,3 @@ offset_top = 390.0
 offset_right = 194.0
 offset_bottom = 390.0
 GlyphType = 19
-
-[connection signal="AscendPressed" from="Glyph0013Electricity" to="." method="AscendElectric"]
