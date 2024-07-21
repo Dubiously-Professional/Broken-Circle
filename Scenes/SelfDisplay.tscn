@@ -103,3 +103,5 @@ offset_right = 678.0
 offset_bottom = 60.0
 AscendVisible = true
 GlyphType = 11
+
+[connection signal="AscendPressed" from="Glyph0110Emotion0023" to="." method="AscendDisplay"]
