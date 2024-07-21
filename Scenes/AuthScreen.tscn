@@ -21,20 +21,6 @@ offset_top = 309.0
 offset_right = 746.0
 offset_bottom = 437.0
 
-[node name="CloseButton" type="TextureButton" parent="TypingText/MessageAlert"]
-visible = false
-self_modulate = Color(0.231373, 0.956863, 0.0823529, 1)
-texture_filter = 1
-layout_mode = 0
-offset_left = 669.0
-offset_top = 128.0
-offset_right = 745.0
-offset_bottom = 168.0
-rotation = -1.5708
-scale = Vector2(1.5, 1.5)
-texture_normal = ExtResource("4_57t0a")
-script = ExtResource("5_nugbk")
-
 [node name="Message" type="RichTextLabel" parent="TypingText/MessageAlert"]
 clip_contents = false
 layout_mode = 1
@@ -63,6 +49,20 @@ show_behind_parent = true
 position = Vector2(75, -12)
 color = Color(0.0365313, 0.0981555, 0.0320369, 1)
 polygon = PackedVector2Array(-75, 138, -75, 9, 653, 8, 652, 139)
+
+[node name="CloseButton" type="TextureButton" parent="TypingText/MessageAlert"]
+visible = false
+self_modulate = Color(0.231373, 0.956863, 0.0823529, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 669.0
+offset_top = 128.0
+offset_right = 745.0
+offset_bottom = 168.0
+rotation = -1.5708
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("4_57t0a")
+script = ExtResource("5_nugbk")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchors_preset = 8
