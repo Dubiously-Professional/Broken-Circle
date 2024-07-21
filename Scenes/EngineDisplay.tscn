@@ -99,3 +99,5 @@ offset_right = 238.0
 offset_bottom = 49.0
 GlyphType = 32
 metadata/_edit_use_anchors_ = true
+
+[connection signal="AscendPressed" from="Glyph0020Force" to="." method="AscendEngine"]

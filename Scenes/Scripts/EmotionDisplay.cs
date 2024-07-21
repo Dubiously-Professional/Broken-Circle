@@ -13,18 +13,7 @@ public partial class EmotionDisplay : Node2D
 	public override void _Process(double delta)
 	{
 	}
-
-	private void on_glyph_0202_art_descend_pressed()
-		{
-		LoadOldArt();
-	}
-	
-	private void _on_glyph_0023_emotion_2_descend_pressed()
-		{
-		LoadEmotion2();
-	}
-		
-
+    
 	private void LoadOldArt() 
 	{
 		MainScreen.Instance.ScreenContents =
@@ -36,6 +25,12 @@ public partial class EmotionDisplay : Node2D
 		MainScreen.Instance.ScreenContents =
 			ResourceLoader.Load<PackedScene>("res://Scenes/Depth/StrongEmotions.tscn").Instantiate();
 	}
+
+    public void AscendEmotion()
+    {
+        MainScreen.Instance.ScreenContents =
+            ResourceLoader.Load<PackedScene>("res://Scenes/MainMenu.tscn").Instantiate();
+    }
 
 }
 

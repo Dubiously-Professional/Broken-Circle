@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using BrokenCircle.Scenes.Scripts;
 
 public partial class StrongEmotions : Node2D
 {

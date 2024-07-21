@@ -4,16 +4,11 @@ using BrokenCircle.Scenes.Scripts;
 
 public partial class MainMenu : Node2D
 {
-    public bool messageSeen = false;
+
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-        if (!messageSeen)
-        {
-            Control message = GetNode<Control>("res://Scenes/MainMenuMessage.tscn");
-            AddChild(message);
-            message.Visible = true;
-        }
+
 
 	}
 

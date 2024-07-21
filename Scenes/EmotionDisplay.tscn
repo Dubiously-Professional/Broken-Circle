@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c1q3ubpvdlxv3"]
+[gd_scene load_steps=4 format=3 uid="uid://d13ku34t2cdq"]
 
 [ext_resource type="Script" path="res://Scenes/Scripts/EmotionDisplay.cs" id="1_bnyb6"]
 [ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="1_kfiuf"]
@@ -48,5 +48,6 @@ GlyphType = 32
 position = Vector2(515, 244)
 texture = ExtResource("2_3f85e")
 
-[connection signal="DescendPressed" from="Glyph0202Art" to="." method="_on_glyph_0202_art_descend_pressed"]
-[connection signal="DescendPressed" from="Glyph0023Emotion2" to="." method="_on_glyph_0023_emotion_2_descend_pressed"]
+[connection signal="AscendPressed" from="Glyph0023Emotion" to="." method="AscendEmotion"]
+[connection signal="DescendPressed" from="Glyph0202Art" to="." method="LoadStrongEmotions"]
+[connection signal="DescendPressed" from="Glyph0023Emotion2" to="." method="LoadStrongEmotions"]
