@@ -175,16 +175,20 @@ texture = ExtResource("5_ni0l8")
 expand_mode = 1
 
 [node name="PopupMenu" type="PopupMenu" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas/TranslateButton"]
-size = Vector2i(181, 220)
+size = Vector2i(116, 129)
 theme = ExtResource("10_lypej")
-item_count = 4
+theme_override_font_sizes/font_size = 20
+item_count = 5
 item_0/text = "????"
-item_1/text = "Fluffy"
+item_0/id = 0
+item_1/text = "FLUFFY"
 item_1/id = 1
-item_2/text = "Onion"
+item_2/text = "ONION"
 item_2/id = 2
-item_3/text = "No Really"
+item_3/text = "NO REALLY"
 item_3/id = 3
+item_4/text = "BEES"
+item_4/id = 4
 
 [node name="FlowButton" type="TextureButton" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas"]
 visible = false
