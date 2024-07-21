@@ -8,10 +8,10 @@
 script = ExtResource("1_bnyb6")
 
 [node name="Glyph0023Emotion" parent="." instance=ExtResource("1_kfiuf")]
-offset_left = 706.0
-offset_top = 87.0
-offset_right = 706.0
-offset_bottom = 87.0
+offset_left = 688.0
+offset_top = 95.0
+offset_right = 688.0
+offset_bottom = 95.0
 AscendVisible = true
 GlyphType = 11
 
@@ -20,7 +20,6 @@ offset_left = 97.0
 offset_top = 253.0
 offset_right = 97.0
 offset_bottom = 253.0
-DescendVisible = true
 GlyphType = 34
 
 [node name="Glyph0203Possess" parent="." instance=ExtResource("1_kfiuf")]
@@ -35,6 +34,7 @@ offset_left = 266.0
 offset_top = 253.0
 offset_right = 266.0
 offset_bottom = 253.0
+DescendVisible = true
 GlyphType = 11
 
 [node name="Glyph0200Touch" parent="." instance=ExtResource("1_kfiuf")]
@@ -49,5 +49,4 @@ position = Vector2(515, 244)
 texture = ExtResource("2_3f85e")
 
 [connection signal="AscendPressed" from="Glyph0023Emotion" to="." method="AscendEmotion"]
-[connection signal="DescendPressed" from="Glyph0202Art" to="." method="LoadStrongEmotions"]
 [connection signal="DescendPressed" from="Glyph0023Emotion2" to="." method="LoadStrongEmotions"]
