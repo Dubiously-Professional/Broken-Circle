@@ -11,6 +11,7 @@
 [node name="Main" type="Node2D" node_paths=PackedStringArray("_screenContents")]
 script = ExtResource("1_pfwmn")
 _screenContents = NodePath("IntroScreen")
+Testing = false
 
 [node name="IntroScreen" parent="." instance=ExtResource("1_thb0u")]
 top_level = true
