@@ -54,6 +54,8 @@ Okay... I pushed an overlay for your connection. You should have navigation tool
 You get it yet?"
 fit_content = true
 scroll_active = false
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="TextBackground2" type="Polygon2D" parent="TypingText/MessageAlert"]
 self_modulate = Color(0, 0, 0, 1)
