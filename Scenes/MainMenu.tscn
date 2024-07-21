@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://c2q3c4cgtjtp6"]
 
-[ext_resource type="Script" path="res://Scenes/MainMenu.cs" id="1_fnwe1"]
+[ext_resource type="Script" path="res://Scenes/Scripts/MainMenu.cs" id="1_fnwe1"]
 [ext_resource type="PackedScene" uid="uid://b3c0mrc7q5y48" path="res://Scenes/Glyphs/Glyph0001Self.tscn" id="2_2fdto"]
 [ext_resource type="PackedScene" uid="uid://pqqow124tdpe" path="res://Scenes/Glyphs/Glyph0012Know.tscn" id="3_qxgku"]
 [ext_resource type="PackedScene" uid="uid://csio7h3tjgoej" path="res://Scenes/Glyphs/Glyph0013Electricity.tscn" id="4_wptrw"]

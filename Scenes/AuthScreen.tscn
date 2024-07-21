@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="4_mpfcn"]
 [ext_resource type="Script" path="res://Scenes/Scripts/CloseButton.cs" id="5_nugbk"]
 [ext_resource type="PackedScene" uid="uid://63cot4n4esaf" path="res://Scenes/FlowMenu.tscn" id="7_fal3t"]
-[ext_resource type="Script" path="res://Scenes/FlowMenu.cs" id="8_sa8xa"]
+[ext_resource type="Script" path="res://Scenes/Scripts/FlowMenu.cs" id="8_sa8xa"]
 
 [node name="AuthScreen2" type="Node2D"]
 position = Vector2(378, 262)
