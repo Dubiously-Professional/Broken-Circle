@@ -200,6 +200,11 @@ public partial class Glyph : Control {
 
     private void OnFlowPressed() {
         EmitSignal(SignalName.FlowPressed);
+        PopupMenu flowMenu = GetNode<PopupMenu>("FlowMenu");
+        Control flowButton = GetNode<Control>("ControlCanvas/ButtonCanvas/SubMenuCanvas/FlowButton");
+        Vector2 globalPosition = flowButton.GlobalPosition;
+        Vector2I size = flowMenu.Size;
+        flowMenu.Popup(new Rect2I(new Vector2I((int)globalPosition.X, (int)globalPosition.Y + 32), size));
     }
 
     private void OnAscendPressed() {

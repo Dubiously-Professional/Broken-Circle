@@ -21,4 +21,6 @@ public partial class CloseButton : TextureButton
         Control messageBox = GetParent<Control>();
         messageBox.Visible = false;
     }
+    
+    
 }
