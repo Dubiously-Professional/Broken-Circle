@@ -5,24 +5,25 @@ using Godot;
 namespace BrokenCircle.Scenes.Scripts;
 
 public partial class MainScreen : Node2D {
-	[Export] private CanvasItem _screenContents;
     private string _sceneName = "Default";
-    private Dictionary<string, CanvasItem> _scenes = new();
-	
-	public static bool Testing = true;
-	public static MainScreen Instance { get; private set; }
+    private readonly Dictionary<string, CanvasItem> _scenes = new();
+    [Export] private CanvasItem _screenContents;
 
-	public string ScreenContents {
-		get => _sceneName;
-		set {
-			if (value == _sceneName) return;
-			if (_screenContents != null) {
-				_screenContents.Visible = false;
-			}
+    [Export] public bool Testing = true;
+    public static MainScreen Instance { get; private set; }
+
+    public string ScreenContents {
+        get => _sceneName;
+        set {
+            if (value == _sceneName) return;
+            if (_screenContents != null) {
+                _screenContents.Visible = false;
+            }
 
             if (_sceneName == "Default") {
                 RemoveChild(_screenContents); // Don't ask me why I need to do this, it's necessary
             }
+
             _sceneName = value;
 
             if (!_scenes.ContainsKey(value)) {
@@ -37,21 +38,21 @@ public partial class MainScreen : Node2D {
                 }
             }
         }
-	}
+    }
 
-	public override void _EnterTree() {
-		if (Instance != null) {
-			throw new InvalidOperationException("Only one instance of main scene is allowed.");
-		}
+    public override void _EnterTree() {
+        if (Instance != null) {
+            throw new InvalidOperationException("Only one instance of main scene is allowed.");
+        }
 
-		Instance = this;
+        Instance = this;
         _scenes[_sceneName] = _screenContents;
     }
 
-	public override void _ExitTree() {
-		Instance = null;
-	}
+    public override void _ExitTree() {
+        Instance = null;
+    }
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta) { }
+    // Called every frame. 'delta' is the elapsed time since the previous frame.
+    public override void _Process(double delta) { }
 }

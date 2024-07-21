@@ -12,7 +12,7 @@ public partial class TypingText : Timer {
         
         int increase = Convert.ToInt16(GD.Randi() % 6);
         
-        if (MainScreen.Testing)
+        if (MainScreen.Instance.Testing)
         {
             increase += 20;
         }
