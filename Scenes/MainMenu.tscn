@@ -75,7 +75,6 @@ DescendVisible = true
 GlyphType = 1
 
 [node name="SelfMenu" type="PopupMenu" parent="CanvasGroup/Glyph0001Self"]
-script = ExtResource("3_vpl2r")
 
 [node name="Glyph0011Know" parent="CanvasGroup" instance=ExtResource("2_koekw")]
 offset_left = 173.0
