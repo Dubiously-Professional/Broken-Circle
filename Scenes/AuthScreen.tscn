@@ -1,11 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://c4ir5ir3q5v1x"]
+[gd_scene load_steps=9 format=3 uid="uid://c4ir5ir3q5v1x"]
 
 [ext_resource type="Script" path="res://Scenes/Scripts/AuthScreen.cs" id="1_7gkba"]
-[ext_resource type="PackedScene" path="res://Scenes/TypingText.tscn" id="1_klmt5"]
+[ext_resource type="PackedScene" uid="uid://dsbf7ieut1jp2" path="res://Scenes/TypingText.tscn" id="1_klmt5"]
 [ext_resource type="FontFile" uid="uid://7l0t5gk5lixg" path="res://Assets/Fonts/VT323-Regular.ttf" id="2_rfui4"]
 [ext_resource type="Texture2D" uid="uid://dbqve3xk7d51h" path="res://Assets/Sprites/Descend.png" id="4_57t0a"]
 [ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="4_mpfcn"]
 [ext_resource type="Script" path="res://Scenes/Scripts/CloseButton.cs" id="5_nugbk"]
+[ext_resource type="PackedScene" uid="uid://63cot4n4esaf" path="res://Scenes/FlowMenu.tscn" id="7_fal3t"]
+[ext_resource type="Script" path="res://Scenes/FlowMenu.cs" id="8_sa8xa"]
 
 [node name="AuthScreen2" type="Node2D"]
 position = Vector2(378, 262)
@@ -88,6 +90,13 @@ layout_mode = 2
 FlowVisible = true
 GlyphType = 3
 
+[node name="FlowMenu" parent="VBoxContainer/TopContainer/Glyph0003Affirm" instance=ExtResource("7_fal3t")]
+size = Vector2i(50, 92)
+visible = false
+theme_override_constants/item_end_padding = -16
+allow_search = false
+script = ExtResource("8_sa8xa")
+
 [node name="BottomContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
@@ -162,3 +171,4 @@ round_precision = 1
 
 [connection signal="TypingEnded" from="TypingText" to="." method="ShowCloseButton"]
 [connection signal="pressed" from="TypingText/MessageAlert/CloseButton" to="TypingText/MessageAlert/CloseButton" method="_on_pressed"]
+[connection signal="id_pressed" from="VBoxContainer/TopContainer/Glyph0003Affirm/FlowMenu" to="VBoxContainer/TopContainer/Glyph0003Affirm/FlowMenu" method="_on_id_pressed"]
