@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1q3ubpvdlxv3"]
+[gd_scene load_steps=3 format=3 uid="uid://d13ku34t2cdq"]
 
 [ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="1_kfiuf"]
 [ext_resource type="Texture2D" uid="uid://ch40jmu7num6y" path="res://Assets/Sprites/AncientArt.png" id="2_3f85e"]
@@ -6,10 +6,11 @@
 [node name="EmotionDisplay" type="Node2D"]
 
 [node name="Glyph0023Emotion" parent="." instance=ExtResource("1_kfiuf")]
-offset_left = 729.0
-offset_top = 43.0
-offset_right = 729.0
-offset_bottom = 43.0
+offset_left = 706.0
+offset_top = 87.0
+offset_right = 706.0
+offset_bottom = 87.0
+AscendVisible = true
 GlyphType = 11
 
 [node name="Glyph0202Art" parent="." instance=ExtResource("1_kfiuf")]
