@@ -11,9 +11,9 @@ public partial class AuthScreen : Node2D
 		player.Play();
 	}
 
-    private void LoadMainMenu() {
-        MainScreen.Instance.ScreenContents = "res://Scenes/MainMenu.tscn";
-    }
+	private void LoadMainMenu() {
+		MainScreen.Instance.ScreenContents = "res://Scenes/MainMenu.tscn";
+	}
 
 	private void FlowMenu()
 	{
