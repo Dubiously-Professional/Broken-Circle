@@ -21,7 +21,7 @@ public partial class TypingText : Timer {
         text.VisibleCharacters += increase;
         
         if (text.VisibleRatio >= 1) {
-            Node2D start = GetNode<Node2D>("Glyph0000Flow");
+            CanvasItem start = GetNode<CanvasItem>("Glyph0000Flow");
             start.Visible = true;
             AudioStreamPlayer2D player = GetNode<AudioStreamPlayer2D>("ButtonAppearSound");
             player.Play();
