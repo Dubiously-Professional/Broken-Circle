@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cp5nt8g2ryc13"
-path="res://.godot/imported/need.png-aebb025526b91c5205ab975ce22e4bfe.ctex"
+path="res://.godot/imported/Need0130.png-c95f5a2dbc18d24db039c93bca2f2d08.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Ideograms/need.png"
-dest_files=["res://.godot/imported/need.png-aebb025526b91c5205ab975ce22e4bfe.ctex"]
+source_file="res://Assets/Sprites/Ideograms/Need0130.png"
+dest_files=["res://.godot/imported/Need0130.png-c95f5a2dbc18d24db039c93bca2f2d08.ctex"]
 
 [params]
 

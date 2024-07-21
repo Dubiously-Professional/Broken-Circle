@@ -41,7 +41,8 @@ public partial class Glyphs : Node
 		Two0120,
 		Measure0121,
 		Three0122,
-		Empty0123
+		Empty0123,
+		Need0130
 	};
 
 	public string[,] TranslationOptions = {
@@ -72,7 +73,8 @@ public partial class Glyphs : Node
 		{ "????", "THREE", "ONE", "EMPTY", "TWO" },
 		{ "????", "MEASURE", "LIQUID", "LIGHT", "TIME"},
 		{ "????", "TWO", "THREE", "ONE", "EMPTY"},
-		{ "????", "ONE", "MATH", "EMPTY", "ART" }
+		{ "????", "ONE", "MATH", "EMPTY", "ART" },
+		{ "????", "PLACE", "MOVE", "CONTAIN", "NEED"}
 	};
 
 
