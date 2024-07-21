@@ -3,15 +3,15 @@ using Godot;
 
 namespace BrokenCircle.Scenes.Scripts;
 
-[Tool]
-public partial class Main : Node2D {
+public partial class MainScreen : Node2D {
+    [Export] private Node _screenContents;
 
-    private Node2D _screenContents;
+    public static MainScreen Instance { get; private set; }
 
-    [Export]
-    public Node2D ScreenContents {
+    public Node ScreenContents {
         get => _screenContents;
         set {
+            if (value == _screenContents) return;
             if (_screenContents != null) {
                 RemoveChild(_screenContents);
                 _screenContents.QueueFree();
@@ -23,6 +23,18 @@ public partial class Main : Node2D {
                 AddChild(_screenContents);
             }
         }
+    }
+
+    public override void _EnterTree() {
+        if (Instance != null) {
+            throw new InvalidOperationException("Only one instance of main scene is allowed.");
+        }
+
+        Instance = this;
+    }
+
+    public override void _ExitTree() {
+        Instance = null;
     }
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.

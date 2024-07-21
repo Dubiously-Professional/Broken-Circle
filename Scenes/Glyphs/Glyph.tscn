@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://77ngbpkgrbkb"]
+[gd_scene load_steps=12 format=3 uid="uid://77ngbpkgrbkb"]
 
 [ext_resource type="Texture2D" uid="uid://cnihms442me1s" path="res://Assets/TextureMaps/CircleGradient.png" id="1_cegpk"]
 [ext_resource type="Script" path="res://Scenes/Scripts/Glyph.cs" id="1_wix65"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://dbqve3xk7d51h" path="res://Assets/Sprites/Descend.png" id="6_1dxet"]
 [ext_resource type="Texture2D" uid="uid://bjvg4mex7t376" path="res://Assets/Sprites/Ideograms/Flow0000.png" id="8_p0tqf"]
 [ext_resource type="FontFile" uid="uid://dwcymbx5ivat2" path="res://Assets/Fonts/doves.ttf" id="8_vjwti"]
-[ext_resource type="AudioStream" uid="uid://cnca65qg283g5" path="res://Assets/Sounds/615533__crash_358__sci-fi-ui-button-sound-010.wav" id="10_e314c"]
 [ext_resource type="AudioStream" uid="uid://c5xkxikwf6j8t" path="res://Assets/Sounds/615538__crash_358__sci-fi-ui-button-sound-015.wav" id="10_eu1jt"]
 [ext_resource type="AudioStream" uid="uid://c12w8dsacjk33" path="res://Assets/Sounds/338229__fachii__button-hover.wav" id="11_rhtry"]
 
@@ -79,10 +78,6 @@ grow_vertical = 2
 texture = ExtResource("8_p0tqf")
 stretch_mode = 3
 metadata/_edit_use_anchors_ = true
-
-[node name="GlyphButtonClick" type="AudioStreamPlayer2D" parent="ControlCanvas/ButtonCanvas/GlyphButtonCanvas"]
-position = Vector2(25, 26)
-stream = ExtResource("10_e314c")
 
 [node name="SubMenuCanvas" type="Control" parent="ControlCanvas/ButtonCanvas"]
 anchors_preset = 0
