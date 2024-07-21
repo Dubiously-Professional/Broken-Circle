@@ -1,10 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://ja4x42o1flej"]
+[gd_scene load_steps=4 format=3 uid="uid://ja4x42o1flej"]
 
-[ext_resource type="Script" path="res://Scenes/Scripts/TypingText.cs" id="1_3mav0"]
 [ext_resource type="Script" path="res://Scenes/Scripts/Intro.cs" id="1_y4c4j"]
-[ext_resource type="FontFile" uid="uid://7l0t5gk5lixg" path="res://Assets/Fonts/VT323-Regular.ttf" id="2_olowl"]
-[ext_resource type="AudioStream" uid="uid://df4kftdmudmp6" path="res://Assets/Sounds/33552__jobro__osd-text-10.wav" id="4_xnqai"]
-[ext_resource type="AudioStream" uid="uid://5j7w8hyi7k2s" path="res://Assets/Sounds/615525__crash_358__sci-fi-ui-button-sound-004.wav" id="5_6bgnb"]
+[ext_resource type="PackedScene" uid="uid://dsbf7ieut1jp2" path="res://Scenes/TypingText.tscn" id="2_m7c0y"]
 [ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="7_6wv5u"]
 
 [node name="IntroScreen" type="Node2D"]
@@ -18,19 +15,15 @@ position = Vector2(93, 291)
 color = Color(0.0365313, 0.0981555, 0.0320369, 1)
 polygon = PackedVector2Array(-78, 93, -79, -264, 662, -263, 663, 95)
 
-[node name="TypingText" type="Timer" parent="TextBackground2"]
-wait_time = 0.2
-autostart = true
-script = ExtResource("1_3mav0")
+[node name="TypingText" parent="TextBackground2" node_paths=PackedStringArray("Text") instance=ExtResource("2_m7c0y")]
+Text = NodePath("IntroText")
 
-[node name="Text" type="Label" parent="TextBackground2/TypingText"]
+[node name="IntroText" type="RichTextLabel" parent="TextBackground2/TypingText"]
 modulate = Color(0.231373, 0.956863, 0.0823529, 1)
 offset_left = 27.0
 offset_top = 47.0
 offset_right = 737.0
 offset_bottom = 88.0
-theme_override_fonts/font = ExtResource("2_olowl")
-theme_override_font_sizes/font_size = 18
 text = "                  
 Obviously, there isn't oxygen and it's unclear if there are materials on board that could cause you harm...
 
@@ -43,18 +36,8 @@ Look, I can see if I can get you into their systems, but please, don't try to bo
 
 I love you. I trust you. I miss you.
                                                        "
-autowrap_mode = 3
 visible_characters = 0
 visible_ratio = 0.0
-metadata/_edit_use_anchors_ = true
-
-[node name="TextSound" type="AudioStreamPlayer2D" parent="TextBackground2/TypingText"]
-position = Vector2(393, 214)
-stream = ExtResource("4_xnqai")
-
-[node name="ButtonAppearSound" type="AudioStreamPlayer2D" parent="TextBackground2/TypingText"]
-position = Vector2(686, 304)
-stream = ExtResource("5_6bgnb")
 
 [node name="Glyph0000Flow" parent="TextBackground2/TypingText" instance=ExtResource("7_6wv5u")]
 visible = false
@@ -65,5 +48,5 @@ offset_bottom = 83.0
 ScaleNode = 2
 ActionButton = true
 
-[connection signal="timeout" from="TextBackground2/TypingText" to="TextBackground2/TypingText" method="_on_timeout"]
+[connection signal="TypingEnded" from="TextBackground2/TypingText" to="." method="ShowFlowButton"]
 [connection signal="GlyphPressed" from="TextBackground2/TypingText/Glyph0000Flow" to="." method="LoadAuthScene"]

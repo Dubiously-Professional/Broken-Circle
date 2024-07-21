@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsbf7ieut1jp2"]
+
+[ext_resource type="Script" path="res://Scenes/Scripts/TypingText.cs" id="1_6om5m"]
+
+[node name="TypingText" type="Timer"]
+wait_time = 0.2
+autostart = true
+script = ExtResource("1_6om5m")
+
+[connection signal="timeout" from="." to="." method="_on_timeout"]
