@@ -56,61 +56,6 @@ offset_bottom = 200.0
 FlowVisible = true
 GlyphType = 14
 
-[node name="FlowMenuDisplay" type="Panel" parent="Glyph0103On"]
-visible = false
-self_modulate = Color(0, 0, 0, 1)
-clip_contents = true
-custom_minimum_size = Vector2(768, 480)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -384.0
-offset_top = -240.0
-offset_right = 384.0
-offset_bottom = 240.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxEmpty_l58nb")
-metadata/_edit_use_anchors_ = true
-
-[node name="CanvasLayer" type="ColorRect" parent="Glyph0103On/FlowMenuDisplay"]
-self_modulate = Color(0, 0, 0, 1)
-custom_minimum_size = Vector2(768, 480)
-layout_mode = 1
-offset_right = 768.0
-offset_bottom = 480.0
-color = Color(0, 0, 0, 1)
-
-[node name="FlowDisplayBG" type="ColorRect" parent="Glyph0103On/FlowMenuDisplay"]
-self_modulate = Color(0, 0, 0, 1)
-layout_mode = 0
-offset_left = 98.6229
-offset_top = -204.781
-offset_right = 98.6229
-offset_bottom = -204.781
-color = Color(0.0365313, 0.0981555, 0.0320369, 1)
-
-[node name="Glyph" parent="Glyph0103On/FlowMenuDisplay/FlowDisplayBG" instance=ExtResource("1_xmmw7")]
-layout_mode = 1
-offset_left = 142.705
-offset_top = 404.33
-offset_right = 142.705
-offset_bottom = 404.33
-ActionButton = true
-GlyphType = 19
-
-[node name="Glyph2" parent="Glyph0103On/FlowMenuDisplay/FlowDisplayBG" instance=ExtResource("1_xmmw7")]
-layout_mode = 1
-offset_left = 397.195
-offset_top = 404.33
-offset_right = 397.195
-offset_bottom = 404.33
-ActionButton = true
-GlyphType = 27
-
 [node name="Glyph0103On2" parent="." instance=ExtResource("1_xmmw7")]
 offset_left = 267.0
 offset_top = 324.0
@@ -158,5 +103,63 @@ offset_bottom = 49.0
 GlyphType = 32
 metadata/_edit_use_anchors_ = true
 
+[node name="FlowMenuDisplay" type="Panel" parent="."]
+visible = false
+self_modulate = Color(0, 0, 0, 1)
+clip_contents = true
+custom_minimum_size = Vector2(768, 480)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -56.0
+offset_top = -40.0
+offset_right = 712.0
+offset_bottom = 440.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_l58nb")
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer" type="ColorRect" parent="FlowMenuDisplay"]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(768, 480)
+layout_mode = 1
+offset_left = 56.0
+offset_top = 40.0
+offset_right = 824.0
+offset_bottom = 520.0
+color = Color(0, 0, 0, 1)
+
+[node name="FlowDisplayBG" type="ColorRect" parent="FlowMenuDisplay"]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 98.6229
+offset_top = -204.781
+offset_right = 98.6229
+offset_bottom = -204.781
+color = Color(0.0365313, 0.0981555, 0.0320369, 1)
+
+[node name="Glyph" parent="FlowMenuDisplay/FlowDisplayBG" instance=ExtResource("1_xmmw7")]
+layout_mode = 1
+offset_left = 142.705
+offset_top = 404.33
+offset_right = 142.705
+offset_bottom = 404.33
+ActionButton = true
+GlyphType = 19
+
+[node name="Glyph2" parent="FlowMenuDisplay/FlowDisplayBG" instance=ExtResource("1_xmmw7")]
+layout_mode = 1
+offset_left = 397.195
+offset_top = 404.33
+offset_right = 397.195
+offset_bottom = 404.33
+ActionButton = true
+GlyphType = 27
+
 [connection signal="AscendPressed" from="Glyph0020Force" to="." method="AscendEngine"]
 [connection signal="FlowPressed" from="Glyph0103On" to="." method="showFlow"]
+[connection signal="GlyphPressed" from="FlowMenuDisplay/FlowDisplayBG/Glyph" to="." method="Power"]
+[connection signal="GlyphPressed" from="FlowMenuDisplay/FlowDisplayBG/Glyph2" to="." method="showFlow"]

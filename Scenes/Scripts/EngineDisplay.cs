@@ -21,7 +21,7 @@ public partial class EngineDisplay : Node2D
 
     public void showFlow()
     {
-        Control flowMenuDisplay = GetNode<Control>("Glyph0103On/FlowMenuDisplay");
+        Control flowMenuDisplay = GetNode<Control>("FlowMenuDisplay");
         flowMenuDisplay.Visible = !flowMenuDisplay.Visible;
     }
 
@@ -34,5 +34,14 @@ public partial class EngineDisplay : Node2D
         enginePower.GlyphType = Glyphs.GlyphType.On0103;
         
         showFlow();
+    }
+
+    public void dePower()
+    {
+        Glyph power = GetNode<Glyph>("Glyph0103On");
+        power.GlyphType = Glyphs.GlyphType.Empty0123;
+        
+        Glyph enginePower = GetNode<Glyph>("Glyph0103On2");
+        enginePower.GlyphType = Glyphs.GlyphType.Empty0123;
     }
 }
