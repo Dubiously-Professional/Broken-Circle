@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ja4x42o1flej"]
 
 [ext_resource type="Script" path="res://Scenes/Scripts/Intro.cs" id="1_y4c4j"]
-[ext_resource type="PackedScene" uid="uid://dsbf7ieut1jp2" path="res://Scenes/TypingText.tscn" id="2_m7c0y"]
+[ext_resource type="PackedScene" path="res://Scenes/TypingText.tscn" id="2_m7c0y"]
 [ext_resource type="FontFile" uid="uid://7l0t5gk5lixg" path="res://Assets/Fonts/VT323-Regular.ttf" id="2_olowl"]
 [ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="7_6wv5u"]
 
@@ -39,8 +39,6 @@ Look, I can see if I can get you into their systems, but please, don't try to bo
 I love you. I trust you. I miss you.
                                                        "
 scroll_active = false
-visible_characters = 0
-visible_ratio = 0.0
 
 [node name="Glyph0000Flow" parent="TextBackground2/TypingText" instance=ExtResource("7_6wv5u")]
 visible = false
