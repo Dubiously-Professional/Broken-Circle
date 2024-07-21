@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c4ir5ir3q5v1x"]
+[gd_scene load_steps=8 format=3 uid="uid://c4ir5ir3q5v1x"]
 
 [ext_resource type="Script" path="res://Scenes/Scripts/AuthScreen.cs" id="1_7gkba"]
 [ext_resource type="PackedScene" uid="uid://dsbf7ieut1jp2" path="res://Scenes/TypingText.tscn" id="1_klmt5"]
@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dbqve3xk7d51h" path="res://Assets/Sprites/Descend.png" id="4_57t0a"]
 [ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="4_mpfcn"]
 [ext_resource type="Script" path="res://Scenes/Scripts/CloseButton.cs" id="5_nugbk"]
-[ext_resource type="PackedScene" uid="uid://63cot4n4esaf" path="res://Scenes/FlowMenu.tscn" id="7_fal3t"]
-[ext_resource type="Script" path="res://Scenes/Scripts/FlowMenu.cs" id="8_sa8xa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c4unk"]
 
 [node name="AuthScreen2" type="Node2D"]
 position = Vector2(378, 262)
@@ -37,13 +37,6 @@ size_flags_vertical = 2
 layout_mode = 2
 FlowVisible = true
 GlyphType = 3
-
-[node name="FlowMenu" parent="VBoxContainer/TopContainer/Glyph0003Affirm" instance=ExtResource("7_fal3t")]
-size = Vector2i(50, 92)
-visible = false
-theme_override_constants/item_end_padding = -16
-allow_search = false
-script = ExtResource("8_sa8xa")
 
 [node name="BottomContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -117,6 +110,60 @@ default_color = Color(0.909804, 0.396078, 0.584314, 1)
 sharp_limit = 0.0
 round_precision = 1
 
+[node name="FlowMenuDisplay" type="Panel" parent="."]
+visible = false
+self_modulate = Color(0, 0, 0, 1)
+clip_contents = true
+custom_minimum_size = Vector2(768, 480)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -384.0
+offset_top = -240.0
+offset_right = 384.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_c4unk")
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer" type="ColorRect" parent="FlowMenuDisplay"]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(768, 480)
+layout_mode = 1
+offset_right = 768.0
+offset_bottom = 480.0
+color = Color(0, 0, 0, 1)
+
+[node name="FlowDisplayBG" type="ColorRect" parent="FlowMenuDisplay"]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 98.6229
+offset_top = -204.781
+offset_right = 98.6229
+offset_bottom = -204.781
+color = Color(0.0365313, 0.0981555, 0.0320369, 1)
+
+[node name="Glyph" parent="FlowMenuDisplay/FlowDisplayBG" instance=ExtResource("4_mpfcn")]
+layout_mode = 1
+offset_left = 142.705
+offset_top = 404.33
+offset_right = 142.705
+offset_bottom = 404.33
+ActionButton = true
+GlyphType = 5
+
+[node name="Glyph2" parent="FlowMenuDisplay/FlowDisplayBG" instance=ExtResource("4_mpfcn")]
+layout_mode = 1
+offset_left = 397.195
+offset_top = 404.33
+offset_right = 397.195
+offset_bottom = 404.33
+ActionButton = true
+GlyphType = 27
+
 [node name="TypingText" parent="." node_paths=PackedStringArray("Text") instance=ExtResource("1_klmt5")]
 Text = NodePath("MessageAlert/Message")
 
@@ -171,6 +218,8 @@ scale = Vector2(1.5, 1.5)
 texture_normal = ExtResource("4_57t0a")
 script = ExtResource("5_nugbk")
 
-[connection signal="id_pressed" from="VBoxContainer/TopContainer/Glyph0003Affirm/FlowMenu" to="VBoxContainer/TopContainer/Glyph0003Affirm/FlowMenu" method="_on_id_pressed"]
+[connection signal="FlowPressed" from="VBoxContainer/TopContainer/Glyph0003Affirm" to="." method="FlowMenu"]
+[connection signal="GlyphPressed" from="FlowMenuDisplay/FlowDisplayBG/Glyph" to="." method="LoadMainMenu"]
+[connection signal="GlyphPressed" from="FlowMenuDisplay/FlowDisplayBG/Glyph2" to="." method="FlowMenu"]
 [connection signal="TypingEnded" from="TypingText" to="." method="ShowCloseButton"]
 [connection signal="pressed" from="TypingText/MessageAlert/CloseButton" to="TypingText/MessageAlert/CloseButton" method="_on_pressed"]

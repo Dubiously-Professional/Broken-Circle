@@ -140,5 +140,12 @@ GlyphType = 13
 
 [connection signal="TypingEnded" from="TypingText" to="." method="ShowCloseButton"]
 [connection signal="pressed" from="TypingText/MessageAlert/CloseButton" to="TypingText/MessageAlert/CloseButton" method="_on_pressed"]
+[connection signal="DescendPressed" from="CanvasGroup/Glyph0001Self" to="." method="DescendSelf"]
+[connection signal="DescendPressed" from="CanvasGroup/Glyph0011Know" to="." method="DescendKnow"]
 [connection signal="DescendPressed" from="CanvasGroup/Glyph0013Electricity" to="." method="DescendElectricity"]
+[connection signal="DescendPressed" from="CanvasGroup/Glyph0020Force" to="." method="DescendForce"]
+[connection signal="DescendPressed" from="CanvasGroup/Glyph0021Move" to="." method="DescendMove"]
+[connection signal="DescendPressed" from="CanvasGroup/Glyph0022Gas" to="." method="DescendGas"]
 [connection signal="DescendPressed" from="CanvasGroup/Glyph0023Emotion" to="." method="DescendEmotion"]
+[connection signal="DescendPressed" from="CanvasGroup/Glyph0030Light" to="." method="DescendLight"]
+[connection signal="DescendPressed" from="CanvasGroup/Glyph0031Math" to="." method="DescendMath"]
