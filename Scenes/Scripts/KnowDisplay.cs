@@ -15,7 +15,6 @@ public partial class KnowDisplay : Node2D
     
     public void AscendKnow()
     {
-        MainScreen.Instance.ScreenContents =
-            ResourceLoader.Load<PackedScene>("res://Scenes/MainMenu.tscn").Instantiate();
+        MainScreen.Instance.ScreenContents = "res://Scenes/MainMenu.tscn";
     }
 }

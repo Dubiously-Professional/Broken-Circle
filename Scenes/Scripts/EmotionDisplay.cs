@@ -13,23 +13,20 @@ public partial class EmotionDisplay : Node2D
 	public override void _Process(double delta)
 	{
 	}
-	
-	private void LoadOldArt() 
+
+	private void LoadOldArt()
 	{
-		MainScreen.Instance.ScreenContents =
-			ResourceLoader.Load<PackedScene>("res://Scenes/Depth/OldArt.tscn").Instantiate();
+		MainScreen.Instance.ScreenContents = "res://Scenes/Depth/OldArt.tscn";
 	}
-	
-	private void LoadStrongEmotions() 
+
+	private void LoadStrongEmotions()
 	{
-		MainScreen.Instance.ScreenContents =
-			ResourceLoader.Load<PackedScene>("res://Scenes/Depth/StrongEmotions.tscn").Instantiate();
+		MainScreen.Instance.ScreenContents = "res://Scenes/Depth/StrongEmotions.tscn";
 	}
 
 	public void AscendEmotion()
 	{
-		MainScreen.Instance.ScreenContents =
-			ResourceLoader.Load<PackedScene>("res://Scenes/MainMenu.tscn").Instantiate();
+		MainScreen.Instance.ScreenContents = "res://Scenes/MainMenu.tscn";
 	}
 
 }

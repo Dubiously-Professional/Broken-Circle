@@ -21,7 +21,6 @@ public partial class StrongEmotions : Node2D
 
 	private void LoadEmotionDisplay() 
 	{
-		MainScreen.Instance.ScreenContents =
-			ResourceLoader.Load<PackedScene>("res://Scenes/EmotionDisplay.tscn").Instantiate();
+		MainScreen.Instance.ScreenContents = "res://Scenes/EmotionDisplay.tscn";
 	}
 }
