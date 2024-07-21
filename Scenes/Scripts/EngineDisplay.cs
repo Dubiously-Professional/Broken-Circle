@@ -14,8 +14,8 @@ public partial class EngineDisplay : Node2D
 	{
 	}
 
-    public void AscendEngine()
-    {
-        MainScreen.Instance.ScreenContents = "res://Scenes/MainMenu.tscn";
-    }
+	public void AscendEngine()
+	{
+		MainScreen.Instance.ScreenContents = "res://Scenes/MainMenu.tscn";
+	}
 }

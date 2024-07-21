@@ -14,57 +14,132 @@ offset_bottom = 83.0
 script = ExtResource("1_3kwtb")
 
 [node name="Glyph0030Light" parent="." instance=ExtResource("2_gtdj1")]
-offset_left = 135.0
-offset_top = 179.0
-offset_right = 135.0
-offset_bottom = 179.0
+offset_left = 142.0
+offset_top = 77.0
+offset_right = 142.0
+offset_bottom = 77.0
 GlyphType = 12
 
+[node name="Line2D3" type="Line2D" parent="Glyph0030Light"]
+position = Vector2(-9, -9)
+scale = Vector2(1.04762, 1.02703)
+points = PackedVector2Array(5.72727, 49.6578, 4.77273, 73.0261)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[node name="Line2D" type="Line2D" parent="Glyph0030Light/Line2D3"]
+visibility_layer = 2
+position = Vector2(-199.5, -116.842)
+scale = Vector2(0.954545, 0.973684)
+points = PackedVector2Array(209, 191, 214, 195, 218, 191)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
 [node name="Glyph0131Wire" parent="." instance=ExtResource("2_gtdj1")]
-offset_left = 194.0
-offset_top = 177.0
-offset_right = 194.0
-offset_bottom = 177.0
+offset_left = 139.0
+offset_top = 185.0
+offset_right = 139.0
+offset_bottom = 185.0
 GlyphType = 29
 
+[node name="Line2D3" type="Line2D" parent="Glyph0131Wire"]
+position = Vector2(-9, -9)
+scale = Vector2(1.04762, 1.02703)
+points = PackedVector2Array(105, -63.2893, 132.682, -21.421)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[node name="Line2D" type="Line2D" parent="Glyph0131Wire/Line2D3"]
+visibility_layer = 2
+position = Vector2(-199.5, -116.842)
+scale = Vector2(0.954545, 0.973684)
+points = PackedVector2Array(349, 86, 348, 98, 337, 95)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
 [node name="Glyph0130Need" parent="." instance=ExtResource("2_gtdj1")]
-offset_left = 254.0
-offset_top = 178.0
-offset_right = 254.0
-offset_bottom = 178.0
+offset_left = 219.0
+offset_top = 114.0
+offset_right = 219.0
+offset_bottom = 114.0
 GlyphType = 28
 
 [node name="Glyph0110Cut" parent="." instance=ExtResource("2_gtdj1")]
-offset_left = 314.0
-offset_top = 179.0
-offset_right = 314.0
-offset_bottom = 179.0
+offset_left = 280.0
+offset_top = 191.0
+offset_right = 280.0
+offset_bottom = 191.0
 GlyphType = 20
 
+[node name="Line2D3" type="Line2D" parent="Glyph0110Cut"]
+position = Vector2(-159.429, -24.2433)
+scale = Vector2(1.09751, 1.05479)
+points = PackedVector2Array(36.2727, 0, 118.364, 1.94736)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[node name="Line2D" type="Line2D" parent="Glyph0110Cut/Line2D3"]
+visibility_layer = 2
+position = Vector2(-199.5, -116.842)
+scale = Vector2(0.954545, 0.973684)
+points = PackedVector2Array(255, 110, 244, 120, 254, 129)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
 [node name="Glyph0013Electricity2" parent="." instance=ExtResource("2_gtdj1")]
-offset_left = 138.0
-offset_top = 306.0
-offset_right = 138.0
-offset_bottom = 306.0
+offset_left = 123.0
+offset_top = 336.0
+offset_right = 123.0
+offset_bottom = 336.0
 GlyphType = 7
 
 [node name="Glyph0132Relate" parent="." instance=ExtResource("2_gtdj1")]
-offset_left = 195.0
-offset_top = 307.0
-offset_right = 195.0
-offset_bottom = 307.0
+offset_left = 198.0
+offset_top = 265.0
+offset_right = 198.0
+offset_bottom = 265.0
 GlyphType = 20
 
+[node name="Line2D3" type="Line2D" parent="Glyph0132Relate"]
+position = Vector2(-77.4286, -98.2433)
+scale = Vector2(1.09751, 1.05479)
+points = PackedVector2Array(90.5949, 87.4517, 129.775, 130.114)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[node name="Line2D" type="Line2D" parent="Glyph0132Relate/Line2D3"]
+visibility_layer = 2
+position = Vector2(-199.5, -116.842)
+scale = Vector2(0.954545, 0.973684)
+points = PackedVector2Array(344.954, 243.894, 344, 252.657, 333.5, 251.683)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[node name="Line2D3" type="Line2D" parent="Glyph0132Relate/Line2D3"]
+position = Vector2(-77.4286, -98.2433)
+scale = Vector2(1.09751, 1.05479)
+points = PackedVector2Array(115.736, 173.353, 83.3583, 216.496)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[node name="Line2D" type="Line2D" parent="Glyph0132Relate/Line2D3/Line2D3"]
+visibility_layer = 2
+position = Vector2(-199.5, -116.842)
+scale = Vector2(0.954545, 0.973684)
+points = PackedVector2Array(305.025, 338.654, 295.458, 342.347, 295.458, 329.423)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
 [node name="Glyph0020Force" parent="." instance=ExtResource("2_gtdj1")]
-offset_left = 254.0
-offset_top = 308.0
-offset_right = 254.0
-offset_bottom = 308.0
+offset_left = 278.0
+offset_top = 336.0
+offset_right = 278.0
+offset_bottom = 336.0
 GlyphType = 8
 
 [node name="Glyph0103On" parent="." instance=ExtResource("2_gtdj1")]
-offset_left = 194.0
-offset_top = 390.0
-offset_right = 194.0
-offset_bottom = 390.0
+offset_left = 200.0
+offset_top = 389.0
+offset_right = 200.0
+offset_bottom = 389.0
 GlyphType = 19
