@@ -6,8 +6,8 @@ namespace BrokenCircle.Scenes.Scripts;
 
 public partial class MainScreen : Node2D {
 	[Export] private CanvasItem _screenContents;
-    private string _sceneName = "Default";
-    private Dictionary<string, CanvasItem> _scenes = new();
+	private string _sceneName = "Default";
+	private Dictionary<string, CanvasItem> _scenes = new();
 	
 	public static bool Testing = true;
 	public static MainScreen Instance { get; private set; }
@@ -20,23 +20,23 @@ public partial class MainScreen : Node2D {
 				_screenContents.Visible = false;
 			}
 
-            if (_sceneName == "Default") {
-                RemoveChild(_screenContents); // Don't ask me why I need to do this, it's necessary
-            }
-            _sceneName = value;
+			if (_sceneName == "Default") {
+				RemoveChild(_screenContents); // Don't ask me why I need to do this, it's necessary
+			}
+			_sceneName = value;
 
-            if (!_scenes.ContainsKey(value)) {
-                CanvasItem newScene = ResourceLoader.Load<PackedScene>(value).Instantiate() as CanvasItem;
-                _scenes.Add(value, newScene);
-                _screenContents = newScene;
-                AddChild(_screenContents);
-            } else {
-                _screenContents = _scenes[value];
-                if (_screenContents != null) {
-                    _screenContents.Visible = true;
-                }
-            }
-        }
+			if (!_scenes.ContainsKey(value)) {
+				CanvasItem newScene = ResourceLoader.Load<PackedScene>(value).Instantiate() as CanvasItem;
+				_scenes.Add(value, newScene);
+				_screenContents = newScene;
+				AddChild(_screenContents);
+			} else {
+				_screenContents = _scenes[value];
+				if (_screenContents != null) {
+					_screenContents.Visible = true;
+				}
+			}
+		}
 	}
 
 	public override void _EnterTree() {
@@ -45,8 +45,8 @@ public partial class MainScreen : Node2D {
 		}
 
 		Instance = this;
-        _scenes[_sceneName] = _screenContents;
-    }
+		_scenes[_sceneName] = _screenContents;
+	}
 
 	public override void _ExitTree() {
 		Instance = null;
