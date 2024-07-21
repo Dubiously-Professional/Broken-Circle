@@ -13,11 +13,39 @@ offset_right = 216.0
 offset_bottom = 280.0
 GlyphType = 5
 
+[node name="Glyph0011One3" parent="." instance=ExtResource("2_5k0dh")]
+offset_left = 474.0
+offset_top = 197.0
+offset_right = 474.0
+offset_bottom = 197.0
+GlyphType = 5
+
+[node name="Glyph0011One4" parent="." instance=ExtResource("2_5k0dh")]
+offset_left = 525.0
+offset_top = 196.0
+offset_right = 525.0
+offset_bottom = 196.0
+GlyphType = 5
+
 [node name="Glyph0120Two" parent="." instance=ExtResource("2_5k0dh")]
 offset_left = 379.0
 offset_top = 279.0
 offset_right = 379.0
 offset_bottom = 279.0
+GlyphType = 24
+
+[node name="Glyph0120Two3" parent="." instance=ExtResource("2_5k0dh")]
+offset_left = 657.0
+offset_top = 193.0
+offset_right = 657.0
+offset_bottom = 193.0
+GlyphType = 24
+
+[node name="Glyph0120Two2" parent="." instance=ExtResource("2_5k0dh")]
+offset_left = 198.0
+offset_top = 198.0
+offset_right = 198.0
+offset_bottom = 198.0
 GlyphType = 24
 
 [node name="Glyph0122Three" parent="." instance=ExtResource("2_5k0dh")]
@@ -27,6 +55,20 @@ offset_right = 513.0
 offset_bottom = 281.0
 GlyphType = 26
 
+[node name="Glyph0122Three3" parent="." instance=ExtResource("2_5k0dh")]
+offset_left = 708.0
+offset_top = 191.0
+offset_right = 708.0
+offset_bottom = 191.0
+GlyphType = 26
+
+[node name="Glyph0122Three2" parent="." instance=ExtResource("2_5k0dh")]
+offset_left = 575.0
+offset_top = 194.0
+offset_right = 575.0
+offset_bottom = 194.0
+GlyphType = 26
+
 [node name="Glyph0011One2" parent="." instance=ExtResource("2_5k0dh")]
 offset_left = 639.0
 offset_top = 280.0
@@ -34,11 +76,25 @@ offset_right = 639.0
 offset_bottom = 280.0
 GlyphType = 5
 
-[node name="Glyph0011One3" parent="." instance=ExtResource("2_5k0dh")]
+[node name="Glyph0123Empty" parent="." instance=ExtResource("2_5k0dh")]
 offset_left = 691.0
 offset_top = 278.0
 offset_right = 691.0
 offset_bottom = 278.0
+GlyphType = 27
+
+[node name="Glyph0123Empty3" parent="." instance=ExtResource("2_5k0dh")]
+offset_left = 379.0
+offset_top = 196.0
+offset_right = 379.0
+offset_bottom = 196.0
+GlyphType = 27
+
+[node name="Glyph0123Empty2" parent="." instance=ExtResource("2_5k0dh")]
+offset_left = 249.0
+offset_top = 198.0
+offset_right = 249.0
+offset_bottom = 198.0
 GlyphType = 27
 
 [node name="Glyph0022Gas" parent="." instance=ExtResource("2_5k0dh")]
@@ -63,8 +119,15 @@ offset_bottom = 186.0
 GlyphType = 25
 
 [node name="Glyph0103On" parent="." instance=ExtResource("2_5k0dh")]
-offset_left = 215.0
-offset_top = 389.0
-offset_right = 215.0
-offset_bottom = 389.0
+offset_left = 378.0
+offset_top = 394.0
+offset_right = 378.0
+offset_bottom = 394.0
+GlyphType = 19
+
+[node name="Glyph0103On2" parent="." instance=ExtResource("2_5k0dh")]
+offset_left = 378.0
+offset_top = 394.0
+offset_right = 378.0
+offset_bottom = 394.0
 GlyphType = 19
