@@ -7,11 +7,11 @@
 script = ExtResource("1_3kwtb")
 
 [node name="Glyph0013Electricity" parent="." instance=ExtResource("2_gtdj1")]
-offset_left = 689.0
-offset_top = 83.0
-offset_right = 689.0
-offset_bottom = 83.0
-script = ExtResource("1_3kwtb")
+offset_left = 680.0
+offset_top = 86.0
+offset_right = 680.0
+offset_bottom = 86.0
+script = null
 
 [node name="Glyph0030Light" parent="." instance=ExtResource("2_gtdj1")]
 offset_left = 142.0

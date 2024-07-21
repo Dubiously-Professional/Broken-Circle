@@ -32,7 +32,7 @@ public partial class MainMenu : Node2D {
 	}
 
 	private void DescendForce() {
-		MainScreen.Instance.ScreenContents = "res://Scenes/ForceDisplay.tscn";
+		MainScreen.Instance.ScreenContents = "res://Scenes/EngineDisplay.tscn";
 	}
 
 	private void DescendMove() {
@@ -44,7 +44,7 @@ public partial class MainMenu : Node2D {
 	}
 
 	private void DescendLight() {
-		MainScreen.Instance.ScreenContents = "res://Scenes/LightDisplay.tscn";
+		MainScreen.Instance.ScreenContents = "res://Scenes/LightsDisplay.tscn";
 	}
 
 	private void DescendMath() {

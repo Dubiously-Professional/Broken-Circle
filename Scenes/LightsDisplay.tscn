@@ -3,18 +3,32 @@
 [ext_resource type="Script" path="res://Scenes/Scripts/LightsDisplay.cs" id="1_mstf2"]
 [ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="1_ormm5"]
 
-[node name="Lights" type="Node2D"]
+[node name="LightsDisplay" type="Node2D"]
 script = ExtResource("1_mstf2")
 
 [node name="Glyph0030Light" parent="." instance=ExtResource("1_ormm5")]
 anchors_preset = -1
 anchor_top = 0.0
-offset_left = 716.0
-offset_top = 63.0
-offset_right = 716.0
-offset_bottom = 63.0
+offset_left = 673.0
+offset_top = 92.0
+offset_right = 673.0
+offset_bottom = 92.0
 AscendVisible = true
 GlyphType = 12
+
+[node name="Glyph0131Wire" parent="." instance=ExtResource("1_ormm5")]
+offset_left = 380.0
+offset_top = 235.0
+offset_right = 380.0
+offset_bottom = 235.0
+GlyphType = 29
+
+[node name="Glyph0110Cut" parent="." instance=ExtResource("1_ormm5")]
+offset_left = 378.0
+offset_top = 332.0
+offset_right = 378.0
+offset_bottom = 332.0
+GlyphType = 20
 
 [node name="Glyph0030Light2" parent="." instance=ExtResource("1_ormm5")]
 visible = false
@@ -165,19 +179,5 @@ offset_top = 371.0
 offset_right = 652.0
 offset_bottom = 371.0
 GlyphType = 12
-
-[node name="Glyph0131Wire" parent="." instance=ExtResource("1_ormm5")]
-offset_left = 380.0
-offset_top = 235.0
-offset_right = 380.0
-offset_bottom = 235.0
-GlyphType = 29
-
-[node name="Glyph0110Cut" parent="." instance=ExtResource("1_ormm5")]
-offset_left = 378.0
-offset_top = 332.0
-offset_right = 378.0
-offset_bottom = 332.0
-GlyphType = 20
 
 [connection signal="AscendPressed" from="Glyph0030Light" to="." method="AscendLights"]
