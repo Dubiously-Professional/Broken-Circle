@@ -53,7 +53,7 @@ public partial class Glyphs : Node {
             _glyphIcons[i] = GD.Load<Texture2D>("res://Assets/Sprites/Ideograms/" + glyphNames[i] + ".png");
             _glyphTranslations[i] = "????";
             // TODO
-            _glyphTranslationOptions[i] = new []{"????", "Fluffy", "Onion", "No Really"};
+            _glyphTranslationOptions[i] = new []{"????", "FLUFFY", "ONION", "NO REALLY", "BEES"};
         }
     }
 
