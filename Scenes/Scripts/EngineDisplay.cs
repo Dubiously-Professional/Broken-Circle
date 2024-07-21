@@ -19,29 +19,29 @@ public partial class EngineDisplay : Node2D
 		MainScreen.Instance.ScreenContents = "res://Scenes/MainMenu.tscn";
 	}
 
-    public void showFlow()
-    {
-        Control flowMenuDisplay = GetNode<Control>("FlowMenuDisplay");
-        flowMenuDisplay.Visible = !flowMenuDisplay.Visible;
-    }
+	public void showFlow()
+	{
+		Control flowMenuDisplay = GetNode<Control>("FlowMenuDisplay");
+		flowMenuDisplay.Visible = !flowMenuDisplay.Visible;
+	}
 
-    public void Power()
-    {
-        Glyph power = GetNode<Glyph>("Glyph0103On");
-        power.GlyphType = Glyphs.GlyphType.On0103;
-        
-        Glyph enginePower = GetNode<Glyph>("Glyph0103On2");
-        enginePower.GlyphType = Glyphs.GlyphType.On0103;
-        
-        showFlow();
-    }
+	public void Power()
+	{
+		Glyph power = GetNode<Glyph>("Glyph0103On");
+		power.GlyphType = Glyphs.GlyphType.On0103;
+		
+		Glyph enginePower = GetNode<Glyph>("Glyph0103On2");
+		enginePower.GlyphType = Glyphs.GlyphType.On0103;
+		
+		showFlow();
+	}
 
-    public void dePower()
-    {
-        Glyph power = GetNode<Glyph>("Glyph0103On");
-        power.GlyphType = Glyphs.GlyphType.Empty0123;
-        
-        Glyph enginePower = GetNode<Glyph>("Glyph0103On2");
-        enginePower.GlyphType = Glyphs.GlyphType.Empty0123;
-    }
+	public void dePower()
+	{
+		Glyph power = GetNode<Glyph>("Glyph0103On");
+		power.GlyphType = Glyphs.GlyphType.Empty0123;
+		
+		Glyph enginePower = GetNode<Glyph>("Glyph0103On2");
+		enginePower.GlyphType = Glyphs.GlyphType.Empty0123;
+	}
 }
