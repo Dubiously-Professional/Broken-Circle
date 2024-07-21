@@ -141,3 +141,4 @@ GlyphType = 13
 [connection signal="TypingEnded" from="TypingText" to="." method="ShowCloseButton"]
 [connection signal="pressed" from="TypingText/MessageAlert/CloseButton" to="TypingText/MessageAlert/CloseButton" method="_on_pressed"]
 [connection signal="DescendPressed" from="CanvasGroup/Glyph0013Electricity" to="." method="DescendElectricity"]
+[connection signal="DescendPressed" from="CanvasGroup/Glyph0023Emotion" to="." method="DescendEmotion"]
