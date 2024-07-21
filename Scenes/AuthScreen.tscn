@@ -1,84 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://c4ir5ir3q5v1x"]
+[gd_scene load_steps=2 format=3 uid="uid://c4ir5ir3q5v1x"]
 
-[ext_resource type="PackedScene" uid="uid://b3c0mrc7q5y48" path="res://Scenes/Glyphs/Glyph0001Self.tscn" id="2_n36xg"]
-[ext_resource type="PackedScene" uid="uid://70kh50s1fnc8" path="res://Scenes/Glyphs/Glyph0003Affirm.tscn" id="3_4rkgu"]
-[ext_resource type="PackedScene" uid="uid://bxhlq5863m238" path="res://Scenes/Glyphs/Glyph0010Safe.tscn" id="4_lunlp"]
 [ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="4_mpfcn"]
 
 [node name="AuthScreen2" type="Node2D"]
-
-[node name="CanvasGroup" type="CanvasGroup" parent="."]
-top_level = true
-
-[node name="CanvasGroup" type="CanvasGroup" parent="CanvasGroup"]
-self_modulate = Color(1, 1, 1, 0)
-show_behind_parent = true
-
-[node name="Line2D" type="Line2D" parent="CanvasGroup/CanvasGroup"]
-visibility_layer = 2
-points = PackedVector2Array(360, 236, 378, 208)
-width = 1.0
-default_color = Color(0.909804, 0.396078, 0.584314, 1)
-
-[node name="Line2D" type="Line2D" parent="CanvasGroup/CanvasGroup/Line2D"]
-visibility_layer = 2
-position = Vector2(0, -48)
-rotation = -0.00453992
-points = PackedVector2Array(369.807, 263.682, 373.825, 259.7, 376.834, 257.713, 376.816, 261.713, 376.798, 265.713)
-width = 1.0
-default_color = Color(0.909804, 0.396078, 0.584314, 1)
-
-[node name="Line2D2" type="Line2D" parent="CanvasGroup/CanvasGroup"]
-visibility_layer = 2
-points = PackedVector2Array(426, 235, 406, 208)
-width = 1.0
-default_color = Color(0.909804, 0.396078, 0.584314, 1)
-
-[node name="Line2D" type="Line2D" parent="CanvasGroup/CanvasGroup/Line2D2"]
-visibility_layer = 2
-position = Vector2(52, -29)
-points = PackedVector2Array(368, 260, 370, 262, 374, 264, 374, 261, 372, 255)
-width = 1.0
-default_color = Color(0.909804, 0.396078, 0.584314, 1)
-
-[node name="Line2D3" type="Line2D" parent="CanvasGroup/CanvasGroup"]
-visibility_layer = 2
-texture_filter = 1
-position = Vector2(0, -3)
-points = PackedVector2Array(414, 258, 410, 258, 370, 258)
-width = 1.0
-default_color = Color(0.909804, 0.396078, 0.584314, 1)
-
-[node name="Line2D" type="Line2D" parent="CanvasGroup/CanvasGroup/Line2D3"]
-visibility_layer = 2
-points = PackedVector2Array(374, 255, 372, 256, 370, 258, 374, 261, 375, 261)
-width = 1.0
-default_color = Color(0.909804, 0.396078, 0.584314, 1)
-
-[node name="Line2D2" type="Line2D" parent="CanvasGroup/CanvasGroup/Line2D3"]
-visibility_layer = 2
-position = Vector2(-1, 0)
-points = PackedVector2Array(410, 255, 412, 255, 415, 258, 414, 259, 409, 261)
-width = 1.0
-default_color = Color(0.909804, 0.396078, 0.584314, 1)
-
-[node name="Glyph0001Self" parent="CanvasGroup" instance=ExtResource("2_n36xg")]
-position = Vector2(271, 184)
-
-[node name="Glyph0003Affirm" parent="CanvasGroup" instance=ExtResource("3_4rkgu")]
-position = Vector2(316, 119)
-
-[node name="Glyph0010Safe" parent="CanvasGroup" instance=ExtResource("4_lunlp")]
-position = Vector2(361, 184)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 63.0
-offset_top = 79.0
-offset_right = 191.0
-offset_bottom = 207.0
+offset_left = 55.0
+offset_top = 63.0
+offset_right = 183.0
+offset_bottom = 191.0
 grow_horizontal = 2
 size_flags_vertical = 3
 
@@ -96,6 +29,65 @@ size_flags_vertical = 10
 [node name="Glyph0001Self" parent="VBoxContainer/BottomContainer" instance=ExtResource("4_mpfcn")]
 layout_mode = 2
 size_flags_horizontal = 2
+GlyphType = 1
 
 [node name="Glyph0010Safe" parent="VBoxContainer/BottomContainer" instance=ExtResource("4_mpfcn")]
 layout_mode = 2
+GlyphType = 4
+
+[node name="CanvasGroup" type="CanvasGroup" parent="VBoxContainer"]
+show_behind_parent = true
+
+[node name="Line2D3" type="Line2D" parent="VBoxContainer/CanvasGroup"]
+position = Vector2(-9, -9)
+scale = Vector2(1.04762, 1.02703)
+points = PackedVector2Array(116.455, 83.7368, 157.5, 140.211)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[node name="Line2D" type="Line2D" parent="VBoxContainer/CanvasGroup/Line2D3"]
+visibility_layer = 2
+position = Vector2(-199.5, -116.842)
+scale = Vector2(0.954545, 0.973684)
+points = PackedVector2Array(368, 260, 370, 262, 374, 264, 374, 261, 372, 255)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[node name="Line2D4" type="Line2D" parent="VBoxContainer/CanvasGroup"]
+position = Vector2(-125, -8)
+scale = Vector2(1.04762, 1.02703)
+points = PackedVector2Array(194.727, 82.7632, 159.409, 142.158)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[node name="Line2D" type="Line2D" parent="VBoxContainer/CanvasGroup/Line2D4"]
+visibility_layer = 2
+position = Vector2(-166.091, -166.5)
+rotation = -0.00463095
+scale = Vector2(0.954546, 0.973684)
+skew = 0.000180244
+points = PackedVector2Array(369.807, 263.682, 373.825, 259.7, 376.834, 257.713, 376.816, 261.713, 376.798, 265.713)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[node name="Line2D2" type="Line2D" parent="VBoxContainer/CanvasGroup"]
+show_behind_parent = true
+position = Vector2(55, 158)
+points = PackedVector2Array(82, 0, 0, 0)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[node name="Line2D2" type="Line2D" parent="VBoxContainer/CanvasGroup/Line2D2"]
+visibility_layer = 2
+position = Vector2(-370, -258)
+points = PackedVector2Array(376, 254, 372, 256, 370, 258, 374, 261, 379, 261)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[node name="Line2D" type="Line2D" parent="VBoxContainer/CanvasGroup/Line2D2"]
+show_behind_parent = true
+points = PackedVector2Array(75, -6, 78, -3, 82, 0, 77, 2, 74, 5)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+sharp_limit = 0.0
+round_precision = 1
