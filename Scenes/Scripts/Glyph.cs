@@ -143,10 +143,16 @@ public partial class Glyph : Node2D {
         Glyphs.Instance.GlyphTranslationChanged += OnTranslationChanged;
     }
 
+    protected override void Dispose(bool disposing) {
+        Glyphs.Instance.GlyphTranslationChanged -= OnTranslationChanged;
+        base.Dispose(disposing);
+    }
+
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(double delta) { }
 
     private void OnGlyphButtonPressed() {
+        MainScreen.Instance.GetNode<AudioStreamPlayer2D>("Sounds/GlyphButtonClick").Play();
         if (ActionButton) {
             EmitSignal(SignalName.GlyphPressed);
         } else {
