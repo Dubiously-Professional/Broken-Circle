@@ -178,15 +178,17 @@ expand_mode = 1
 size = Vector2i(116, 129)
 theme = ExtResource("10_lypej")
 theme_override_font_sizes/font_size = 20
-item_count = 4
+item_count = 5
 item_0/text = "????"
 item_0/id = 0
-item_1/text = "Fluffy"
+item_1/text = "FLOW"
 item_1/id = 1
-item_2/text = "Onion"
+item_2/text = "FLOW"
 item_2/id = 2
-item_3/text = "No Really"
+item_3/text = "FLOW"
 item_3/id = 3
+item_4/text = "FLOW"
+item_4/id = 4
 
 [node name="FlowButton" type="TextureButton" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas"]
 visible = false

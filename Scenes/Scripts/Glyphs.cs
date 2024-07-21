@@ -1,14 +1,19 @@
 using System;
+using System.Collections.Generic;
 using Godot;
+using Godot.Collections;
+using Array = Godot.Collections.Array;
 
 namespace BrokenCircle.Scenes.Scripts;
 
 [Tool]
-public partial class Glyphs : Node {
+public partial class Glyphs : Node
+{
     [Signal]
     public delegate void GlyphTranslationChangedEventHandler(GlyphType glyphType, string translation);
 
-    public enum GlyphType {
+    public enum GlyphType
+    {
         Flow0000,
         Self0001,
         Contain0002,
@@ -30,11 +35,37 @@ public partial class Glyphs : Node {
         Metal0102,
         On0103,
         Cut0110
-    }
+    };
 
+    public string[,] TranslationOptions = {
+        { "????", "FLOW", "FLOW", "FLOW", "FLOW" },
+        { "????", "SELF", "SELF", "SELF", "SELF" },
+        { "????", "CONTAIN", "CONTAIN", "CONTAIN", "CONTAIN" },
+        { "????", "AFFIRM", "AFFIRM", "AFFIRM", "AFFIRM" },
+        { "????", "EMOTION", "SAFE", "FORCE", "OBJECT" },
+        { "????", "EMPTY", "ONE", "TWO", "THREE" },
+        { "????", "KNOW", "OBJECT", "NOT", "MATH" },
+        { "????", "FORCE", "SAFE", "POWER", "CUT" },
+        { "????", "FORCE", "METAL", "CUT", "OBJECT" },
+        { "????", "ORIGIN", "MOVE", "PLACE", "MOVE" },
+        { "????", "OBJECT", "GAS", "LIQUID", "METAL" },
+        { "????", "EMOTION", "OBJECT", "ART", "OTHER" },
+        { "????", "ART", "AFFIRM", "LIGHT", "OTHER" },
+        { "????", "EMPTY", "ONE", "MATH", "ART" },
+        { "????", "NOT", "TIME", "AFTER", "BEFORE" },
+        { "????", "PLACE", "OTHER", "MOVE", "ORIGIN" },
+        { "????", "LIGHT", "MOVE", "PLACE", "FORCE" },
+        { "????", "EMPTY", "ONE", "MATH", "OBJECT" },
+        { "????", "OBJECT", "GAS", "LIQUID", "METAL" },
+        { "????", "ON", "TIME", "EMPTY", "BEFORE" },
+        { "????", "GAS", "AFTER", "CUT", "METAL"}
+    };
+    
+    
     private Texture2D[] _glyphIcons;
     private string[] _glyphTranslations;
     private string[][] _glyphTranslationOptions;
+
 
     public Glyphs() {
         if (Instance != null) {
@@ -53,7 +84,8 @@ public partial class Glyphs : Node {
             _glyphIcons[i] = GD.Load<Texture2D>("res://Assets/Sprites/Ideograms/" + glyphNames[i] + ".png");
             _glyphTranslations[i] = "????";
             // TODO
-            _glyphTranslationOptions[i] = new []{"????", "FLUFFY", "ONION", "NO REALLY", "BEES"};
+            _glyphTranslationOptions[i] = new []{TranslationOptions[i,0], TranslationOptions[i,1], TranslationOptions[i,2], TranslationOptions[i,3], TranslationOptions[i,4]}
+            ;
         }
     }
 
