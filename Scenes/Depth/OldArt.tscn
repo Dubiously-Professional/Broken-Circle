@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://8a25c2mut5me"]
+[gd_scene load_steps=3 format=3 uid="uid://c4lpn00obg5o0"]
 
 [ext_resource type="Script" path="res://Scenes/Scripts/OldArt.cs" id="1_c2rj1"]
 [ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="1_kurqo"]

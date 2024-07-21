@@ -1,13 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://c2q3c4cgtjtp6"]
 
 [ext_resource type="Script" path="res://Scenes/Scripts/MainMenu.cs" id="1_fnwe1"]
-[ext_resource type="PackedScene" uid="uid://ccgm5r4qj2vb3" path="res://MainMenuMessage.tscn" id="2_bnh8x"]
+[ext_resource type="PackedScene" uid="uid://mqf2pj05dpbw" path="res://MainMenuMessage.tscn" id="2_bnh8x"]
 [ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="2_koekw"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_fnwe1")
-
-[node name="MessageAlert" parent="." instance=ExtResource("2_bnh8x")]
 
 [node name="CanvasGroup" type="CanvasGroup" parent="."]
 position = Vector2(41, 82)
@@ -83,6 +81,8 @@ offset_right = 332.0
 offset_bottom = 327.0
 DescendVisible = true
 GlyphType = 13
+
+[node name="MessageAlert" parent="." instance=ExtResource("2_bnh8x")]
 
 [connection signal="DescendPressed" from="CanvasGroup/Glyph0001Self" to="." method="DescendSelf"]
 [connection signal="DescendPressed" from="CanvasGroup/Glyph0011Know" to="." method="DescendKnow"]
