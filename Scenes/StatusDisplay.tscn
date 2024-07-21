@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="1_p4exh"]
 
-[node name="StatusDisplay" type="Node2D"]
+[node name="Status" type="Node2D"]
 
 [node name="Glyph0010Safe" parent="." instance=ExtResource("1_p4exh")]
 offset_left = 136.0
@@ -92,7 +92,7 @@ offset_right = 218.0
 offset_bottom = 432.0
 GlyphType = 20
 
-[node name="Glyph0023Emotion" parent="." instance=ExtResource("1_p4exh")]
+[node name="Glyph0110Emotion0023" parent="." instance=ExtResource("1_p4exh")]
 offset_left = 678.0
 offset_top = 60.0
 offset_right = 678.0
