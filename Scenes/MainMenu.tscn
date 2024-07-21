@@ -74,8 +74,6 @@ offset_bottom = -4.0
 DescendVisible = true
 GlyphType = 1
 
-[node name="SelfMenu" type="PopupMenu" parent="CanvasGroup/Glyph0001Self"]
-
 [node name="Glyph0011Know" parent="CanvasGroup" instance=ExtResource("2_koekw")]
 offset_left = 173.0
 offset_top = 167.0
@@ -142,3 +140,4 @@ GlyphType = 13
 
 [connection signal="TypingEnded" from="TypingText" to="." method="ShowCloseButton"]
 [connection signal="pressed" from="TypingText/MessageAlert/CloseButton" to="TypingText/MessageAlert/CloseButton" method="_on_pressed"]
+[connection signal="DescendPressed" from="CanvasGroup/Glyph0013Electricity" to="." method="DescendElectricity"]
