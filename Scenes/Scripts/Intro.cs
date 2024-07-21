@@ -3,8 +3,7 @@ using Godot;
 
 public partial class Intro : Node2D {
 	private void LoadAuthScene() {
-		MainScreen.Instance.ScreenContents =
-			ResourceLoader.Load<PackedScene>("res://Scenes/AuthScreen.tscn").Instantiate();
+		MainScreen.Instance.ScreenContents = "res://Scenes/AuthScreen.tscn";
 	}
 
 	private void ShowFlowButton() {

@@ -16,7 +16,6 @@ public partial class LightsDisplay : Node2D
     
     public void AscendLights()
     {
-        MainScreen.Instance.ScreenContents =
-            ResourceLoader.Load<PackedScene>("res://Scenes/MainMenu.tscn").Instantiate();
+        MainScreen.Instance.ScreenContents = "res://Scenes/MainMenu.tscn";
     }
 }

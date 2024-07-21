@@ -16,7 +16,6 @@ public partial class EngineDisplay : Node2D
 
     public void AscendEngine()
     {
-        MainScreen.Instance.ScreenContents =
-            ResourceLoader.Load<PackedScene>("res://Scenes/MainMenu.tscn").Instantiate();
+        MainScreen.Instance.ScreenContents = "res://Scenes/MainMenu.tscn";
     }
 }
