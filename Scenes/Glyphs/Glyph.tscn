@@ -13,30 +13,28 @@
 [ext_resource type="AudioStream" uid="uid://c5xkxikwf6j8t" path="res://Assets/Sounds/615538__crash_358__sci-fi-ui-button-sound-015.wav" id="10_eu1jt"]
 [ext_resource type="AudioStream" uid="uid://c12w8dsacjk33" path="res://Assets/Sounds/338229__fachii__button-hover.wav" id="11_rhtry"]
 
-[node name="Glyph" type="Node2D"]
+[node name="Glyph" type="Control"]
 texture_filter = 1
-position = Vector2(44, 39)
-script = ExtResource("1_wix65")
-
-[node name="ControlCanvas" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
+offset_left = 44.0
+offset_top = 39.0
+offset_right = 44.0
+offset_bottom = 39.0
+script = ExtResource("1_wix65")
+
+[node name="ControlCanvas" type="VBoxContainer" parent="."]
+layout_mode = 0
 offset_right = 64.0
 offset_bottom = 88.0
 metadata/_edit_use_anchors_ = true
 
 [node name="ButtonCanvas" type="Control" parent="ControlCanvas"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -32.0
-offset_right = 32.0
-offset_bottom = 64.0
-grow_horizontal = 2
+layout_mode = 2
+size_flags_vertical = 3
 metadata/_edit_use_anchors_ = true
 
-[node name="GlyphButtonCanvas" type="Control" parent="ControlCanvas/ButtonCanvas"]
+[node name="GlyphButtonCanvas" type="CenterContainer" parent="ControlCanvas/ButtonCanvas"]
 modulate = Color(0.501469, 1, 0.892343, 1)
 layout_mode = 1
 anchors_preset = 8
@@ -53,18 +51,7 @@ grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="GlyphButton" type="TextureButton" parent="ControlCanvas/ButtonCanvas/GlyphButtonCanvas"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -23.0
-offset_top = -23.0
-offset_right = 23.0
-offset_bottom = 23.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 texture_normal = ExtResource("1_cegpk")
@@ -98,156 +85,19 @@ position = Vector2(25, 26)
 stream = ExtResource("10_e314c")
 
 [node name="SubMenuCanvas" type="Control" parent="ControlCanvas/ButtonCanvas"]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -32.0
-offset_top = -32.0
-offset_right = 32.0
-offset_bottom = 32.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+offset_right = 64.0
+offset_bottom = 64.0
 mouse_filter = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="TranslateButtonCanvas" type="Control" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas"]
+[node name="SubMenuButtonClick" type="AudioStreamPlayer2D" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas"]
+position = Vector2(32, 32)
+stream = ExtResource("10_eu1jt")
+
+[node name="AscendButton" type="TextureButton" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas"]
 modulate = Color(1, 0, 0.996078, 1)
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -24.0
-offset_right = 24.0
-grow_vertical = 0
-
-[node name="TranslateButton" type="TextureButton" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas/TranslateButtonCanvas"]
 clip_contents = true
-layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_right = 24.0
-grow_vertical = 2
-texture_normal = ExtResource("1_cegpk")
-texture_pressed = ExtResource("2_2whlt")
-texture_hover = ExtResource("3_tjf3u")
-texture_click_mask = ExtResource("4_c7rnf")
-ignore_texture_size = true
-stretch_mode = 5
-
-[node name="TranslateTexture" type="TextureRect" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas/TranslateButtonCanvas/TranslateButton"]
-self_modulate = Color(0.345098, 0, 0.34902, 1)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -10.0
-offset_top = -10.0
-offset_right = 10.0
-offset_bottom = 10.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("5_ni0l8")
-expand_mode = 1
-
-[node name="DescendButtonCanvas" type="Control" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas"]
-visible = false
-modulate = Color(1, 0, 0.996078, 1)
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -24.0
-offset_top = -24.0
-grow_horizontal = 0
-grow_vertical = 0
-
-[node name="DescendButton" type="TextureButton" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas/DescendButtonCanvas"]
-clip_contents = true
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -24.0
-offset_top = -12.0
-offset_bottom = 12.0
-grow_horizontal = 0
-grow_vertical = 2
-texture_normal = ExtResource("1_cegpk")
-texture_pressed = ExtResource("2_2whlt")
-texture_hover = ExtResource("3_tjf3u")
-texture_click_mask = ExtResource("4_c7rnf")
-ignore_texture_size = true
-stretch_mode = 5
-
-[node name="DescendTexture" type="TextureRect" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas/DescendButtonCanvas/DescendButton"]
-self_modulate = Color(0.345098, 0, 0.34902, 1)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -10.0
-offset_top = -10.0
-offset_right = 10.0
-offset_bottom = 10.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("6_1dxet")
-expand_mode = 1
-
-[node name="FlowButtonCanvas" type="Control" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas"]
-visible = false
-modulate = Color(0, 0.464581, 0.395127, 1)
-layout_mode = 1
-anchors_preset = 0
-offset_right = 24.0
-offset_bottom = 24.0
-
-[node name="FlowButton" type="TextureButton" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas/FlowButtonCanvas"]
-clip_contents = true
-layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_right = 24.0
-grow_vertical = 2
-texture_normal = ExtResource("1_cegpk")
-texture_pressed = ExtResource("2_2whlt")
-texture_hover = ExtResource("3_tjf3u")
-texture_click_mask = ExtResource("4_c7rnf")
-ignore_texture_size = true
-stretch_mode = 5
-
-[node name="FlowTexture" type="TextureRect" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas/FlowButtonCanvas/FlowButton"]
-self_modulate = Color(5.05373e-07, 0.293859, 0.247129, 1)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -10.0
-offset_top = -10.0
-offset_right = 10.0
-offset_bottom = 10.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("8_p0tqf")
-expand_mode = 1
-
-[node name="AscendButtonCanvas" type="Control" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas"]
-visible = false
-modulate = Color(1, 0, 0.996078, 1)
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -255,20 +105,6 @@ anchor_right = 1.0
 offset_left = -24.0
 offset_bottom = 24.0
 grow_horizontal = 0
-
-[node name="AscendButton" type="TextureButton" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas/AscendButtonCanvas"]
-clip_contents = true
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -24.0
-offset_top = -12.0
-offset_bottom = 12.0
-grow_horizontal = 0
-grow_vertical = 2
 texture_normal = ExtResource("1_cegpk")
 texture_pressed = ExtResource("2_2whlt")
 texture_hover = ExtResource("3_tjf3u")
@@ -276,7 +112,7 @@ texture_click_mask = ExtResource("4_c7rnf")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="AscendTexture" type="TextureRect" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas/AscendButtonCanvas/AscendButton"]
+[node name="AscendTexture" type="TextureRect" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas/AscendButton"]
 self_modulate = Color(0.345098, 0, 0.34902, 1)
 layout_mode = 1
 anchors_preset = 8
@@ -294,43 +130,117 @@ texture = ExtResource("6_1dxet")
 expand_mode = 1
 flip_v = true
 
-[node name="SubMenuButtonClick" type="AudioStreamPlayer2D" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas"]
-position = Vector2(32, 32)
-stream = ExtResource("10_eu1jt")
+[node name="TranslateButton" type="TextureButton" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas"]
+modulate = Color(1, 0, 0.996078, 1)
+clip_contents = true
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -24.0
+offset_right = 24.0
+grow_vertical = 0
+texture_normal = ExtResource("1_cegpk")
+texture_pressed = ExtResource("2_2whlt")
+texture_hover = ExtResource("3_tjf3u")
+texture_click_mask = ExtResource("4_c7rnf")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TranslateTexture" type="TextureRect" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas/TranslateButton"]
+self_modulate = Color(0.345098, 0, 0.34902, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_ni0l8")
+expand_mode = 1
+
+[node name="FlowButton" type="TextureButton" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas"]
+modulate = Color(0.0313726, 0.388235, 0.458824, 1)
+clip_contents = true
+layout_mode = 1
+offset_right = 24.0
+offset_bottom = 24.0
+texture_normal = ExtResource("1_cegpk")
+texture_pressed = ExtResource("2_2whlt")
+texture_hover = ExtResource("3_tjf3u")
+texture_click_mask = ExtResource("4_c7rnf")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="FlowTexture" type="TextureRect" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas/FlowButton"]
+self_modulate = Color(5.05373e-07, 0.293859, 0.247129, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_p0tqf")
+expand_mode = 1
+
+[node name="DescendButton" type="TextureButton" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas"]
+modulate = Color(1, 0, 0.996078, 1)
+clip_contents = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -24.0
+offset_top = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("1_cegpk")
+texture_pressed = ExtResource("2_2whlt")
+texture_hover = ExtResource("3_tjf3u")
+texture_click_mask = ExtResource("4_c7rnf")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="DescendTexture" type="TextureRect" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas/DescendButton"]
+self_modulate = Color(0.345098, 0, 0.34902, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_1dxet")
+expand_mode = 1
 
 [node name="HoverSound" type="AudioStreamPlayer2D" parent="ControlCanvas/ButtonCanvas"]
 position = Vector2(32, 31)
 stream = ExtResource("11_rhtry")
 volume_db = 11.954
 
-[node name="TranslationLabelCanvas" type="Control" parent="ControlCanvas"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -33.0
-offset_top = -28.0
-offset_right = 33.0
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="TranslationLabel" type="RichTextLabel" parent="ControlCanvas/TranslationLabelCanvas"]
+[node name="TranslationLabel" type="RichTextLabel" parent="ControlCanvas"]
 self_modulate = Color(0.501469, 1, 0.892343, 1)
 texture_filter = 1
 clip_contents = false
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -32.0
-offset_top = -25.0
-offset_right = 32.0
-grow_horizontal = 2
-grow_vertical = 0
+layout_mode = 2
 theme_override_colors/font_outline_color = Color(5.05373e-07, 0.293859, 0.247129, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/normal_font = ExtResource("8_vjwti")
@@ -342,31 +252,23 @@ scroll_active = false
 autowrap_mode = 0
 language = "en_US"
 
-[node name="Window" type="Window" parent="ControlCanvas"]
-transparent_bg = true
-snap_2d_transforms_to_pixel = true
-snap_2d_vertices_to_pixel = true
-initial_position = 2
-size = Vector2i(480, 300)
-visible = false
-
 [connection signal="mouse_entered" from="ControlCanvas/ButtonCanvas/GlyphButtonCanvas/GlyphButton" to="ControlCanvas/ButtonCanvas/HoverSound" method="play"]
 [connection signal="mouse_exited" from="ControlCanvas/ButtonCanvas/GlyphButtonCanvas/GlyphButton" to="ControlCanvas/ButtonCanvas/HoverSound" method="play"]
-[connection signal="pressed" from="ControlCanvas/ButtonCanvas/GlyphButtonCanvas/GlyphButton" to="." method="OnGlyphButtonPressed"]
 [connection signal="pressed" from="ControlCanvas/ButtonCanvas/GlyphButtonCanvas/GlyphButton" to="ControlCanvas/ButtonCanvas/GlyphButtonCanvas/GlyphButtonClick" method="play"]
-[connection signal="mouse_entered" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/TranslateButtonCanvas/TranslateButton" to="ControlCanvas/ButtonCanvas/HoverSound" method="play"]
-[connection signal="mouse_exited" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/TranslateButtonCanvas/TranslateButton" to="ControlCanvas/ButtonCanvas/HoverSound" method="play"]
-[connection signal="pressed" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/TranslateButtonCanvas/TranslateButton" to="." method="OnTranslatePressed"]
-[connection signal="pressed" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/TranslateButtonCanvas/TranslateButton" to="ControlCanvas/ButtonCanvas/SubMenuCanvas/SubMenuButtonClick" method="play"]
-[connection signal="mouse_entered" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/DescendButtonCanvas/DescendButton" to="ControlCanvas/ButtonCanvas/HoverSound" method="play"]
-[connection signal="mouse_exited" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/DescendButtonCanvas/DescendButton" to="ControlCanvas/ButtonCanvas/HoverSound" method="play"]
-[connection signal="pressed" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/DescendButtonCanvas/DescendButton" to="." method="OnDescendPressed"]
-[connection signal="pressed" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/DescendButtonCanvas/DescendButton" to="ControlCanvas/ButtonCanvas/SubMenuCanvas/SubMenuButtonClick" method="play"]
-[connection signal="mouse_entered" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/FlowButtonCanvas/FlowButton" to="ControlCanvas/ButtonCanvas/HoverSound" method="play"]
-[connection signal="mouse_exited" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/FlowButtonCanvas/FlowButton" to="ControlCanvas/ButtonCanvas/HoverSound" method="play"]
-[connection signal="pressed" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/FlowButtonCanvas/FlowButton" to="." method="OnFlowPressed"]
-[connection signal="pressed" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/FlowButtonCanvas/FlowButton" to="ControlCanvas/ButtonCanvas/SubMenuCanvas/SubMenuButtonClick" method="play"]
-[connection signal="mouse_entered" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/AscendButtonCanvas/AscendButton" to="ControlCanvas/ButtonCanvas/HoverSound" method="play"]
-[connection signal="mouse_exited" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/AscendButtonCanvas/AscendButton" to="ControlCanvas/ButtonCanvas/HoverSound" method="play"]
-[connection signal="pressed" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/AscendButtonCanvas/AscendButton" to="." method="OnAscendPressed"]
-[connection signal="pressed" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/AscendButtonCanvas/AscendButton" to="ControlCanvas/ButtonCanvas/SubMenuCanvas/SubMenuButtonClick" method="play"]
+[connection signal="pressed" from="ControlCanvas/ButtonCanvas/GlyphButtonCanvas/GlyphButton" to="." method="OnGlyphButtonPressed"]
+[connection signal="mouse_entered" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/AscendButton" to="ControlCanvas/ButtonCanvas/HoverSound" method="play"]
+[connection signal="mouse_exited" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/AscendButton" to="ControlCanvas/ButtonCanvas/HoverSound" method="play"]
+[connection signal="pressed" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/AscendButton" to="ControlCanvas/ButtonCanvas/SubMenuCanvas/SubMenuButtonClick" method="play"]
+[connection signal="pressed" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/AscendButton" to="." method="OnAscendPressed"]
+[connection signal="mouse_entered" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/TranslateButton" to="ControlCanvas/ButtonCanvas/HoverSound" method="play"]
+[connection signal="mouse_exited" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/TranslateButton" to="ControlCanvas/ButtonCanvas/HoverSound" method="play"]
+[connection signal="pressed" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/TranslateButton" to="ControlCanvas/ButtonCanvas/SubMenuCanvas/SubMenuButtonClick" method="play"]
+[connection signal="pressed" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/TranslateButton" to="." method="OnTranslatePressed"]
+[connection signal="mouse_entered" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/FlowButton" to="ControlCanvas/ButtonCanvas/HoverSound" method="play"]
+[connection signal="mouse_exited" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/FlowButton" to="ControlCanvas/ButtonCanvas/HoverSound" method="play"]
+[connection signal="pressed" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/FlowButton" to="ControlCanvas/ButtonCanvas/SubMenuCanvas/SubMenuButtonClick" method="play"]
+[connection signal="pressed" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/FlowButton" to="." method="OnFlowPressed"]
+[connection signal="mouse_entered" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/DescendButton" to="ControlCanvas/ButtonCanvas/HoverSound" method="play"]
+[connection signal="mouse_exited" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/DescendButton" to="ControlCanvas/ButtonCanvas/HoverSound" method="play"]
+[connection signal="pressed" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/DescendButton" to="ControlCanvas/ButtonCanvas/SubMenuCanvas/SubMenuButtonClick" method="play"]
+[connection signal="pressed" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/DescendButton" to="." method="OnDescendPressed"]

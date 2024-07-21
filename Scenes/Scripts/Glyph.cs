@@ -3,7 +3,7 @@ using Godot;
 namespace BrokenCircle.Scenes.Scripts;
 
 [Tool]
-public partial class Glyph : Node2D {
+public partial class Glyph : Control {
     [Signal]
     public delegate void AscendPressedEventHandler();
 
@@ -68,7 +68,7 @@ public partial class Glyph : Node2D {
         set {
             _flowVisible = value;
             if (IsNodeReady()) {
-                GetNode<Control>("ControlCanvas/ButtonCanvas/SubMenuCanvas/FlowButtonCanvas").Visible = value;
+                GetNode<TextureButton>("ControlCanvas/ButtonCanvas/SubMenuCanvas/FlowButton").Visible = value;
             }
         }
     }
@@ -79,7 +79,7 @@ public partial class Glyph : Node2D {
         set {
             _ascendVisible = value;
             if (IsNodeReady()) {
-                GetNode<Control>("ControlCanvas/ButtonCanvas/SubMenuCanvas/AscendButtonCanvas").Visible = value;
+                GetNode<TextureButton>("ControlCanvas/ButtonCanvas/SubMenuCanvas/AscendButton").Visible = value;
             }
         }
     }
@@ -90,7 +90,7 @@ public partial class Glyph : Node2D {
         set {
             _descendVisible = value;
             if (IsNodeReady()) {
-                GetNode<Control>("ControlCanvas/ButtonCanvas/SubMenuCanvas/DescendButtonCanvas").Visible = value;
+                GetNode<TextureButton>("ControlCanvas/ButtonCanvas/SubMenuCanvas/DescendButton").Visible = value;
             }
         }
     }
@@ -100,8 +100,8 @@ public partial class Glyph : Node2D {
         set {
             _labelText = value;
             if (IsNodeReady()) {
-                GetNode<RichTextLabel>("ControlCanvas/TranslationLabelCanvas/TranslationLabel").Text =
-                    $"[center]{value}[/center]";
+                GetNode<RichTextLabel>("ControlCanvas/TranslationLabel").Text =
+                    $"[center]{value.ToUpper()}[/center]";
             }
         }
     }
@@ -132,10 +132,10 @@ public partial class Glyph : Node2D {
         GlyphIcon = Glyphs.Instance.GetGlyphIcon(_glyphType);
         LabelText = Glyphs.Instance.GetGlyphTranslation(_glyphType);
         GetNode<Control>("ControlCanvas/ButtonCanvas/SubMenuCanvas").Visible = _subMenuVisible;
-        GetNode<Control>("ControlCanvas/ButtonCanvas/SubMenuCanvas/FlowButtonCanvas").Visible = _flowVisible;
-        GetNode<Control>("ControlCanvas/ButtonCanvas/SubMenuCanvas/AscendButtonCanvas").Visible = _ascendVisible;
-        GetNode<Control>("ControlCanvas/ButtonCanvas/SubMenuCanvas/DescendButtonCanvas").Visible = _descendVisible;
-        GetNode<RichTextLabel>("ControlCanvas/TranslationLabelCanvas/TranslationLabel").Text =
+        GetNode<TextureButton>("ControlCanvas/ButtonCanvas/SubMenuCanvas/FlowButton").Visible = _flowVisible;
+        GetNode<TextureButton>("ControlCanvas/ButtonCanvas/SubMenuCanvas/AscendButton").Visible = _ascendVisible;
+        GetNode<TextureButton>("ControlCanvas/ButtonCanvas/SubMenuCanvas/DescendButton").Visible = _descendVisible;
+        GetNode<RichTextLabel>("ControlCanvas/TranslationLabel").Text =
             $"[center]{_labelText}[/center]";
         GetNode<Control>("ControlCanvas").Scale = new Vector2(_scaleNode, _scaleNode);
         GetNode<TextureRect>("ControlCanvas/ButtonCanvas/GlyphButtonCanvas/GlyphButton/GlyphTexture").Texture =
