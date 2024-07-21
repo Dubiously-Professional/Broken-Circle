@@ -34,7 +34,8 @@ public partial class Glyphs : Node
 		Object0101,
 		Metal0102,
 		On0103,
-		Cut0110
+		Cut0110,
+		Grief0111
 	};
 
 	public string[,] TranslationOptions = {
@@ -58,17 +59,20 @@ public partial class Glyphs : Node
 		{ "????", "EMPTY", "ONE", "MATH", "OBJECT" },
 		{ "????", "OBJECT", "GAS", "LIQUID", "METAL" },
 		{ "????", "ON", "TIME", "EMPTY", "BEFORE" },
-		{ "????", "GAS", "AFTER", "CUT", "METAL"}
+		{ "????", "GAS", "AFTER", "CUT", "METAL"},
+		{ "????", "EMOTION", "GRIEF", "AFFIRM", "ART"}
 	};
-	
-	
+
+
 	private Texture2D[] _glyphIcons;
 	private string[] _glyphTranslations;
 	private string[][] _glyphTranslationOptions;
 
 
-	public Glyphs() {
-		if (Instance != null) {
+	public Glyphs()
+	{
+		if (Instance != null)
+		{
 			QueueFree();
 			return;
 		}
@@ -80,31 +84,36 @@ public partial class Glyphs : Node
 		_glyphTranslations = new string[glyphNames.Length];
 		_glyphTranslationOptions = new string[glyphNames.Length][];
 
-		for (int i = 0; i < glyphNames.Length; i++) {
+		for (int i = 0; i < glyphNames.Length; i++)
+		{
 			_glyphIcons[i] = GD.Load<Texture2D>("res://Assets/Sprites/Ideograms/" + glyphNames[i] + ".png");
 			_glyphTranslations[i] = "????";
 			// TODO
-			_glyphTranslationOptions[i] = new []{TranslationOptions[i,0], TranslationOptions[i,1], TranslationOptions[i,2], TranslationOptions[i,3], TranslationOptions[i,4]}
+			_glyphTranslationOptions[i] = new[] { TranslationOptions[i, 0], TranslationOptions[i, 1], TranslationOptions[i, 2], TranslationOptions[i, 3], TranslationOptions[i, 4] }
 			;
 		}
 	}
 
 	public static Glyphs Instance { get; private set; }
 
-	public Texture2D GetGlyphIcon(GlyphType glyphType) {
+	public Texture2D GetGlyphIcon(GlyphType glyphType)
+	{
 		return _glyphIcons[(int)glyphType];
 	}
 
-	public string GetGlyphTranslation(GlyphType glyphType) {
+	public string GetGlyphTranslation(GlyphType glyphType)
+	{
 		return _glyphTranslations[(int)glyphType];
 	}
 
-	public void SetGlyphTranslation(GlyphType glyphType, string translation) {
+	public void SetGlyphTranslation(GlyphType glyphType, string translation)
+	{
 		_glyphTranslations[(int)glyphType] = translation;
 		EmitSignal(SignalName.GlyphTranslationChanged, (int)glyphType, translation);
 	}
 
-	public string[] GetGlyphTranslationOptions(GlyphType glyphType) {
+	public string[] GetGlyphTranslationOptions(GlyphType glyphType)
+	{
 		return _glyphTranslationOptions[(int)glyphType];
 	}
 }
