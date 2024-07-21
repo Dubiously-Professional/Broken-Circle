@@ -180,7 +180,12 @@ public partial class Glyph : Control {
 
     private void OnTranslatePressed() {
         EmitSignal(SignalName.TranslatePressed);
-        GetNode<PopupMenu>("ControlCanvas/ButtonCanvas/SubMenuCanvas/TranslateButton/PopupMenu").Popup();
+        PopupMenu translatePopup =
+            GetNode<PopupMenu>("ControlCanvas/ButtonCanvas/SubMenuCanvas/TranslateButton/PopupMenu");
+        Control translateButton = GetNode<Control>("ControlCanvas/ButtonCanvas/SubMenuCanvas/TranslateButton");
+        Vector2 globalPosition = translateButton.GlobalPosition;
+        Vector2I size = translatePopup.Size;
+        translatePopup.Popup(new Rect2I(new Vector2I((int)globalPosition.X, (int)globalPosition.Y), size));
     }
 
     private void OnTranslationSelected(int index) {
