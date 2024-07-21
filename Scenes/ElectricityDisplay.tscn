@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://767sk2p7ghbx"]
 
-[ext_resource type="Script" path="res://Scenes/ElectricityDisplay.cs" id="1_3kwtb"]
+[ext_resource type="Script" path="res://Scenes/Scripts/ElectricityDisplay.cs" id="1_3kwtb"]
 [ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="2_gtdj1"]
 
 [node name="ElectricityDisplay" type="Node2D"]
