@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://c4ir5ir3q5v1x"]
 
 [ext_resource type="Script" path="res://Scenes/Scripts/AuthScreen.cs" id="1_7gkba"]
-[ext_resource type="PackedScene" uid="uid://dsbf7ieut1jp2" path="res://Scenes/TypingText.tscn" id="1_klmt5"]
+[ext_resource type="PackedScene" path="res://Scenes/TypingText.tscn" id="1_klmt5"]
 [ext_resource type="FontFile" uid="uid://7l0t5gk5lixg" path="res://Assets/Fonts/VT323-Regular.ttf" id="2_rfui4"]
 [ext_resource type="Texture2D" uid="uid://dbqve3xk7d51h" path="res://Assets/Sprites/Descend.png" id="4_57t0a"]
 [ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="4_mpfcn"]
