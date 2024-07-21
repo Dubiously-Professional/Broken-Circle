@@ -19,6 +19,7 @@ DescendVisible = true
 GlyphType = 1
 
 [node name="Glyph0011Know" parent="CanvasGroup" instance=ExtResource("2_koekw")]
+visible = false
 offset_left = 173.0
 offset_top = 167.0
 offset_right = 173.0
@@ -43,6 +44,7 @@ DescendVisible = true
 GlyphType = 8
 
 [node name="Glyph0021Move" parent="CanvasGroup" instance=ExtResource("2_koekw")]
+visible = false
 offset_left = 490.0
 offset_top = 168.0
 offset_right = 490.0
@@ -67,6 +69,7 @@ DescendVisible = true
 GlyphType = 11
 
 [node name="Glyph0030Light" parent="CanvasGroup" instance=ExtResource("2_koekw")]
+visible = false
 offset_left = 232.0
 offset_top = 266.0
 offset_right = 232.0
@@ -75,6 +78,7 @@ DescendVisible = true
 GlyphType = 12
 
 [node name="Glyph0031Math" parent="CanvasGroup" instance=ExtResource("2_koekw")]
+visible = false
 offset_left = 332.0
 offset_top = 327.0
 offset_right = 332.0
@@ -83,6 +87,10 @@ DescendVisible = true
 GlyphType = 13
 
 [node name="MessageAlert" parent="." instance=ExtResource("2_bnh8x")]
+offset_left = 23.0
+offset_top = 332.0
+offset_right = 751.0
+offset_bottom = 460.0
 
 [connection signal="DescendPressed" from="CanvasGroup/Glyph0001Self" to="." method="DescendSelf"]
 [connection signal="DescendPressed" from="CanvasGroup/Glyph0011Know" to="." method="DescendKnow"]
