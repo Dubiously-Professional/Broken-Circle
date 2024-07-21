@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://brysksexln488"]
 
-[ext_resource type="PackedScene" uid="uid://drydumtl0cjh0" path="res://Scenes/background.tscn" id="1_hbtoa"]
+[ext_resource type="PackedScene" uid="uid://drydumtl0cjh0" path="res://Scenes/Background.tscn" id="1_hbtoa"]
 [ext_resource type="Script" path="res://Scenes/Scripts/MainScreen.cs" id="1_pfwmn"]
 [ext_resource type="PackedScene" uid="uid://ja4x42o1flej" path="res://Scenes/Intro.tscn" id="1_thb0u"]
 [ext_resource type="AudioStream" uid="uid://cnca65qg283g5" path="res://Assets/Sounds/615533__crash_358__sci-fi-ui-button-sound-010.wav" id="4_gv7v7"]
@@ -11,7 +11,6 @@
 [node name="Main" type="Node2D" node_paths=PackedStringArray("_screenContents")]
 script = ExtResource("1_pfwmn")
 _screenContents = NodePath("IntroScreen")
-Testing = false
 
 [node name="IntroScreen" parent="." instance=ExtResource("1_thb0u")]
 top_level = true
