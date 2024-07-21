@@ -40,7 +40,7 @@ public partial class Glyphs : Node
     public string[,] TranslationOptions = {
         { "????", "FLOW", "FLOW", "FLOW", "FLOW" },
         { "????", "SELF", "SELF", "SELF", "SELF" },
-        { "????", "CONTAIN", "CONTAIN", "CONTAIN", "CONTAIN" },
+        { "????", "CONTAIN", "OTHER", "MOVE", "TIME" },
         { "????", "AFFIRM", "AFFIRM", "AFFIRM", "AFFIRM" },
         { "????", "EMOTION", "SAFE", "FORCE", "OBJECT" },
         { "????", "EMPTY", "ONE", "TWO", "THREE" },
