@@ -26,6 +26,7 @@ size_flags_vertical = 2
 
 [node name="Glyph0003Affirm" parent="VBoxContainer/TopContainer" instance=ExtResource("4_mpfcn")]
 layout_mode = 2
+FlowVisible = true
 
 [node name="BottomContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
