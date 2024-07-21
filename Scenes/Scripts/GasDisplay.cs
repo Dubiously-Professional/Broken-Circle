@@ -13,9 +13,9 @@ public partial class GasDisplay : Node2D
 	public override void _Process(double delta)
 	{
 	}
-    
-    public void AscendGas()
-    {
-        MainScreen.Instance.ScreenContents = "res://Scenes/MainMenu.tscn";
-    }
+	
+	public void AscendGas()
+	{
+		MainScreen.Instance.ScreenContents = "res://Scenes/MainMenu.tscn";
+	}
 }
