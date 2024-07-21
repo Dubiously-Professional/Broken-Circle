@@ -7,8 +7,16 @@ namespace BrokenCircle.Scenes.Scripts;
 public partial class TypingText : Timer {
 	[Export] public RichTextLabel Text;
 	[Signal] public delegate void TypingEndedEventHandler();
+    
 	private void _on_timeout() {
-		int increase = Convert.ToInt16(GD.Randi() % 6);
+        
+        int increase = Convert.ToInt16(GD.Randi() % 6);
+        
+        if (MainScreen.Testing)
+        {
+            increase += 20;
+        }
+		
 
 		int startingVisibleCharacters = Text.VisibleCharacters;
 		Text.VisibleCharacters += increase;
