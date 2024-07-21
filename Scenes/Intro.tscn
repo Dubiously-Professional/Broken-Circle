@@ -57,11 +57,10 @@ position = Vector2(686, 304)
 stream = ExtResource("5_6bgnb")
 
 [node name="Glyph0000Flow" parent="TextBackground2/TypingText" instance=ExtResource("7_6wv5u")]
-visible = false
-offset_left = 597.0
-offset_top = 267.0
-offset_right = 597.0
-offset_bottom = 267.0
+offset_left = 264.0
+offset_top = 83.0
+offset_right = 264.0
+offset_bottom = 83.0
 ScaleNode = 2
 ActionButton = true
 
