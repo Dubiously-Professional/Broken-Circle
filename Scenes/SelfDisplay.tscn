@@ -1,17 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://b6nf430uccvqm"]
 
 [ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="1_6juxm"]
-[ext_resource type="Script" path="res://Scenes/Scripts/SelfDisplay.cs" id="1_gh1m1"]
+[ext_resource type="Script" path="res://Scenes/Scripts/SelfDisplay.cs" id="1_yu154"]
 
 [node name="SelfDisplay" type="Node2D"]
-script = ExtResource("1_gh1m1")
-
-[node name="Glyph0001Self" parent="." instance=ExtResource("1_6juxm")]
-offset_left = 678.0
-offset_top = 75.0
-offset_right = 678.0
-offset_bottom = 75.0
-GlyphType = 1
+script = ExtResource("1_yu154")
 
 [node name="Glyph0010Safe" parent="." instance=ExtResource("1_6juxm")]
 offset_left = 136.0
@@ -104,11 +97,11 @@ offset_bottom = 432.0
 GlyphType = 20
 
 [node name="Glyph0110Emotion0023" parent="." instance=ExtResource("1_6juxm")]
-visible = false
-offset_left = 635.0
-offset_top = 394.0
-offset_right = 635.0
-offset_bottom = 394.0
+offset_left = 678.0
+offset_top = 60.0
+offset_right = 678.0
+offset_bottom = 60.0
+AscendVisible = true
 GlyphType = 11
 
 [connection signal="AscendPressed" from="Glyph0001Self" to="." method="_on_glyph_0001_self_ascend_pressed"]

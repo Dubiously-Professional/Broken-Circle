@@ -11,7 +11,7 @@ offset_left = 687.0
 offset_top = 78.0
 offset_right = 687.0
 offset_bottom = 78.0
-DescendVisible = true
+AscendVisible = true
 GlyphType = 9
 
 [connection signal="AscendPressed" from="Glyph0021Move" to="." method="AscendMove"]

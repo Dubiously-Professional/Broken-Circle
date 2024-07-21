@@ -14,12 +14,7 @@ public partial class SelfDisplay : Node2D
 	{
 	}
 
-	private void _on_self_ascend_pressed()
-	{
-		LoadMainMenu();
-	}
-
-	private void LoadMainMenu()
+	public void AscendDisplay()
 	{
 		MainScreen.Instance.ScreenContents =
 			ResourceLoader.Load<PackedScene>("res://Scenes/MainMenu.tscn").Instantiate();
