@@ -35,7 +35,8 @@ public partial class Glyphs : Node
 		Metal0102,
 		On0103,
 		Cut0110,
-		Grief0111
+		Grief0111,
+		Low0112
 	};
 
 	public string[,] TranslationOptions = {
@@ -60,7 +61,8 @@ public partial class Glyphs : Node
 		{ "????", "OBJECT", "GAS", "LIQUID", "METAL" },
 		{ "????", "ON", "TIME", "EMPTY", "BEFORE" },
 		{ "????", "GAS", "AFTER", "CUT", "METAL"},
-		{ "????", "EMOTION", "GRIEF", "AFFIRM", "ART"}
+		{ "????", "EMOTION", "GRIEF", "AFFIRM", "ART"},
+		{ "????", "LIGHT", "ON", "AFTER", "LOW"}
 	};
 
 
