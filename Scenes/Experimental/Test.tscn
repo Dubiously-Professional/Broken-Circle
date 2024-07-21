@@ -13,10 +13,10 @@ grow_vertical = 2
 [node name="PopupMenu" type="PopupMenu" parent="."]
 size = Vector2i(149, 224)
 visible = true
+unfocusable = true
 theme = ExtResource("1_cusha")
 item_count = 4
 item_0/text = "????"
-item_0/id = 0
 item_1/text = "SELF"
 item_1/id = 1
 item_2/text = "ORIGIN"

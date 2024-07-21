@@ -5,7 +5,6 @@ compatibility_minimum = "4.1.0"
 
 [libraries]
 
-macos.editor.arm64.debug = "macos/libgit_plugin.macos.editor.dev.arm64.dylib"
 macos.editor = "macos/libgit_plugin.macos.editor.universal.dylib"
 windows.editor.x86_64 = "win64/libgit_plugin.windows.editor.x86_64.dll"
 linux.editor.x86_64 = "linux/libgit_plugin.linux.editor.x86_64.so"
