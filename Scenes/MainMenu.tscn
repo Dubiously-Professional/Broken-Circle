@@ -1,45 +1,76 @@
-[gd_scene load_steps=11 format=3 uid="uid://c2q3c4cgtjtp6"]
+[gd_scene load_steps=3 format=3 uid="uid://c2q3c4cgtjtp6"]
 
 [ext_resource type="Script" path="res://Scenes/MainMenu.cs" id="1_fnwe1"]
-[ext_resource type="PackedScene" uid="uid://b3c0mrc7q5y48" path="res://Scenes/Glyphs/Glyph0001Self.tscn" id="2_2fdto"]
-[ext_resource type="PackedScene" uid="uid://pqqow124tdpe" path="res://Scenes/Glyphs/Glyph0012Know.tscn" id="3_qxgku"]
-[ext_resource type="PackedScene" uid="uid://csio7h3tjgoej" path="res://Scenes/Glyphs/Glyph0013Electricity.tscn" id="4_wptrw"]
-[ext_resource type="PackedScene" uid="uid://pewj1rjs08mr" path="res://Scenes/Glyphs/Glyph0020Force.tscn" id="5_pk2by"]
-[ext_resource type="PackedScene" uid="uid://c4vhrpteonpj0" path="res://Scenes/Glyphs/Glyph0021Move.tscn" id="6_y46ad"]
-[ext_resource type="PackedScene" uid="uid://c4mn35xpc1b1s" path="res://Scenes/Glyphs/Glyph0022Gas.tscn" id="7_ptwp2"]
-[ext_resource type="PackedScene" uid="uid://xrgyqvxemc81" path="res://Scenes/Glyphs/Glyph0023Emotion.tscn" id="8_6vuwn"]
-[ext_resource type="PackedScene" uid="uid://br546t4cnr28m" path="res://Scenes/Glyphs/Glyph0030Light.tscn" id="9_yydja"]
-[ext_resource type="PackedScene" uid="uid://dmu8nib4dy73s" path="res://Scenes/Glyphs/Glyph0031Math.tscn" id="10_7mg04"]
+[ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="2_7dbou"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_fnwe1")
 
-[node name="CanvasGroup" type="CanvasGroup" parent="."]
-position = Vector2(-24, 0)
+[node name="Glyph0001Self" parent="." instance=ExtResource("2_7dbou")]
+offset_left = 368.0
+offset_top = 84.0
+offset_right = 368.0
+offset_bottom = 84.0
+GlyphType = 1
 
-[node name="Glyph0001Self" parent="CanvasGroup" instance=ExtResource("2_2fdto")]
-position = Vector2(332, 0)
+[node name="Glyph0012Know" parent="." instance=ExtResource("2_7dbou")]
+anchors_preset = -1
+anchor_left = 0.0
+anchor_top = 0.0
+offset_left = 194.0
+offset_top = 240.0
+offset_right = 194.0
+offset_bottom = 240.0
+GlyphType = 6
 
-[node name="Glyph0011Know" parent="CanvasGroup" instance=ExtResource("3_qxgku")]
-position = Vector2(160, 168)
+[node name="Glyph0013Electricity" parent="." instance=ExtResource("2_7dbou")]
+offset_left = 240.0
+offset_top = 132.0
+offset_right = 240.0
+offset_bottom = 132.0
+GlyphType = 7
 
-[node name="Glyph0012Electricity" parent="CanvasGroup" instance=ExtResource("4_wptrw")]
-position = Vector2(440, 63)
+[node name="Glyph0020Force" parent="." instance=ExtResource("2_7dbou")]
+offset_left = 241.0
+offset_top = 359.0
+offset_right = 241.0
+offset_bottom = 359.0
+GlyphType = 8
 
-[node name="Glyph0013Force" parent="CanvasGroup" instance=ExtResource("5_pk2by")]
-position = Vector2(438, 280)
+[node name="Glyph0021Move" parent="." instance=ExtResource("2_7dbou")]
+offset_left = 490.0
+offset_top = 122.0
+offset_right = 490.0
+offset_bottom = 122.0
+GlyphType = 9
 
-[node name="Glyph0021Move" parent="CanvasGroup" instance=ExtResource("6_y46ad")]
-position = Vector2(504, 167)
+[node name="Glyph002Gas" parent="." instance=ExtResource("2_7dbou")]
+offset_left = 539.0
+offset_top = 247.0
+offset_right = 539.0
+offset_bottom = 247.0
+GlyphType = 10
 
-[node name="Glyph0022Gas" parent="CanvasGroup" instance=ExtResource("7_ptwp2")]
-position = Vector2(224, 63)
+[node name="Glyph0023Emotion" parent="." instance=ExtResource("2_7dbou")]
+anchors_preset = -1
+anchor_left = 0.0
+anchor_top = 0.0
+offset_left = 479.0
+offset_top = 359.0
+offset_right = 479.0
+offset_bottom = 359.0
+GlyphType = 11
 
-[node name="Glyph0023Emotion" parent="CanvasGroup" instance=ExtResource("8_6vuwn")]
-position = Vector2(332, 168)
+[node name="Glyph0030Light" parent="." instance=ExtResource("2_7dbou")]
+offset_left = 364.0
+offset_top = 425.0
+offset_right = 364.0
+offset_bottom = 425.0
+GlyphType = 12
 
-[node name="Glyph0030Light" parent="CanvasGroup" instance=ExtResource("9_yydja")]
-position = Vector2(224, 280)
-
-[node name="Glyph0031Math" parent="CanvasGroup" instance=ExtResource("10_7mg04")]
-position = Vector2(332, 337)
+[node name="Glyph0031Math" parent="." instance=ExtResource("2_7dbou")]
+offset_left = 367.0
+offset_top = 243.0
+offset_right = 367.0
+offset_bottom = 243.0
+GlyphType = 13

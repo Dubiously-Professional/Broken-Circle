@@ -36,7 +36,12 @@ public partial class Glyphs : Node
 		On0103,
 		Cut0110,
 		Grief0111,
-		Low0112
+		Low0112,
+		Strong0113,
+		Two0120,
+		Measure0121,
+		Three0122,
+		Empty0123
 	};
 
 	public string[,] TranslationOptions = {
@@ -62,7 +67,12 @@ public partial class Glyphs : Node
 		{ "????", "ON", "TIME", "EMPTY", "BEFORE" },
 		{ "????", "GAS", "AFTER", "CUT", "METAL"},
 		{ "????", "EMOTION", "GRIEF", "AFFIRM", "ART"},
-		{ "????", "LIGHT", "ON", "AFTER", "LOW"}
+		{ "????", "LIGHT", "ON", "AFTER", "LOW"},
+		{ "????", "STRONG", "LOW", "TIME", "NOT"},
+		{ "????", "THREE", "ONE", "EMPTY", "TWO" },
+		{ "????", "MEASURE", "LIQUID", "LIGHT", "TIME"},
+		{ "????", "TWO", "THREE", "ONE", "EMPTY"},
+		{ "????", "ONE", "MATH", "EMPTY", "ART" }
 	};
 
 

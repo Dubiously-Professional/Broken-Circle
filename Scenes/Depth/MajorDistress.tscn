@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcnkmen7xr732"]
+
+[ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="1_ibdvh"]
+
+[node name="MajorDistress" type="Node2D"]
+
+[node name="Glyph0111Grief" parent="." instance=ExtResource("1_ibdvh")]
+offset_left = 299.0
+offset_top = 148.0
+offset_right = 299.0
+offset_bottom = 148.0
+GlyphType = 21
+
+[node name="Glyph0113Strong" parent="." instance=ExtResource("1_ibdvh")]
+offset_left = 214.0
+offset_top = 174.0
+offset_right = 214.0
+offset_bottom = 174.0
+GlyphType = 23
