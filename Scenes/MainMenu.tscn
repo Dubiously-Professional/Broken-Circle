@@ -7,7 +7,7 @@
 script = ExtResource("1_fnwe1")
 
 [node name="CanvasGroup" type="CanvasGroup" parent="."]
-position = Vector2(41, 63)
+position = Vector2(41, 82)
 
 [node name="Glyph0001Self" parent="CanvasGroup" instance=ExtResource("2_koekw")]
 offset_left = 332.0
