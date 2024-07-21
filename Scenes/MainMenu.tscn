@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c2q3c4cgtjtp6"]
+[gd_scene load_steps=4 format=3 uid="uid://c2q3c4cgtjtp6"]
 
 [ext_resource type="Script" path="res://Scenes/Scripts/MainMenu.cs" id="1_fnwe1"]
 [ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="2_koekw"]
+[ext_resource type="Script" path="res://Scenes/Scripts/SelfMenu.cs" id="3_vpl2r"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_fnwe1")
@@ -15,6 +16,9 @@ offset_top = -4.0
 offset_right = 332.0
 offset_bottom = -4.0
 GlyphType = 1
+
+[node name="SelfMenu" type="PopupMenu" parent="CanvasGroup/Glyph0001Self"]
+script = ExtResource("3_vpl2r")
 
 [node name="Glyph0011Know" parent="CanvasGroup" instance=ExtResource("2_koekw")]
 offset_left = 173.0
