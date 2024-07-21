@@ -5,8 +5,8 @@ namespace BrokenCircle.Scenes.Scripts;
 
 public partial class MainScreen : Node2D {
 	[Export] private Node _screenContents;
-    
-    public static bool Testing = true;
+	
+	public static bool Testing = true;
 	public static MainScreen Instance { get; private set; }
 
 	public Node ScreenContents {
