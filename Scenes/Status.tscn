@@ -1,26 +1,79 @@
-[gd_scene load_steps=7 format=3 uid="uid://d4i00tyjex828"]
+[gd_scene load_steps=2 format=3 uid="uid://d4i00tyjex828"]
 
-[ext_resource type="PackedScene" uid="uid://bxhlq5863m238" path="res://Scenes/Glyphs/Glyph0010Safe.tscn" id="1_dnsrl"]
-[ext_resource type="PackedScene" uid="uid://b6gik6fh0n58f" path="res://Scenes/Glyphs/Glyph0032Not.tscn" id="2_61f38"]
-[ext_resource type="PackedScene" uid="uid://b3c0mrc7q5y48" path="res://Scenes/Glyphs/Glyph0001Self.tscn" id="2_w1awq"]
-[ext_resource type="PackedScene" uid="uid://c8ljayq1n8k0t" path="res://Scenes/Glyphs/Glyph0033Origin.tscn" id="5_7mflj"]
-[ext_resource type="PackedScene" uid="uid://c4vhrpteonpj0" path="res://Scenes/Glyphs/Glyph0021Move.tscn" id="6_67con"]
-[ext_resource type="PackedScene" uid="uid://cf0u0v3xyfdnf" path="res://Scenes/Glyphs/Glyph0100Place.tscn" id="6_obvph"]
+[ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="1_p4exh"]
 
 [node name="Status" type="Node2D"]
 
-[node name="Glyph0010Safe" parent="." instance=ExtResource("1_dnsrl")]
+[node name="Glyph0010Safe" parent="." instance=ExtResource("1_p4exh")]
+offset_left = 136.0
+offset_top = 65.0
+offset_right = 136.0
+offset_bottom = 65.0
+GlyphType = 4
 
-[node name="Glyph0032Not" parent="." instance=ExtResource("2_61f38")]
+[node name="Glyph0021Move" parent="." instance=ExtResource("1_p4exh")]
+offset_left = 227.0
+offset_top = 64.0
+offset_right = 227.0
+offset_bottom = 64.0
+GlyphType = 9
 
-[node name="Glyph0032Not2" parent="." instance=ExtResource("2_61f38")]
+[node name="Glyph0101Object" parent="." instance=ExtResource("1_p4exh")]
+offset_left = 316.0
+offset_top = 64.0
+offset_right = 316.0
+offset_bottom = 64.0
+GlyphType = 17
 
-[node name="Glyph0021Move" parent="." instance=ExtResource("6_67con")]
+[node name="Glyph0020Force" parent="." instance=ExtResource("1_p4exh")]
+offset_left = 134.0
+offset_top = 157.0
+offset_right = 134.0
+offset_bottom = 157.0
+GlyphType = 8
 
-[node name="Glyph0001Self" parent="." instance=ExtResource("2_w1awq")]
+[node name="Glyph0103On" parent="." instance=ExtResource("1_p4exh")]
+offset_left = 224.0
+offset_top = 156.0
+offset_right = 224.0
+offset_bottom = 156.0
+GlyphType = 19
 
-[node name="Glyph0033Origin" parent="." instance=ExtResource("5_7mflj")]
-position = Vector2(80, 71)
+[node name="Glyph0013Electricity" parent="." instance=ExtResource("1_p4exh")]
+offset_left = 133.0
+offset_top = 247.0
+offset_right = 133.0
+offset_bottom = 247.0
+GlyphType = 7
 
-[node name="Glyph0100Place" parent="." instance=ExtResource("6_obvph")]
-position = Vector2(80, 71)
+[node name="Glyph0103On2" parent="." instance=ExtResource("1_p4exh")]
+offset_left = 221.0
+offset_top = 248.0
+offset_right = 221.0
+offset_bottom = 248.0
+GlyphType = 19
+
+[node name="Glyph0022Gas" parent="." instance=ExtResource("1_p4exh")]
+offset_left = 131.0
+offset_top = 337.0
+offset_right = 131.0
+offset_bottom = 337.0
+GlyphType = 10
+
+[node name="Glyph0002Contain" parent="." instance=ExtResource("1_p4exh")]
+anchors_preset = -1
+anchor_top = 0.0
+offset_left = 221.0
+offset_top = 335.0
+offset_right = 221.0
+offset_bottom = 335.0
+GlyphType = 2
+
+[node name="Glyph0002Contain2" parent="." instance=ExtResource("1_p4exh")]
+anchors_preset = -1
+anchor_top = 0.0
+offset_left = 298.0
+offset_top = 333.0
+offset_right = 298.0
+offset_bottom = 333.0
+GlyphType = 2
