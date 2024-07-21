@@ -37,8 +37,10 @@ Look, I can see if I can get you into their systems, but please, don't try to bo
 
 
 I love you. I trust you. I miss you.
-                                                       "
+                                "
 scroll_active = false
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="Glyph0000Flow" parent="TextBackground2/TypingText" instance=ExtResource("7_6wv5u")]
 visible = false

@@ -16,9 +16,8 @@ public partial class TypingText : Timer {
         {
             increase += 20;
         }
-		
 
-		int startingVisibleCharacters = Text.VisibleCharacters;
+        int startingVisibleCharacters = Text.VisibleCharacters;
 		Text.VisibleCharacters += increase;
 		
 		if (Text.VisibleRatio >= 1) {
