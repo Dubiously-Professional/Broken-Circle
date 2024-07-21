@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dhay2l3xkdys" path="res://Assets/TextureMaps/CircleClickGradient.png" id="2_gtv3g"]
 [ext_resource type="BitMap" uid="uid://cauic0hcd7663" path="res://Assets/TextureMaps/CircleMask.png" id="3_gjp1j"]
 [ext_resource type="Texture2D" uid="uid://b10w56ymj0y3f" path="res://Assets/TextureMaps/CircleHoverGradient.png" id="3_ki2cb"]
-[ext_resource type="Texture2D" uid="uid://dw2jf4qqmbdu4" path="res://Assets/Sprites/Ideograms/possess.png" id="4_ds6ld"]
+[ext_resource type="Texture2D" uid="uid://dw2jf4qqmbdu4" path="res://Assets/Sprites/Ideograms/Possess0203.png" id="4_ds6ld"]
 [ext_resource type="Texture2D" uid="uid://cnihms442me1s" path="res://Assets/TextureMaps/CircleGradient.png" id="5_mktot"]
 [ext_resource type="Script" path="res://Scenes/Experimental/TextNode.cs" id="6_7bmy0"]
 [ext_resource type="Texture2D" uid="uid://bgjvufx1wpgua" path="res://Assets/Sprites/Ideograms/group.png" id="6_c6aqm"]

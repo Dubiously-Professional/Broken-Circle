@@ -43,7 +43,13 @@ public partial class Glyphs : Node
 		Three0122,
 		Empty0123,
 		Need0130,
-		Wire0131
+		Wire0131,
+		Relate0132,
+		Question0133,
+		Touch0200,
+		Learn0201,
+		Art0202,
+		Possess0203
 	};
 
 	public string[,] TranslationOptions = {
@@ -76,7 +82,13 @@ public partial class Glyphs : Node
 		{ "????", "TWO", "THREE", "ONE", "EMPTY"},
 		{ "????", "ONE", "MATH", "EMPTY", "ART" },
 		{ "????", "PLACE", "MOVE", "CONTAIN", "NEED"},
-		{ "????", "WIRE", "LIGHT", "ELECTRICITY", "GAS"}
+		{ "????", "WIRE", "LIGHT", "ELECTRICITY", "GAS"},
+		{ "????", "RELATE", "FORCE", "POWER", "POSSESS"},
+		{ "????", "ORIGIN", "OTHER", "QUESTION", "HAPPY"},
+		{ "????", "TOUCH", "SMELL", "SEE", "KNOW"},
+		{ "????", "KNOW", "LEARN", "MEASURE", "RELATE"},
+		{ "????", "WRITE", "MATH", "ART", "SCIENCE"},
+		{ "????", "CONTAIN", "POSSES", "AFFIRM", "THREE"}
 	};
 
 

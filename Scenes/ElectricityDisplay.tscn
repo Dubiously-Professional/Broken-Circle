@@ -1,0 +1,70 @@
+[gd_scene load_steps=3 format=3 uid="uid://w3oa1wqb5p81"]
+
+[ext_resource type="Script" path="res://Scenes/Scripts/MainMenu.cs" id="1_r3xgu"]
+[ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="2_gtdj1"]
+
+[node name="ElectricityDisplay" type="Node2D"]
+script = ExtResource("1_r3xgu")
+
+[node name="Glyph0013Electricity" parent="." instance=ExtResource("2_gtdj1")]
+offset_left = 731.0
+offset_top = 40.0
+offset_right = 731.0
+offset_bottom = 40.0
+GlyphType = 7
+
+[node name="Glyph0030Light" parent="." instance=ExtResource("2_gtdj1")]
+offset_left = 135.0
+offset_top = 179.0
+offset_right = 135.0
+offset_bottom = 179.0
+GlyphType = 12
+
+[node name="Glyph0131Wire" parent="." instance=ExtResource("2_gtdj1")]
+offset_left = 194.0
+offset_top = 177.0
+offset_right = 194.0
+offset_bottom = 177.0
+GlyphType = 29
+
+[node name="Glyph0130Need" parent="." instance=ExtResource("2_gtdj1")]
+offset_left = 254.0
+offset_top = 178.0
+offset_right = 254.0
+offset_bottom = 178.0
+GlyphType = 28
+
+[node name="Glyph0110Cut" parent="." instance=ExtResource("2_gtdj1")]
+offset_left = 314.0
+offset_top = 179.0
+offset_right = 314.0
+offset_bottom = 179.0
+GlyphType = 20
+
+[node name="Glyph0013Electricity2" parent="." instance=ExtResource("2_gtdj1")]
+offset_left = 138.0
+offset_top = 306.0
+offset_right = 138.0
+offset_bottom = 306.0
+GlyphType = 7
+
+[node name="Glyph0132Relate" parent="." instance=ExtResource("2_gtdj1")]
+offset_left = 195.0
+offset_top = 307.0
+offset_right = 195.0
+offset_bottom = 307.0
+GlyphType = 20
+
+[node name="Glyph0020Force" parent="." instance=ExtResource("2_gtdj1")]
+offset_left = 254.0
+offset_top = 308.0
+offset_right = 254.0
+offset_bottom = 308.0
+GlyphType = 8
+
+[node name="Glyph0103On" parent="." instance=ExtResource("2_gtdj1")]
+offset_left = 194.0
+offset_top = 390.0
+offset_right = 194.0
+offset_bottom = 390.0
+GlyphType = 19
