@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://baob7c7ywuo8o"]
+[gd_scene load_steps=3 format=3 uid="uid://baob7c7ywuo8o"]
 
+[ext_resource type="Script" path="res://Scenes/Scripts/StatusDisplay.cs" id="1_6s3te"]
 [ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="1_p4exh"]
 
 [node name="Status" type="Node2D"]
+script = ExtResource("1_6s3te")
 
 [node name="Glyph0010Safe" parent="." instance=ExtResource("1_p4exh")]
 offset_left = 136.0
@@ -97,4 +99,7 @@ offset_left = 678.0
 offset_top = 60.0
 offset_right = 678.0
 offset_bottom = 60.0
+AscendVisible = true
 GlyphType = 11
+
+[connection signal="AscendPressed" from="Glyph0110Emotion0023" to="." method="AscendStatus"]
