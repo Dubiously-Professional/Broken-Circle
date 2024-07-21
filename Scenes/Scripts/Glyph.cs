@@ -160,6 +160,10 @@ public partial class Glyph : Control {
         }
     }
 
+    private void PlayHoverSound() {
+        MainScreen.Instance.GetNode<AudioStreamPlayer2D>("Sounds/Hover").Play();
+    }
+
     private void OnTranslatePressed() {
         EmitSignal(SignalName.TranslatePressed);
     }
