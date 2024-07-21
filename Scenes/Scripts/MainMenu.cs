@@ -35,53 +35,53 @@ public partial class MainMenu : Node2D
 			ResourceLoader.Load<PackedScene>("res://Scenes/ElectricityDisplay.tscn").Instantiate();
 	}
 
-    private void DescendEmotion()
-    {
-        MainScreen.Instance.ScreenContents =
-            ResourceLoader.Load<PackedScene>("res://Scenes/EmotionDisplay.tscn").Instantiate();
-    }
+	private void DescendEmotion()
+	{
+		MainScreen.Instance.ScreenContents =
+			ResourceLoader.Load<PackedScene>("res://Scenes/EmotionDisplay.tscn").Instantiate();
+	}
 
-    private void DescendSelf()
-    {
-        MainScreen.Instance.ScreenContents =
-            ResourceLoader.Load<PackedScene>("res://Scenes/SelfDisplay.tscn").Instantiate();
-    }
-    
-    private void DescendKnow()
-    {
-        MainScreen.Instance.ScreenContents =
-            ResourceLoader.Load<PackedScene>("res://Scenes/KnowDisplay.tscn").Instantiate();
-    }
+	private void DescendSelf()
+	{
+		MainScreen.Instance.ScreenContents =
+			ResourceLoader.Load<PackedScene>("res://Scenes/SelfDisplay.tscn").Instantiate();
+	}
+	
+	private void DescendKnow()
+	{
+		MainScreen.Instance.ScreenContents =
+			ResourceLoader.Load<PackedScene>("res://Scenes/KnowDisplay.tscn").Instantiate();
+	}
 
-    private void DescendForce()
-    {
-        MainScreen.Instance.ScreenContents =
-            ResourceLoader.Load<PackedScene>("res://Scenes/ForceDisplay.tscn").Instantiate();
-    }
-    
-    private void DescendMove()
-    {
-        MainScreen.Instance.ScreenContents =
-            ResourceLoader.Load<PackedScene>("res://Scenes/MoveDisplay.tscn").Instantiate();
-    }
+	private void DescendForce()
+	{
+		MainScreen.Instance.ScreenContents =
+			ResourceLoader.Load<PackedScene>("res://Scenes/ForceDisplay.tscn").Instantiate();
+	}
+	
+	private void DescendMove()
+	{
+		MainScreen.Instance.ScreenContents =
+			ResourceLoader.Load<PackedScene>("res://Scenes/MoveDisplay.tscn").Instantiate();
+	}
 
-    private void DescendGas()
-    {
-        MainScreen.Instance.ScreenContents =
-            ResourceLoader.Load<PackedScene>("res://Scenes/GasDisplay.tscn").Instantiate();
-    }
+	private void DescendGas()
+	{
+		MainScreen.Instance.ScreenContents =
+			ResourceLoader.Load<PackedScene>("res://Scenes/GasDisplay.tscn").Instantiate();
+	}
 
-    private void DescendLight()
-    {
-        MainScreen.Instance.ScreenContents =
-            ResourceLoader.Load<PackedScene>("res://Scenes/LightDisplay.tscn").Instantiate();
-    }
-    
-    private void DescendMath()
-    {
-        MainScreen.Instance.ScreenContents =
-            ResourceLoader.Load<PackedScene>("res://Scenes/MathDisplay.tscn").Instantiate();
-    }
+	private void DescendLight()
+	{
+		MainScreen.Instance.ScreenContents =
+			ResourceLoader.Load<PackedScene>("res://Scenes/LightDisplay.tscn").Instantiate();
+	}
+	
+	private void DescendMath()
+	{
+		MainScreen.Instance.ScreenContents =
+			ResourceLoader.Load<PackedScene>("res://Scenes/MathDisplay.tscn").Instantiate();
+	}
 
     private void CloseMessage()
     {

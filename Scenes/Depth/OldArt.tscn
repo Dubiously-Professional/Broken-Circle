@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://8a25c2mut5me"]
+
+[ext_resource type="Script" path="res://Scenes/Scripts/OldArt.cs" id="1_c2rj1"]
+[ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="1_kurqo"]
+
+[node name="OldArt" type="Node2D"]
+script = ExtResource("1_c2rj1")
+
+[node name="Glyph0210Old" parent="." instance=ExtResource("1_kurqo")]
+offset_left = 328.0
+offset_top = 248.0
+offset_right = 328.0
+offset_bottom = 248.0
+GlyphType = 36
+
+[node name="Glyph0202Art" parent="." instance=ExtResource("1_kurqo")]
+offset_left = 388.0
+offset_top = 247.0
+offset_right = 388.0
+offset_bottom = 247.0
+AscendVisible = true
+GlyphType = 34
+
+[connection signal="AscendPressed" from="Glyph0202Art" to="." method="_on_glyph_0202_art_ascend_pressed"]

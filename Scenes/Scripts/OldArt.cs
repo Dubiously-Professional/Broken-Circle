@@ -2,7 +2,7 @@ using Godot;
 using System;
 using BrokenCircle.Scenes.Scripts;
 
-public partial class ElectricityDisplay : Node2D
+public partial class OldArt : Node2D
 {
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -14,9 +14,14 @@ public partial class ElectricityDisplay : Node2D
 	{
 	}
 
-	public void AscendElectric()
+	private void _on_glyph_0202_art_ascend_pressed()
+	{
+		LoadEmotionDisplay();
+	}
+
+	private void LoadEmotionDisplay() 
 	{
 		MainScreen.Instance.ScreenContents =
-			ResourceLoader.Load<PackedScene>("res://Scenes/MainMenu.tscn").Instantiate();
+			ResourceLoader.Load<PackedScene>("res://Scenes/EmotionDisplay.tscn").Instantiate();
 	}
 }
