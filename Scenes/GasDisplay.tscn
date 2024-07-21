@@ -1,0 +1,70 @@
+[gd_scene load_steps=3 format=3 uid="uid://bs4tjxkvat4sc"]
+
+[ext_resource type="Script" path="res://Scenes/MainMenu.cs" id="1_o10ru"]
+[ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="2_5k0dh"]
+
+[node name="GasDisplay" type="Node2D"]
+script = ExtResource("1_o10ru")
+
+[node name="Glyph0011One" parent="." instance=ExtResource("2_5k0dh")]
+offset_left = 216.0
+offset_top = 280.0
+offset_right = 216.0
+offset_bottom = 280.0
+GlyphType = 5
+
+[node name="Glyph0120Two" parent="." instance=ExtResource("2_5k0dh")]
+offset_left = 379.0
+offset_top = 279.0
+offset_right = 379.0
+offset_bottom = 279.0
+GlyphType = 24
+
+[node name="Glyph0122Three" parent="." instance=ExtResource("2_5k0dh")]
+offset_left = 513.0
+offset_top = 281.0
+offset_right = 513.0
+offset_bottom = 281.0
+GlyphType = 26
+
+[node name="Glyph0011One2" parent="." instance=ExtResource("2_5k0dh")]
+offset_left = 639.0
+offset_top = 280.0
+offset_right = 639.0
+offset_bottom = 280.0
+GlyphType = 5
+
+[node name="Glyph0011One3" parent="." instance=ExtResource("2_5k0dh")]
+offset_left = 691.0
+offset_top = 278.0
+offset_right = 691.0
+offset_bottom = 278.0
+GlyphType = 27
+
+[node name="Glyph0022Gas" parent="." instance=ExtResource("2_5k0dh")]
+offset_left = 33.0
+offset_top = 50.0
+offset_right = 33.0
+offset_bottom = 50.0
+GlyphType = 10
+
+[node name="Glyph0002Contain" parent="." instance=ExtResource("2_5k0dh")]
+offset_left = 59.0
+offset_top = 278.0
+offset_right = 59.0
+offset_bottom = 278.0
+GlyphType = 2
+
+[node name="Glyph0121Measure" parent="." instance=ExtResource("2_5k0dh")]
+offset_left = 60.0
+offset_top = 186.0
+offset_right = 60.0
+offset_bottom = 186.0
+GlyphType = 25
+
+[node name="Glyph0103On" parent="." instance=ExtResource("2_5k0dh")]
+offset_left = 215.0
+offset_top = 389.0
+offset_right = 215.0
+offset_bottom = 389.0
+GlyphType = 19

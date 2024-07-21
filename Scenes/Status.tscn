@@ -85,9 +85,16 @@ offset_right = 127.0
 offset_bottom = 429.0
 GlyphType = 17
 
-[node name="Glyph" parent="." instance=ExtResource("1_p4exh")]
+[node name="Glyph0110Cut" parent="." instance=ExtResource("1_p4exh")]
 offset_left = 218.0
 offset_top = 432.0
 offset_right = 218.0
 offset_bottom = 432.0
 GlyphType = 20
+
+[node name="Glyph0110Emotion0023" parent="." instance=ExtResource("1_p4exh")]
+offset_left = 678.0
+offset_top = 60.0
+offset_right = 678.0
+offset_bottom = 60.0
+GlyphType = 11
