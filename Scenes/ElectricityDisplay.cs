@@ -2,7 +2,7 @@ using Godot;
 using System;
 using BrokenCircle.Scenes.Scripts;
 
-public partial class FlowMenu : PopupMenu
+public partial class ElectricityDisplay : Node2D
 {
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -14,15 +14,8 @@ public partial class FlowMenu : PopupMenu
 	{
 	}
 
-	private void _on_id_pressed(int id)
+	public void AscendElectric()
 	{
-		if (id == 0)
-		{
-			LoadMainMenu();
-		}
-	}
-	
-	private void LoadMainMenu() {
 		MainScreen.Instance.ScreenContents =
 			ResourceLoader.Load<PackedScene>("res://Scenes/MainMenu.tscn").Instantiate();
 	}
