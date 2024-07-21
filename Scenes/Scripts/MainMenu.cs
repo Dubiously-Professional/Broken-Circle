@@ -82,6 +82,13 @@ public partial class MainMenu : Node2D
 		glyph0031Math.SubMenuVisible = false;
 		
 	}
+    
+    private void ShowCloseButton() {
+        CanvasItem start = GetNode<CanvasItem>("TypingText/MessageAlert/CloseButton");
+        start.Visible = true;
+        AudioStreamPlayer2D player = MainScreen.Instance.GetNode<AudioStreamPlayer2D>("Sounds/ButtonAppear");
+        player.Play();
+    }
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)

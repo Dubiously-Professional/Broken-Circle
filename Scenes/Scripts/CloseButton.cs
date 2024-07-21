@@ -19,7 +19,7 @@ public partial class CloseButton : TextureButton
     private void _on_pressed()
     {
         Control messageBox = GetParent<Control>();
-        messageBox.Visible = false;
+        messageBox.Hide();
     }
     
     

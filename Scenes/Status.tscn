@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://baob7c7ywuo8o"]
+[gd_scene load_steps=2 format=3 uid="uid://b6nf430uccvqm"]
 
 [ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="1_p4exh"]
 
@@ -9,7 +9,7 @@ offset_left = 136.0
 offset_top = 65.0
 offset_right = 136.0
 offset_bottom = 65.0
-script = null
+GlyphType = 4
 
 [node name="Glyph0021Move" parent="." instance=ExtResource("1_p4exh")]
 offset_left = 227.0
