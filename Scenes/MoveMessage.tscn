@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://be4gkskp3lm6n"]
 
-[ext_resource type="Script" path="res://Scenes/MainMenu.cs" id="1_4k2wy"]
+[ext_resource type="Script" path="res://Scenes/Scripts/MainMenu.cs" id="1_4k2wy"]
 [ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="2_4dcx8"]
 
 [node name="MoveMessage" type="Node2D"]
