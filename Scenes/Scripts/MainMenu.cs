@@ -50,6 +50,8 @@ public partial class MainMenu : Node2D {
     private void DescendMath() {
         MainScreen.Instance.ScreenContents = "res://Scenes/MathDisplay.tscn";
     }
+    
+    
 
 	private void CloseMessage()
 	{
