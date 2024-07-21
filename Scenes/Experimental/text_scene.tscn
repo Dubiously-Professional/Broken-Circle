@@ -9,7 +9,7 @@
 [ext_resource type="Script" path="res://Scenes/Experimental/TextNode.cs" id="6_7bmy0"]
 [ext_resource type="Texture2D" uid="uid://bgjvufx1wpgua" path="res://Assets/Sprites/Ideograms/group.png" id="6_c6aqm"]
 [ext_resource type="Texture2D" uid="uid://d2ljcqmh48811" path="res://Assets/Sprites/Ideograms/Self0001.png" id="7_j4wuy"]
-[ext_resource type="Script" path="res://Scenes/TextNode2.cs" id="8_lkw7p"]
+[ext_resource type="Script" path="res://Scenes/Scripts/TextNode2.cs" id="8_lkw7p"]
 [ext_resource type="Texture2D" uid="uid://dbqve3xk7d51h" path="res://Assets/Sprites/Descend.png" id="8_x88uo"]
 [ext_resource type="Texture2D" uid="uid://cwmfhq38om1rt" path="res://Assets/Sprites/Edit.png" id="9_t2e1q"]
 [ext_resource type="Script" path="res://Scenes/Experimental/TextNode3.cs" id="11_esy6q"]
