@@ -3,28 +3,33 @@
 [ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="4_mpfcn"]
 
 [node name="AuthScreen2" type="Node2D"]
+position = Vector2(378, 262)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-anchors_preset = 5
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-offset_left = 55.0
-offset_top = 63.0
-offset_right = 183.0
-offset_bottom = 191.0
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
 grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="TopContainer" type="CenterContainer" parent="VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_vertical = 2
 
 [node name="Glyph0003Affirm" parent="VBoxContainer/TopContainer" instance=ExtResource("4_mpfcn")]
 layout_mode = 2
 
 [node name="BottomContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 10
+size_flags_vertical = 3
 
 [node name="Glyph0001Self" parent="VBoxContainer/BottomContainer" instance=ExtResource("4_mpfcn")]
 layout_mode = 2
@@ -33,10 +38,12 @@ GlyphType = 1
 
 [node name="Glyph0010Safe" parent="VBoxContainer/BottomContainer" instance=ExtResource("4_mpfcn")]
 layout_mode = 2
+size_flags_horizontal = 10
 GlyphType = 4
 
 [node name="CanvasGroup" type="CanvasGroup" parent="VBoxContainer"]
 show_behind_parent = true
+position = Vector2(-31, -75)
 
 [node name="Line2D3" type="Line2D" parent="VBoxContainer/CanvasGroup"]
 position = Vector2(-9, -9)
