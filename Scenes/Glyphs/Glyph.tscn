@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://77ngbpkgrbkb"]
+[gd_scene load_steps=12 format=3 uid="uid://77ngbpkgrbkb"]
 
 [ext_resource type="Texture2D" uid="uid://cnihms442me1s" path="res://Assets/TextureMaps/CircleGradient.png" id="1_cegpk"]
 [ext_resource type="Script" path="res://Scenes/Scripts/Glyph.cs" id="1_wix65"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bjvg4mex7t376" path="res://Assets/Sprites/Ideograms/Flow0000.png" id="8_p0tqf"]
 [ext_resource type="FontFile" uid="uid://dwcymbx5ivat2" path="res://Assets/Fonts/doves.ttf" id="8_vjwti"]
 [ext_resource type="AudioStream" uid="uid://c5xkxikwf6j8t" path="res://Assets/Sounds/615538__crash_358__sci-fi-ui-button-sound-015.wav" id="10_eu1jt"]
+[ext_resource type="Theme" uid="uid://dnejqfutfxet1" path="res://Assets/Themes/ProtagTheme.tres" id="10_lypej"]
 
 [node name="Glyph" type="Control"]
 texture_filter = 1
@@ -173,6 +174,18 @@ grow_vertical = 2
 texture = ExtResource("5_ni0l8")
 expand_mode = 1
 
+[node name="PopupMenu" type="PopupMenu" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas/TranslateButton"]
+size = Vector2i(181, 220)
+theme = ExtResource("10_lypej")
+item_count = 4
+item_0/text = "????"
+item_1/text = "Fluffy"
+item_1/id = 1
+item_2/text = "Onion"
+item_2/id = 2
+item_3/text = "No Really"
+item_3/id = 3
+
 [node name="FlowButton" type="TextureButton" parent="ControlCanvas/ButtonCanvas/SubMenuCanvas"]
 visible = false
 modulate = Color(0.0313726, 0.388235, 0.458824, 1)
@@ -269,6 +282,7 @@ language = "en_US"
 [connection signal="mouse_exited" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/TranslateButton" to="." method="PlayHoverSound"]
 [connection signal="pressed" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/TranslateButton" to="." method="OnTranslatePressed"]
 [connection signal="pressed" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/TranslateButton" to="ControlCanvas/ButtonCanvas/SubMenuCanvas/SubMenuButtonClick" method="play"]
+[connection signal="index_pressed" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/TranslateButton/PopupMenu" to="." method="OnTranslationSelected"]
 [connection signal="mouse_entered" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/FlowButton" to="." method="PlayHoverSound"]
 [connection signal="mouse_exited" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/FlowButton" to="." method="PlayHoverSound"]
 [connection signal="pressed" from="ControlCanvas/ButtonCanvas/SubMenuCanvas/FlowButton" to="." method="OnFlowPressed"]

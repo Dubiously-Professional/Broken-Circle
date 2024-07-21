@@ -123,6 +123,12 @@ public partial class Glyph : Control {
             if (IsNodeReady()) {
                 GlyphIcon = Glyphs.Instance.GetGlyphIcon(value);
                 LabelText = Glyphs.Instance.GetGlyphTranslation(value);
+                PopupMenu translatePopup =
+                    GetNode<PopupMenu>("ControlCanvas/ButtonCanvas/SubMenuCanvas/TranslateButton/PopupMenu");
+                translatePopup.Clear();
+                foreach (string option in Glyphs.Instance.GetGlyphTranslationOptions(value)) {
+                    translatePopup.AddItem(option);
+                }
             }
         }
     }
@@ -131,6 +137,14 @@ public partial class Glyph : Control {
     public override void _Ready() {
         GlyphIcon = Glyphs.Instance.GetGlyphIcon(_glyphType);
         LabelText = Glyphs.Instance.GetGlyphTranslation(_glyphType);
+
+        PopupMenu translatePopup =
+            GetNode<PopupMenu>("ControlCanvas/ButtonCanvas/SubMenuCanvas/TranslateButton/PopupMenu");
+        translatePopup.Clear();
+        foreach (string option in Glyphs.Instance.GetGlyphTranslationOptions(_glyphType)) {
+            translatePopup.AddItem(option);
+        }
+
         GetNode<Control>("ControlCanvas/ButtonCanvas/SubMenuCanvas").Visible = _subMenuVisible;
         GetNode<TextureButton>("ControlCanvas/ButtonCanvas/SubMenuCanvas/FlowButton").Visible = _flowVisible;
         GetNode<TextureButton>("ControlCanvas/ButtonCanvas/SubMenuCanvas/AscendButton").Visible = _ascendVisible;
@@ -166,6 +180,13 @@ public partial class Glyph : Control {
 
     private void OnTranslatePressed() {
         EmitSignal(SignalName.TranslatePressed);
+        GetNode<PopupMenu>("ControlCanvas/ButtonCanvas/SubMenuCanvas/TranslateButton/PopupMenu").Popup();
+    }
+
+    private void OnTranslationSelected(int index) {
+        Glyphs.Instance.SetGlyphTranslation(_glyphType,
+            GetNode<PopupMenu>("ControlCanvas/ButtonCanvas/SubMenuCanvas/TranslateButton/PopupMenu")
+                .GetItemText(index));
     }
 
     private void OnDescendPressed() {

@@ -34,6 +34,7 @@ public partial class Glyphs : Node {
 
     private Texture2D[] _glyphIcons;
     private string[] _glyphTranslations;
+    private string[][] _glyphTranslationOptions;
 
     public Glyphs() {
         if (Instance != null) {
@@ -46,10 +47,13 @@ public partial class Glyphs : Node {
         string[] glyphNames = Enum.GetNames<GlyphType>();
         _glyphIcons = new Texture2D[glyphNames.Length];
         _glyphTranslations = new string[glyphNames.Length];
+        _glyphTranslationOptions = new string[glyphNames.Length][];
 
         for (int i = 0; i < glyphNames.Length; i++) {
             _glyphIcons[i] = GD.Load<Texture2D>("res://Assets/Sprites/Ideograms/" + glyphNames[i] + ".png");
             _glyphTranslations[i] = "????";
+            // TODO
+            _glyphTranslationOptions[i] = new []{"????", "Fluffy", "Onion", "No Really"};
         }
     }
 
@@ -66,5 +70,9 @@ public partial class Glyphs : Node {
     public void SetGlyphTranslation(GlyphType glyphType, string translation) {
         _glyphTranslations[(int)glyphType] = translation;
         EmitSignal(SignalName.GlyphTranslationChanged, (int)glyphType, translation);
+    }
+
+    public string[] GetGlyphTranslationOptions(GlyphType glyphType) {
+        return _glyphTranslationOptions[(int)glyphType];
     }
 }
