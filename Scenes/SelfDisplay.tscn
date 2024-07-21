@@ -1,8 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://b6nf430uccvqm"]
+[gd_scene load_steps=3 format=3 uid="uid://b6nf430uccvqm"]
 
 [ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Glyphs/Glyph.tscn" id="1_6juxm"]
+[ext_resource type="Script" path="res://Scenes/Scripts/SelfDisplay.cs" id="1_gh1m1"]
 
 [node name="SelfDisplay" type="Node2D"]
+script = ExtResource("1_gh1m1")
+
+[node name="Glyph0001Self" parent="." instance=ExtResource("1_6juxm")]
+offset_left = 678.0
+offset_top = 75.0
+offset_right = 678.0
+offset_bottom = 75.0
+GlyphType = 1
 
 [node name="Glyph0010Safe" parent="." instance=ExtResource("1_6juxm")]
 offset_left = 136.0
@@ -19,66 +28,67 @@ offset_bottom = 64.0
 GlyphType = 9
 
 [node name="Glyph0101Object" parent="." instance=ExtResource("1_6juxm")]
-offset_left = 316.0
-offset_top = 64.0
-offset_right = 316.0
-offset_bottom = 64.0
+offset_left = 307.0
+offset_top = 66.0
+offset_right = 307.0
+offset_bottom = 66.0
 GlyphType = 17
 
 [node name="Glyph0020Force" parent="." instance=ExtResource("1_6juxm")]
 offset_left = 134.0
-offset_top = 157.0
+offset_top = 212.0
 offset_right = 134.0
-offset_bottom = 157.0
+offset_bottom = 212.0
 GlyphType = 8
 
 [node name="Glyph0103On" parent="." instance=ExtResource("1_6juxm")]
 offset_left = 224.0
-offset_top = 156.0
+offset_top = 211.0
 offset_right = 224.0
-offset_bottom = 156.0
+offset_bottom = 211.0
 GlyphType = 19
 
 [node name="Glyph0013Electricity" parent="." instance=ExtResource("1_6juxm")]
 offset_left = 133.0
-offset_top = 247.0
+offset_top = 302.0
 offset_right = 133.0
-offset_bottom = 247.0
+offset_bottom = 302.0
 GlyphType = 7
 
 [node name="Glyph0103On2" parent="." instance=ExtResource("1_6juxm")]
 offset_left = 221.0
-offset_top = 248.0
+offset_top = 303.0
 offset_right = 221.0
-offset_bottom = 248.0
+offset_bottom = 303.0
 GlyphType = 19
 
 [node name="Glyph0022Gas" parent="." instance=ExtResource("1_6juxm")]
 offset_left = 131.0
-offset_top = 337.0
+offset_top = 392.0
 offset_right = 131.0
-offset_bottom = 337.0
+offset_bottom = 392.0
 GlyphType = 10
 
 [node name="Glyph0002Contain" parent="." instance=ExtResource("1_6juxm")]
 anchors_preset = -1
 anchor_top = 0.0
 offset_left = 221.0
-offset_top = 335.0
+offset_top = 390.0
 offset_right = 221.0
-offset_bottom = 335.0
+offset_bottom = 390.0
 GlyphType = 2
 
 [node name="Glyph0112Low" parent="." instance=ExtResource("1_6juxm")]
 anchors_preset = -1
 anchor_top = 0.0
 offset_left = 298.0
-offset_top = 333.0
+offset_top = 388.0
 offset_right = 298.0
-offset_bottom = 333.0
+offset_bottom = 388.0
 GlyphType = 22
 
 [node name="Glyph0101Object2" parent="." instance=ExtResource("1_6juxm")]
+visible = false
 offset_left = 127.0
 offset_top = 429.0
 offset_right = 127.0
@@ -86,6 +96,7 @@ offset_bottom = 429.0
 GlyphType = 17
 
 [node name="Glyph0110Cut" parent="." instance=ExtResource("1_6juxm")]
+visible = false
 offset_left = 218.0
 offset_top = 432.0
 offset_right = 218.0
@@ -93,8 +104,11 @@ offset_bottom = 432.0
 GlyphType = 20
 
 [node name="Glyph0110Emotion0023" parent="." instance=ExtResource("1_6juxm")]
-offset_left = 678.0
-offset_top = 60.0
-offset_right = 678.0
-offset_bottom = 60.0
+visible = false
+offset_left = 635.0
+offset_top = 394.0
+offset_right = 635.0
+offset_bottom = 394.0
 GlyphType = 11
+
+[connection signal="AscendPressed" from="Glyph0001Self" to="." method="_on_glyph_0001_self_ascend_pressed"]
