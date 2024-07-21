@@ -41,7 +41,6 @@ GlyphType = 3
 [node name="FlowMenu" parent="VBoxContainer/TopContainer/Glyph0003Affirm" instance=ExtResource("7_fal3t")]
 size = Vector2i(50, 92)
 visible = false
-unfocusable = true
 theme_override_constants/item_end_padding = -16
 allow_search = false
 script = ExtResource("8_sa8xa")
