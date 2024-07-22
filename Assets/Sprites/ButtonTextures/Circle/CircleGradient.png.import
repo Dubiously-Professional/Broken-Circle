@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nt5ahkcdfgwo"
-path="res://.godot/imported/CheckPressed.png-c1c8cd7aec0f406ed640da79619f31d1.ctex"
+uid="uid://cnihms442me1s"
+path="res://.godot/imported/CircleGradient.png-da94b4b5d949df6774f0103c407c8946.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/CheckPressed.png"
-dest_files=["res://.godot/imported/CheckPressed.png-c1c8cd7aec0f406ed640da79619f31d1.ctex"]
+source_file="res://Assets/Sprites/ButtonTextures/Circle/CircleGradient.png"
+dest_files=["res://.godot/imported/CircleGradient.png-da94b4b5d949df6774f0103c407c8946.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwmfhq38om1rt"
-path="res://.godot/imported/Edit.png-02b051e68fd59821e367e434ebc9ac2d.ctex"
+uid="uid://dercb67d8avrh"
+path="res://.godot/imported/CheckHover.png-b1cdf1dbb14b4bac2e09b0ab42f429e7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Edit.png"
-dest_files=["res://.godot/imported/Edit.png-02b051e68fd59821e367e434ebc9ac2d.ctex"]
+source_file="res://Assets/Sprites/ButtonTextures/Check/CheckHover.png"
+dest_files=["res://.godot/imported/CheckHover.png-b1cdf1dbb14b4bac2e09b0ab42f429e7.ctex"]
 
 [params]
 

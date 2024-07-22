@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/Scripts/EmotionDisplay.cs" id="1_xedl2"]
 [ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Common/Glyph.tscn" id="2_v50a6"]
-[ext_resource type="Texture2D" uid="uid://ch40jmu7num6y" path="res://Assets/Sprites/AncientArt.png" id="3_3rdlu"]
+[ext_resource type="Texture2D" uid="uid://ch40jmu7num6y" path="res://Assets/Sprites/Images/AncientArt.png" id="3_3rdlu"]
 
 [node name="EmotionDisplay" type="Node2D"]
 script = ExtResource("1_xedl2")

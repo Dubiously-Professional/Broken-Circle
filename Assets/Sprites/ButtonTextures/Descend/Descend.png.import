@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b10w56ymj0y3f"
-path="res://.godot/imported/CircleHoverGradient.png-f13400e7e87145604e2adef79bfd44d0.ctex"
+uid="uid://dbqve3xk7d51h"
+path="res://.godot/imported/Descend.png-a22dff908e8af9785adc294c6f3aa5b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/TextureMaps/CircleHoverGradient.png"
-dest_files=["res://.godot/imported/CircleHoverGradient.png-f13400e7e87145604e2adef79bfd44d0.ctex"]
+source_file="res://Assets/Sprites/ButtonTextures/Descend/Descend.png"
+dest_files=["res://.godot/imported/Descend.png-a22dff908e8af9785adc294c6f3aa5b8.ctex"]
 
 [params]
 

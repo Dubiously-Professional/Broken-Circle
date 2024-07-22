@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dsbf7ieut1jp2" path="res://Scenes/Common/TypingText.tscn" id="3_wkwf5"]
 [ext_resource type="Script" path="res://Scenes/Scripts/MessageAlert.cs" id="4_rrn4l"]
 [ext_resource type="FontFile" uid="uid://7l0t5gk5lixg" path="res://Assets/Fonts/VT323-Regular.ttf" id="5_bfudf"]
-[ext_resource type="Texture2D" uid="uid://dbqve3xk7d51h" path="res://Assets/Sprites/Descend.png" id="6_vj4b7"]
+[ext_resource type="Texture2D" uid="uid://dbqve3xk7d51h" path="res://Assets/Sprites/ButtonTextures/Descend/Descend.png" id="6_vj4b7"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c4unk"]
 

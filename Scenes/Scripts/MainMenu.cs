@@ -15,8 +15,8 @@ public partial class MainMenu : Node2D {
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta) { }
 
-	private void DescendElectricity() {
-		MainScreen.Instance.ScreenContents = "res://Scenes/ElectricityDisplay.tscn";
+	private void Electricity() {
+		MainScreen.Instance.ScreenContents = "res://Scenes/Electricity.tscn";
 	}
 
 	private void DescendEmotion() {
