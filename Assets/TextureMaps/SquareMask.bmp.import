@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://0jmmppwyqmih"
+path="res://.godot/imported/SquareMask.bmp-6ec455b4669c65068e15648494c288e7.res"
+
+[deps]
+
+source_file="res://Assets/TextureMaps/SquareMask.bmp"
+dest_files=["res://.godot/imported/SquareMask.bmp-6ec455b4669c65068e15648494c288e7.res"]
+
+[params]
+
+create_from=0
+threshold=0.5
