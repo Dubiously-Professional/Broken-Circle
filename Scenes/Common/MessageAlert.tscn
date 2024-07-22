@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://bqmpnr0236ta6"]
 
-[ext_resource type="Theme" uid="uid://dsl1ku3tvbrml" path="res://Assets/Themes/SupportingTheme.tres" id="1_sxm2b"]
+[ext_resource type="Theme" uid="uid://dsl1ku3tvbrml" path="res://Assets/Themes/Supporting/SupportingTheme.tres" id="1_sxm2b"]
 [ext_resource type="Script" path="res://Scenes/Scripts/MessageAlert.cs" id="2_slv4g"]
 [ext_resource type="PackedScene" uid="uid://dsbf7ieut1jp2" path="res://Scenes/Common/TypingText.tscn" id="3_1bwxe"]
 [ext_resource type="AudioStream" uid="uid://df4kftdmudmp6" path="res://Assets/Sounds/33552__jobro__osd-text-10.wav" id="4_4uecf"]
@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://nt5ahkcdfgwo" path="res://Assets/Sprites/CheckPressed.png" id="6_ov0ot"]
 [ext_resource type="Texture2D" uid="uid://dercb67d8avrh" path="res://Assets/Sprites/CheckHover.png" id="7_vecxa"]
 [ext_resource type="BitMap" uid="uid://0jmmppwyqmih" path="res://Assets/TextureMaps/SquareMask.bmp" id="8_skuhe"]
-[ext_resource type="StyleBox" uid="uid://ist44avgx3kb" path="res://Assets/Themes/SupportingPanelStyleBoxButton.tres" id="9_pclso"]
+[ext_resource type="StyleBox" uid="uid://ist44avgx3kb" path="res://Assets/Themes/Supporting/SupportingPanelStyleBoxButton.tres" id="9_pclso"]
 [ext_resource type="AudioStream" uid="uid://5j7w8hyi7k2s" path="res://Assets/Sounds/615525__crash_358__sci-fi-ui-button-sound-004.wav" id="10_78elh"]
 
 [node name="MessageAlert" type="Panel"]

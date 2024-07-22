@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cnusiswcowh84"]
 
-[ext_resource type="Theme" uid="uid://dnejqfutfxet1" path="res://Assets/Themes/ProtagTheme.tres" id="1_cusha"]
+[ext_resource type="Theme" uid="uid://dnejqfutfxet1" path="res://Assets/Themes/Protag/ProtagTheme.tres" id="1_cusha"]
 
 [node name="Test" type="Control"]
 layout_mode = 3

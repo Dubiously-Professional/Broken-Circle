@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bjvg4mex7t376" path="res://Assets/Sprites/Ideograms/Flow0000.png" id="8_p0tqf"]
 [ext_resource type="FontFile" uid="uid://dwcymbx5ivat2" path="res://Assets/Fonts/doves.ttf" id="8_vjwti"]
 [ext_resource type="AudioStream" uid="uid://c5xkxikwf6j8t" path="res://Assets/Sounds/615538__crash_358__sci-fi-ui-button-sound-015.wav" id="10_eu1jt"]
-[ext_resource type="Theme" uid="uid://dnejqfutfxet1" path="res://Assets/Themes/ProtagTheme.tres" id="10_lypej"]
+[ext_resource type="Theme" uid="uid://dnejqfutfxet1" path="res://Assets/Themes/Protag/ProtagTheme.tres" id="10_lypej"]
 
 [node name="Glyph" type="Control"]
 texture_filter = 1
