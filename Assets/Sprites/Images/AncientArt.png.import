@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ch40jmu7num6y"
-path="res://.godot/imported/AncientArt.png-37c8e90e29816f1c7934bf3b8b7058f5.ctex"
+path="res://.godot/imported/AncientArt.png-bc64f7fb95938b455356d7f3435a56d1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/AncientArt.png"
-dest_files=["res://.godot/imported/AncientArt.png-37c8e90e29816f1c7934bf3b8b7058f5.ctex"]
+source_file="res://Assets/Sprites/Images/AncientArt.png"
+dest_files=["res://.godot/imported/AncientArt.png-bc64f7fb95938b455356d7f3435a56d1.ctex"]
 
 [params]
 
