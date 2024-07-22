@@ -1,0 +1,109 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2q3c4cgtjtp6"]
+
+[ext_resource type="Script" path="res://Scenes/Scripts/MainMenu.cs" id="1_1k37a"]
+[ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Common/Glyph.tscn" id="2_kstwh"]
+[ext_resource type="PackedScene" uid="uid://mqf2pj05dpbw" path="res://Scenes/Experimental/MainMenuMessage.tscn" id="3_muhpn"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_1k37a")
+
+[node name="Usable Screen" type="CenterContainer" parent="."]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 748.0
+offset_bottom = 460.0
+metadata/_edit_lock_ = true
+
+[node name="GlyphCollection" type="VBoxContainer" parent="Usable Screen"]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GlyphRow1" type="HBoxContainer" parent="Usable Screen/GlyphCollection"]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="Self" parent="Usable Screen/GlyphCollection/GlyphRow1" instance=ExtResource("2_kstwh")]
+layout_mode = 2
+size_flags_horizontal = 6
+DescendVisible = true
+GlyphType = 1
+
+[node name="GlyphRow2" type="HBoxContainer" parent="Usable Screen/GlyphCollection"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="Gas" parent="Usable Screen/GlyphCollection/GlyphRow2" instance=ExtResource("2_kstwh")]
+layout_mode = 2
+size_flags_horizontal = 6
+DescendVisible = true
+GlyphType = 10
+
+[node name="Electricity" parent="Usable Screen/GlyphCollection/GlyphRow2" instance=ExtResource("2_kstwh")]
+layout_mode = 2
+size_flags_horizontal = 6
+DescendVisible = true
+GlyphType = 7
+
+[node name="GlyphRow3" type="HBoxContainer" parent="Usable Screen/GlyphCollection"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="Know" parent="Usable Screen/GlyphCollection/GlyphRow3" instance=ExtResource("2_kstwh")]
+layout_mode = 2
+DescendVisible = true
+GlyphType = 6
+
+[node name="Emotion" parent="Usable Screen/GlyphCollection/GlyphRow3" instance=ExtResource("2_kstwh")]
+layout_mode = 2
+size_flags_horizontal = 6
+DescendVisible = true
+GlyphType = 11
+
+[node name="Move" parent="Usable Screen/GlyphCollection/GlyphRow3" instance=ExtResource("2_kstwh")]
+layout_mode = 2
+DescendVisible = true
+GlyphType = 9
+
+[node name="GlyphRow4" type="HBoxContainer" parent="Usable Screen/GlyphCollection"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="Light" parent="Usable Screen/GlyphCollection/GlyphRow4" instance=ExtResource("2_kstwh")]
+layout_mode = 2
+size_flags_horizontal = 6
+DescendVisible = true
+GlyphType = 12
+
+[node name="Force" parent="Usable Screen/GlyphCollection/GlyphRow4" instance=ExtResource("2_kstwh")]
+layout_mode = 2
+size_flags_horizontal = 6
+DescendVisible = true
+GlyphType = 8
+
+[node name="GlyphRow5" type="HBoxContainer" parent="Usable Screen/GlyphCollection"]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="Math" parent="Usable Screen/GlyphCollection/GlyphRow5" instance=ExtResource("2_kstwh")]
+layout_mode = 2
+size_flags_horizontal = 6
+DescendVisible = true
+GlyphType = 13
+
+[node name="MessageAlert" parent="." instance=ExtResource("3_muhpn")]
+offset_left = 23.0
+offset_top = 332.0
+offset_right = 751.0
+offset_bottom = 460.0
+
+[connection signal="DescendPressed" from="Usable Screen/GlyphCollection/GlyphRow1/Self" to="." method="DescendSelf"]
+[connection signal="DescendPressed" from="Usable Screen/GlyphCollection/GlyphRow2/Gas" to="." method="DescendGas"]
+[connection signal="DescendPressed" from="Usable Screen/GlyphCollection/GlyphRow2/Electricity" to="." method="DescendElectricity"]
+[connection signal="DescendPressed" from="Usable Screen/GlyphCollection/GlyphRow3/Know" to="." method="DescendKnow"]
+[connection signal="DescendPressed" from="Usable Screen/GlyphCollection/GlyphRow3/Emotion" to="." method="DescendEmotion"]
+[connection signal="DescendPressed" from="Usable Screen/GlyphCollection/GlyphRow3/Move" to="." method="DescendMove"]
+[connection signal="DescendPressed" from="Usable Screen/GlyphCollection/GlyphRow4/Light" to="." method="DescendLight"]
+[connection signal="DescendPressed" from="Usable Screen/GlyphCollection/GlyphRow4/Force" to="." method="DescendForce"]
+[connection signal="DescendPressed" from="Usable Screen/GlyphCollection/GlyphRow5/Math" to="." method="DescendMath"]

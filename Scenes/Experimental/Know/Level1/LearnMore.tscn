@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfgedet6dstgi"]
+
+[ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Common/Glyph.tscn" id="1_0myyl"]
+
+[node name="WhoAreYou" type="Node2D"]
+
+[node name="Glyph0012Know" parent="." instance=ExtResource("1_0myyl")]
+offset_left = 348.0
+offset_top = 240.0
+offset_right = 348.0
+offset_bottom = 240.0
+GlyphType = 6
+
+[node name="Glyph02001Learn" parent="." instance=ExtResource("1_0myyl")]
+offset_left = 477.0
+offset_top = 231.0
+offset_right = 477.0
+offset_bottom = 231.0
+GlyphType = 33

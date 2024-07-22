@@ -1,0 +1,68 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu6y61d0tde4i"]
+
+[ext_resource type="Script" path="res://Scenes/Scripts/StrongEmotions.cs" id="1_8ddqb"]
+[ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Common/Glyph.tscn" id="1_d1qhm"]
+
+[node name="StrongEmotions" type="Node2D"]
+script = ExtResource("1_8ddqb")
+
+[node name="Glyph0113Strong" parent="." instance=ExtResource("1_d1qhm")]
+offset_left = 339.0
+offset_top = 139.0
+offset_right = 339.0
+offset_bottom = 139.0
+GlyphType = 23
+
+[node name="Line2D3" type="Line2D" parent="Glyph0113Strong"]
+position = Vector2(-9, -9)
+scale = Vector2(1.04762, 1.02703)
+points = PackedVector2Array(26.7272, -9.73682, 128.863, -6.81577)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[node name="Line2D" type="Line2D" parent="Glyph0113Strong/Line2D3"]
+visibility_layer = 2
+position = Vector2(-199.5, -116.842)
+scale = Vector2(0.954545, 0.973684)
+points = PackedVector2Array(336, 118, 344, 113, 337, 107)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[node name="Glyph0023Emotion" parent="." instance=ExtResource("1_d1qhm")]
+offset_left = 488.0
+offset_top = 141.0
+offset_right = 488.0
+offset_bottom = 141.0
+GlyphType = 11
+
+[node name="Glyph0001Self" parent="." instance=ExtResource("1_d1qhm")]
+offset_left = 412.0
+offset_top = 246.0
+offset_right = 412.0
+offset_bottom = 246.0
+GlyphType = 1
+
+[node name="Line2D3" type="Line2D" parent="."]
+position = Vector2(320.571, 120.757)
+scale = Vector2(1.09751, 1.05479)
+points = PackedVector2Array(90.5949, 82.7114, 132.508, 19.1917)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[node name="Line2D" type="Line2D" parent="Line2D3"]
+visibility_layer = 2
+position = Vector2(-199.5, -116.842)
+scale = Vector2(0.954545, 0.973684)
+points = PackedVector2Array(347.818, 149.447, 348.773, 139.71, 338.273, 142.631)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[node name="Line2D2" type="Line2D" parent="Line2D3"]
+visibility_layer = 2
+position = Vector2(-389.932, -230.609)
+scale = Vector2(0.911156, 0.948061)
+points = PackedVector2Array(537.381, 328.486, 527.381, 331.486, 526.381, 320.486)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[connection signal="AscendPressed" from="Glyph0023Emotion" to="." method="_on_glyph_0023_emotion_ascend_pressed"]

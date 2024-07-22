@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://mqf2pj05dpbw"]
+
+[ext_resource type="PackedScene" uid="uid://dsbf7ieut1jp2" path="res://Scenes/Common/TypingText.tscn" id="1_hhutr"]
+[ext_resource type="Script" path="res://Scenes/Scripts/MainMenuMessage.cs" id="1_rf4k4"]
+[ext_resource type="FontFile" uid="uid://7l0t5gk5lixg" path="res://Assets/Fonts/VT323-Regular.ttf" id="2_n4sge"]
+[ext_resource type="Texture2D" uid="uid://dbqve3xk7d51h" path="res://Assets/Sprites/Descend.png" id="3_tvn0s"]
+[ext_resource type="Script" path="res://CloseButton.cs" id="5_orj1b"]
+
+[node name="MessageAlert" type="Panel"]
+clip_contents = true
+offset_left = 14.0
+offset_top = 325.0
+offset_right = 742.0
+offset_bottom = 453.0
+script = ExtResource("1_rf4k4")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextBackground2" type="Polygon2D" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+show_behind_parent = true
+position = Vector2(75, -12)
+color = Color(0.0365313, 0.0981555, 0.0320369, 1)
+polygon = PackedVector2Array(-75, 138, -75, 9, 653, 8, 652, 139)
+
+[node name="TypingText" parent="." node_paths=PackedStringArray("Text") instance=ExtResource("1_hhutr")]
+Text = NodePath("../Message")
+
+[node name="Message" type="RichTextLabel" parent="."]
+clip_contents = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 720.0
+offset_bottom = 146.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.231373, 0.956863, 0.0823529, 1)
+theme_override_fonts/normal_font = ExtResource("2_n4sge")
+text = "What did you do? I'm seeing a bunch of new options available.
+
+I thought you said the ship was abandoned?"
+fit_content = true
+scroll_active = false
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="CloseButton" type="TextureButton" parent="."]
+visible = false
+self_modulate = Color(0.231373, 0.956863, 0.0823529, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 669.0
+offset_top = 128.0
+offset_right = 745.0
+offset_bottom = 168.0
+rotation = -1.5708
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("3_tvn0s")
+script = ExtResource("5_orj1b")
+
+[connection signal="TypingEnded" from="TypingText" to="CloseButton" method="_Show"]
+[connection signal="pressed" from="CloseButton" to="." method="CloseMessage"]

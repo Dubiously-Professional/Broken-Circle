@@ -1,0 +1,225 @@
+[gd_scene load_steps=8 format=3 uid="uid://c4ir5ir3q5v1x"]
+
+[ext_resource type="Script" path="res://Scenes/Scripts/AuthScreen.cs" id="1_6dswq"]
+[ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Common/Glyph.tscn" id="2_ugse5"]
+[ext_resource type="PackedScene" uid="uid://dsbf7ieut1jp2" path="res://Scenes/Common/TypingText.tscn" id="3_wkwf5"]
+[ext_resource type="Script" path="res://Scenes/Scripts/MessageAlert.cs" id="4_rrn4l"]
+[ext_resource type="FontFile" uid="uid://7l0t5gk5lixg" path="res://Assets/Fonts/VT323-Regular.ttf" id="5_bfudf"]
+[ext_resource type="Texture2D" uid="uid://dbqve3xk7d51h" path="res://Assets/Sprites/Descend.png" id="6_vj4b7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c4unk"]
+
+[node name="AuthScreen2" type="Node2D"]
+position = Vector2(378, 262)
+script = ExtResource("1_6dswq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+z_as_relative = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -122.0
+offset_right = 64.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TopContainer" type="CenterContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="Glyph0003Affirm" parent="VBoxContainer/TopContainer" instance=ExtResource("2_ugse5")]
+layout_mode = 2
+FlowVisible = true
+GlyphType = 3
+
+[node name="BottomContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Glyph0001Self" parent="VBoxContainer/BottomContainer" instance=ExtResource("2_ugse5")]
+layout_mode = 2
+size_flags_horizontal = 2
+GlyphType = 1
+
+[node name="Glyph0010Safe" parent="VBoxContainer/BottomContainer" instance=ExtResource("2_ugse5")]
+layout_mode = 2
+size_flags_horizontal = 10
+GlyphType = 4
+
+[node name="CanvasGroup" type="CanvasGroup" parent="VBoxContainer"]
+show_behind_parent = true
+position = Vector2(-31, -75)
+
+[node name="Line2D3" type="Line2D" parent="VBoxContainer/CanvasGroup"]
+position = Vector2(-9, -9)
+scale = Vector2(1.04762, 1.02703)
+points = PackedVector2Array(116.455, 83.7368, 157.5, 140.211)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[node name="Line2D" type="Line2D" parent="VBoxContainer/CanvasGroup/Line2D3"]
+visibility_layer = 2
+position = Vector2(-199.5, -116.842)
+scale = Vector2(0.954545, 0.973684)
+points = PackedVector2Array(368, 260, 370, 262, 374, 264, 374, 261, 372, 255)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[node name="Line2D4" type="Line2D" parent="VBoxContainer/CanvasGroup"]
+position = Vector2(-125, -8)
+scale = Vector2(1.04762, 1.02703)
+points = PackedVector2Array(194.727, 82.7632, 159.409, 142.158)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[node name="Line2D" type="Line2D" parent="VBoxContainer/CanvasGroup/Line2D4"]
+visibility_layer = 2
+position = Vector2(-166.091, -166.5)
+rotation = -0.00463095
+scale = Vector2(0.954546, 0.973684)
+skew = 0.000180244
+points = PackedVector2Array(369.807, 263.682, 373.825, 259.7, 376.834, 257.713, 376.816, 261.713, 376.798, 265.713)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[node name="Line2D2" type="Line2D" parent="VBoxContainer/CanvasGroup"]
+show_behind_parent = true
+position = Vector2(55, 158)
+points = PackedVector2Array(82, 0, 0, 0)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[node name="Line2D2" type="Line2D" parent="VBoxContainer/CanvasGroup/Line2D2"]
+visibility_layer = 2
+position = Vector2(-370, -258)
+points = PackedVector2Array(376, 254, 372, 256, 370, 258, 374, 261, 379, 261)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+
+[node name="Line2D" type="Line2D" parent="VBoxContainer/CanvasGroup/Line2D2"]
+show_behind_parent = true
+points = PackedVector2Array(75, -6, 78, -3, 82, 0, 77, 2, 74, 5)
+width = 1.0
+default_color = Color(0.909804, 0.396078, 0.584314, 1)
+sharp_limit = 0.0
+round_precision = 1
+
+[node name="FlowMenuDisplay" type="Panel" parent="."]
+visible = false
+self_modulate = Color(0, 0, 0, 1)
+clip_contents = true
+custom_minimum_size = Vector2(768, 480)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -384.0
+offset_top = -240.0
+offset_right = 384.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_c4unk")
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer" type="ColorRect" parent="FlowMenuDisplay"]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(768, 480)
+layout_mode = 1
+offset_right = 768.0
+offset_bottom = 480.0
+color = Color(0, 0, 0, 1)
+
+[node name="FlowDisplayBG" type="ColorRect" parent="FlowMenuDisplay"]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 98.6229
+offset_top = -204.781
+offset_right = 98.6229
+offset_bottom = -204.781
+color = Color(0.0365313, 0.0981555, 0.0320369, 1)
+
+[node name="Glyph" parent="FlowMenuDisplay/FlowDisplayBG" instance=ExtResource("2_ugse5")]
+layout_mode = 1
+offset_left = 142.705
+offset_top = 404.33
+offset_right = 142.705
+offset_bottom = 404.33
+ActionButton = true
+GlyphType = 5
+
+[node name="Glyph2" parent="FlowMenuDisplay/FlowDisplayBG" instance=ExtResource("2_ugse5")]
+layout_mode = 1
+offset_left = 397.195
+offset_top = 404.33
+offset_right = 397.195
+offset_bottom = 404.33
+ActionButton = true
+GlyphType = 27
+
+[node name="TypingText" parent="." node_paths=PackedStringArray("Text") instance=ExtResource("3_wkwf5")]
+Text = NodePath("MessageAlert/Message")
+
+[node name="MessageAlert" type="Panel" parent="TypingText"]
+clip_contents = true
+offset_left = 18.0
+offset_top = 309.0
+offset_right = 746.0
+offset_bottom = 437.0
+script = ExtResource("4_rrn4l")
+metadata/_edit_use_anchors_ = true
+
+[node name="Message" type="RichTextLabel" parent="TypingText/MessageAlert"]
+clip_contents = false
+layout_mode = 1
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 715.0
+offset_bottom = 139.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.231373, 0.956863, 0.0823529, 1)
+theme_override_fonts/normal_font = ExtResource("5_bfudf")
+text = "
+Oh good, it worked. This is bizarre. ... let me see what I can do.
+                      
+Okay... I pushed an overlay for your connection. You should have navigation tools and a translation patcher now. There's one hook I couldn't really parse, so I left it as is.
+      
+You get it yet?"
+fit_content = true
+scroll_active = false
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="TextBackground2" type="Polygon2D" parent="TypingText/MessageAlert"]
+self_modulate = Color(0, 0, 0, 1)
+show_behind_parent = true
+position = Vector2(75, -12)
+color = Color(0.0365313, 0.0981555, 0.0320369, 1)
+polygon = PackedVector2Array(-75, 138, -75, 9, 653, 8, 652, 139)
+
+[node name="CloseButton" type="TextureButton" parent="TypingText/MessageAlert"]
+visible = false
+self_modulate = Color(0.231373, 0.956863, 0.0823529, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 669.0
+offset_top = 128.0
+offset_right = 745.0
+offset_bottom = 168.0
+rotation = -1.5708
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("6_vj4b7")
+
+[connection signal="FlowPressed" from="VBoxContainer/TopContainer/Glyph0003Affirm" to="." method="FlowMenu"]
+[connection signal="GlyphPressed" from="FlowMenuDisplay/FlowDisplayBG/Glyph" to="." method="LoadMainMenu"]
+[connection signal="GlyphPressed" from="FlowMenuDisplay/FlowDisplayBG/Glyph2" to="." method="FlowMenu"]
+[connection signal="TypingEnded" from="TypingText" to="." method="ShowCloseButton"]
+[connection signal="pressed" from="TypingText/MessageAlert/CloseButton" to="TypingText/MessageAlert" method="CloseMessage"]

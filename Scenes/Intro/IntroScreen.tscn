@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://ja4x42o1flej"]
+
+[ext_resource type="Script" path="res://Scenes/Scripts/Intro.cs" id="1_y4c4j"]
+[ext_resource type="PackedScene" uid="uid://dsbf7ieut1jp2" path="res://Scenes/Common/TypingText.tscn" id="2_m7c0y"]
+[ext_resource type="FontFile" uid="uid://7l0t5gk5lixg" path="res://Assets/Fonts/VT323-Regular.ttf" id="2_olowl"]
+[ext_resource type="PackedScene" uid="uid://77ngbpkgrbkb" path="res://Scenes/Common/Glyph.tscn" id="7_6wv5u"]
+
+[node name="IntroScreen" type="Node2D"]
+script = ExtResource("1_y4c4j")
+
+[node name="TextBackground2" type="Polygon2D" parent="."]
+self_modulate = Color(0, 0, 0, 0.490196)
+top_level = true
+visibility_layer = 4
+position = Vector2(93, 291)
+color = Color(0.0365313, 0.0981555, 0.0320369, 1)
+polygon = PackedVector2Array(-78, 93, -79, -264, 662, -263, 663, 95)
+
+[node name="TypingText" parent="TextBackground2" instance=ExtResource("2_m7c0y")]
+
+[node name="IntroText" type="RichTextLabel" parent="TextBackground2/TypingText"]
+modulate = Color(0.231373, 0.956863, 0.0823529, 1)
+offset_left = 27.0
+offset_top = 47.0
+offset_right = 737.0
+offset_bottom = 314.0
+theme_override_fonts/normal_font = ExtResource("2_olowl")
+text = "                
+Obviously, there isn't oxygen and it's unclear if there are materials on board that could cause you harm...
+
+                     
+I know. I know.
+               
+
+Look, I can see if I can get you into their systems, but please, don't try to board the thing until we can get someone else out there to make sure it's safe. Even if there isn't a hazmat risk, that thing is a death trap.
+
+
+I love you. I trust you. I miss you.
+                                "
+scroll_active = false
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Glyph0000Flow" parent="TextBackground2/TypingText" instance=ExtResource("7_6wv5u")]
+visible = false
+offset_left = 264.0
+offset_top = 83.0
+offset_right = 264.0
+offset_bottom = 83.0
+ScaleNode = 2
+ActionButton = true
+
+[connection signal="TypingEnded" from="TextBackground2/TypingText" to="." method="ShowFlowButton"]
+[connection signal="GlyphPressed" from="TextBackground2/TypingText/Glyph0000Flow" to="." method="LoadAuthScene"]
