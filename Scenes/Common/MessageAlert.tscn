@@ -1,0 +1,97 @@
+[gd_scene load_steps=11 format=3 uid="uid://bqmpnr0236ta6"]
+
+[ext_resource type="Theme" uid="uid://dsl1ku3tvbrml" path="res://Assets/Themes/SupportingTheme.tres" id="1_sxm2b"]
+[ext_resource type="Script" path="res://Scenes/Scripts/MessageAlert.cs" id="2_slv4g"]
+[ext_resource type="PackedScene" uid="uid://dsbf7ieut1jp2" path="res://Scenes/Common/TypingText.tscn" id="3_1bwxe"]
+[ext_resource type="AudioStream" uid="uid://df4kftdmudmp6" path="res://Assets/Sounds/33552__jobro__osd-text-10.wav" id="4_4uecf"]
+[ext_resource type="Texture2D" uid="uid://cnfn0ucrme0k4" path="res://Assets/Sprites/check.png" id="5_8ia6y"]
+[ext_resource type="Texture2D" uid="uid://nt5ahkcdfgwo" path="res://Assets/Sprites/CheckPressed.png" id="6_ov0ot"]
+[ext_resource type="Texture2D" uid="uid://dercb67d8avrh" path="res://Assets/Sprites/CheckHover.png" id="7_vecxa"]
+[ext_resource type="BitMap" uid="uid://0jmmppwyqmih" path="res://Assets/TextureMaps/SquareMask.bmp" id="8_skuhe"]
+[ext_resource type="StyleBox" uid="uid://ist44avgx3kb" path="res://Assets/Themes/SupportingPanelStyleBoxButton.tres" id="9_pclso"]
+[ext_resource type="AudioStream" uid="uid://5j7w8hyi7k2s" path="res://Assets/Sounds/615525__crash_358__sci-fi-ui-button-sound-004.wav" id="10_78elh"]
+
+[node name="MessageAlert" type="Panel"]
+texture_filter = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -317.0
+offset_top = -144.0
+offset_right = 315.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("1_sxm2b")
+script = ExtResource("2_slv4g")
+MessageText = "The conditional operator ?:, also known as the ternary conditional operator, evaluates a Boolean expression and returns the result of one of the two expressions, depending on whether the Boolean expression evaluates to true or false, as the following example shows:C#string GetWeatherDisplay(double tempInCelsius) => tempInCelsius < 20.0 ? \"Cold.\" : \"Perfect!\";Console.WriteLine(GetWeatherDisplay(15));  // output: Cold.Console.WriteLine(GetWeatherDisplay(27));  // output: Perfect!As the preceding example shows, the syntax for the conditional operator is as follows:C#condition ? consequent : alternativeThe condition expression must evaluate to true or false. If condition evaluates to true, the consequent expression is evaluated, and its result becomes the result of the operation. If condition evaluates to false, the alternative expression is evaluated, and its result becomes the result of the operation. Only consequent or alternative is evaluated. Conditional expressions are target-typed. That is, if a target type of a conditional expression is known, the types of consequent and alternative must be implicitly convertible to the target type, as the following example shows:"
+
+[node name="AlertPanel" type="HBoxContainer" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -299.0
+offset_top = -60.0
+offset_right = 299.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TypingText" parent="AlertPanel" node_paths=PackedStringArray("_text") instance=ExtResource("3_1bwxe")]
+_text = NodePath("../MessageBox")
+
+[node name="TypingTextSound" type="AudioStreamPlayer2D" parent="AlertPanel/TypingText"]
+position = Vector2(464, 550)
+stream = ExtResource("4_4uecf")
+
+[node name="MessageBox" type="RichTextLabel" parent="AlertPanel"]
+custom_minimum_size = Vector2(536, 120)
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_sxm2b")
+scroll_following = true
+
+[node name="CloseButton" type="TextureButton" parent="AlertPanel"]
+visible = false
+self_modulate = Color(0.231373, 0.956863, 0.0823529, 1)
+texture_filter = 1
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 8
+theme = ExtResource("1_sxm2b")
+texture_normal = ExtResource("5_8ia6y")
+texture_pressed = ExtResource("6_ov0ot")
+texture_hover = ExtResource("7_vecxa")
+texture_click_mask = ExtResource("8_skuhe")
+stretch_mode = 3
+
+[node name="CloseButtonPanel" type="Panel" parent="AlertPanel/CloseButton"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = ExtResource("1_sxm2b")
+theme_override_styles/panel = ExtResource("9_pclso")
+
+[node name="ButtonAppearSound" type="AudioStreamPlayer2D" parent="AlertPanel/CloseButton"]
+position = Vector2(686, 304)
+stream = ExtResource("10_78elh")
+
+[connection signal="TypingEnded" from="AlertPanel/TypingText" to="." method="ShowCloseButton"]
+[connection signal="pressed" from="AlertPanel/CloseButton" to="." method="CloseMessage"]

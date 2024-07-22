@@ -1,21 +1,42 @@
 using Godot;
-using System;
+namespace BrokenCircle.Scenes.Scripts;
 
 public partial class MessageAlert : Panel
 {
-    // Called when the node enters the scene tree for the first time.
+    
+    private string _messageText = "";
+    
+    // Allow setting of the MessageAlert Text
+    [Export]
+    private string MessageText {
+        get => _messageText;
+        set { 
+            _messageText = value;
+            if (IsNodeReady()) {
+                GetNode<RichTextLabel>("AlertPanel/MessageBox").Text = _messageText;
+            }
+        }
+    }
+    
     public override void _Ready()
     {
+        GetNode<RichTextLabel>("AlertPanel/MessageBox").Text = _messageText;
     }
-
-    // Called every frame. 'delta' is the elapsed time since the previous frame.
-    public override void _Process(double delta)
+    
+    // Hide MessageAlert upon confirmation.
+    private void CloseMessage()
     {
+        Visible = false;
     }
-
-    public void CloseMessage()
+    
+    // Display CloseButton
+    private void ShowCloseButton()
     {
-        Hide();
+        TextureButton closeButton = GetNode<TextureButton>("AlertPanel/CloseButton");
+        closeButton.Visible = true;
+        
+        AudioStreamPlayer2D player = GetNode<AudioStreamPlayer2D>("AlertPanel/CloseButton/ButtonAppearSound");
+        player.Play();
     }
-
+    
 }
